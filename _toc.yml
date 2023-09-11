@@ -1,0 +1,38 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: README
+chapters:
+- file: lecture_1/overview
+  sections:
+   - file: lecture_1/Introduction.ipynb
+   - file: lecture_1/Python_types.ipynb
+   - file: lecture_1/Python_types_interactive.ipynb
+   - file: lecture_1/Operators_summary.ipynb
+   - file: lecture_1/Arithmetic_exercises.ipynb
+   - file: lecture_1/Operations_mixing_types.ipynb
+   - file: lecture_1/Variables.ipynb
+   - file: lecture_1/Variable_swap.ipynb
+   - file: lecture_1/Comparison_operators.ipynb
+   - file: lecture_1/String_type.ipynb
+   - file: lecture_1/Type_conversion.ipynb
+   - file: lecture_1/Errors.ipynb
+   - file: lecture_1/Summary.ipynb
+   - file: lecture_1/Summary_exercises.ipynb
+   - file: lecture_1/CompSMAP_Lect01_Introduction.ipynb
+- file: lecture_2/overview
+  sections:
+    - file: lecture_2/1_Functions_overview.ipynb
+    - file: lecture_2/2_Using_functions.ipynb
+    - file: lecture_2/3_Writing_Functions.ipynb
+    - file: lecture_2/4_Writing_Functions_Exercises.ipynb
+    - file: lecture_2/5_Writing_functions_exercises_2.ipynb
+    - file: lecture_2/6_Importing_functions.ipynb
+    - file: lecture_2/7_Logical_operators.ipynb
+    - file: lecture_2/8_Logical_Exercises.ipynb
+    - file: lecture_2/9_Conditionals.ipynb
+    - file: lecture_2/10_Conditional_Exercises.ipynb
+    - file: lecture_2/11_Summary.ipynb
+    - file: lecture_2/12_Summary_Exercises.ipynb
+    - file: lecture_2/CompSMAP_Lect02_FunctionsCondtionalsLogic.ipynb
