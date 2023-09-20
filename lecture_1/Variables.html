@@ -201,6 +201,83 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../lecture_2/overview.html">
+   Lecture 2: Functions, Logic and Conditionals
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_2/1_Functions_overview.html">
+     Functions - An overview
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_2/2_Using_functions.html">
+     Using (or “calling”) a function - Interactive
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_2/3_Writing_Functions.html">
+     How to write your own function
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_2/4_Writing_Functions_Exercises.html">
+     Writing Functions - Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_2/5_Writing_functions_exercises_2.html">
+     Writing functions with multiple inputs and outputs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_2/6_Importing_functions.html">
+     Importing a function
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_2/7_Logical_operators.html">
+     Logical operators
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_2/8_Logical_Exercises.html">
+     Logical Operators - Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_2/9_Conditionals.html">
+     Conditional statements
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_2/10_Conditional_Exercises.html">
+     Conditionals - Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_2/11_Summary.html">
+     Summary
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_2/12_Summary_Exercises.html">
+     End of class exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_2/CompSMAP_Lect02_FunctionsCondtionalsLogic.html">
+     Lecture 2 - Functions, Conditionals, and Logic (full lecture in one notebook)
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
     </div>
@@ -550,36 +627,6 @@ title="Print to PDF"
 </div>
 </div>
 <p>What happens if we set a variable to another one? Try doing <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">y</span></code>. Think about what x and y should be, <em>then</em> test whether you’re correct.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="n">y</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">y</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5 2
-2 2
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2 3
-</pre></div>
-</div>
-</div>
-</div>
 <p>What is this output telling us? Think about it. Ask us if you’re unsure!</p>
 <p>Now set y to something else, like <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">=</span> <span class="pre">3</span></code>. What will x be equal to after doing that? There are two possibilities. Think about them both, then test it. Try to explain to someone else the two possibilities, and what you’ve just learned about how Python treats variables.</p>
 <p>Variable names should be descriptive but not too long. Any name made with letters, numbers, and underscores will work if it’s not a reserved Python keyword. Examples are energy, variable7, and very_long_variable_name. Try assigning to a few of your own.</p>
