@@ -16,4 +16,5 @@ This is the "storyboard" for this module, showing where we are and where we're g
 Follow the links below, or the links on the side, to access individual lectures' material!
 
 * [Lecture 1: Introduction](lecture_1/overview.md)
-* [Lecture 2: Functions, Conditionals and Logic](lecture_2/overview.md)
+
+[comment]: # [Lecture 2: Functions, Conditionals and Logic](lecture_2/overview.md)
