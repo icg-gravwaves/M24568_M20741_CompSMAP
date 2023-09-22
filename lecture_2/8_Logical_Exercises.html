@@ -215,7 +215,7 @@ const thebe_selector_output = ".output, .cell_output"
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="1_Functions_overview.html">
-     Functions
+     Functions - An overview
     </a>
    </li>
    <li class="toctree-l2">
@@ -225,7 +225,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="3_Writing_Functions.html">
-     Writing functions - an Overview
+     How to write your own function
     </a>
    </li>
    <li class="toctree-l2">
@@ -241,6 +241,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="6_Importing_functions.html">
      Importing a function
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="6a_Function_Failures.html">
+     The most common reasons people use functions wrong and don’t pass coursework questions
     </a>
    </li>
    <li class="toctree-l2">
@@ -275,7 +280,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="CompSMAP_Lect02_FunctionsCondtionalsLogic.html">
-     Computational SMAP
+     Lecture 2 - Functions, Conditionals, and Logic (full lecture in one notebook)
     </a>
    </li>
   </ul>
@@ -599,6 +604,7 @@ title="Print to PDF"
 <p>Write a function, <code class="docutils literal notranslate"><span class="pre">logical_1</span></code> that takes two inputs <code class="docutils literal notranslate"><span class="pre">P</span></code> and <code class="docutils literal notranslate"><span class="pre">Q</span></code> and returns the logical operation</p>
 <div class="math notranslate nohighlight">
 \[ \mbox{not } (P \mbox{ or } Q) \]</div>
+<p><strong>NOTE: We provide the solution here for you to see an example. You’ll then have to do this yourself in the next exercise!</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">logical_1</span><span class="p">(</span><span class="n">P</span><span class="p">,</span> <span class="n">Q</span><span class="p">):</span>
@@ -607,7 +613,9 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<p>Test that your function works by calling it with the 4 possible inputs. As <code class="docutils literal notranslate"><span class="pre">P</span></code> and <code class="docutils literal notranslate"><span class="pre">Q</span></code> are boolean, they each have two possible values; <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>. So we can only call it as follows:</p>
+<p>Test that your function works by calling it with the 4 possible inputs.</p>
+<p><strong>Again we give the solution:</strong>
+As <code class="docutils literal notranslate"><span class="pre">P</span></code> and <code class="docutils literal notranslate"><span class="pre">Q</span></code> are boolean, they each have two possible values; <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>. So we can only call it as follows:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">logical_1</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">))</span>
@@ -648,7 +656,7 @@ False
 <p>One of de Morgan’s Laws states that</p>
 <div class="math notranslate nohighlight">
 \[ \mbox{not } (P \mbox{ or } Q) \quad \textbf{ is equivalent to } \quad (\mbox{not } P) \mbox{ and }  (\mbox{not } Q)\]</div>
-<p>From your functions above, show that this is always true. <em>HINT</em> there is only 2 possible values of <span class="math notranslate nohighlight">\(P\)</span> and 2 possible values of <span class="math notranslate nohighlight">\(Q\)</span> so if this is True for all the 4 possible combinations, it is always true.</p>
+<p>From your functions above, show that this is always true. <em>HINT</em> there is only 2 possible values of <span class="math notranslate nohighlight">\(P\)</span> and 2 possible values of <span class="math notranslate nohighlight">\(Q\)</span> so if this is True for all the 4 possible combinations, it is always true. The functions for the 2 exercises above should also be used <em>directly</em> here.</p>
 </section>
 <section id="id3">
 <h2>Exercise<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h2>

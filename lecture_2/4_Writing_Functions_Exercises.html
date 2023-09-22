@@ -55,7 +55,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Writing functions with multiple inputs and outputs" href="5_Writing_functions_exercises_2.html" />
-    <link rel="prev" title="Writing functions - an Overview" href="3_Writing_Functions.html" />
+    <link rel="prev" title="How to write your own function" href="3_Writing_Functions.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -215,7 +215,7 @@ const thebe_selector_output = ".output, .cell_output"
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="1_Functions_overview.html">
-     Functions
+     Functions - An overview
     </a>
    </li>
    <li class="toctree-l2">
@@ -225,7 +225,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="3_Writing_Functions.html">
-     Writing functions - an Overview
+     How to write your own function
     </a>
    </li>
    <li class="toctree-l2 current active">
@@ -241,6 +241,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="6_Importing_functions.html">
      Importing a function
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="6a_Function_Failures.html">
+     The most common reasons people use functions wrong and don’t pass coursework questions
     </a>
    </li>
    <li class="toctree-l2">
@@ -275,7 +280,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="CompSMAP_Lect02_FunctionsCondtionalsLogic.html">
-     Computational SMAP
+     Lecture 2 - Functions, Conditionals, and Logic (full lecture in one notebook)
     </a>
    </li>
   </ul>
@@ -628,14 +633,6 @@ title="Print to PDF"
 <li><p>Step 4: Add the return statement. Most (but not all) functions will have a <code class="docutils literal notranslate"><span class="pre">return</span></code> statement (functions will have an implicit <code class="docutils literal notranslate"><span class="pre">return</span> <span class="pre">None</span></code> if you don’t write a <code class="docutils literal notranslate"><span class="pre">return</span></code>, or the function never reaches a <code class="docutils literal notranslate"><span class="pre">return</span></code> statement). In this case we want to <code class="docutils literal notranslate"><span class="pre">return</span></code> the value of <span class="math notranslate nohighlight">\(x^3\)</span> that we have computed and stored in <code class="docutils literal notranslate"><span class="pre">y</span></code>. So we would do <code class="docutils literal notranslate">&#160;&#160;&#160; <span class="pre">return</span> <span class="pre">y</span></code> (remembering indentation again).</p></li>
 </ul>
 <p>Please ask us if you are not clear on any of this!</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">cube</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">3</span>
-</pre></div>
-</div>
-</div>
-</div>
 <section id="testing-your-function">
 <h3>Testing your function.<a class="headerlink" href="#testing-your-function" title="Permalink to this headline">#</a></h3>
 <p>Run the cell below to test your function. It will print “Your function works” if your function works, and raise an error if it doesn’t. If it doesn’t work, see if you can figure out what is wrong. If you can’t, talk to us!</p>
@@ -659,7 +656,17 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Your function works, well done!
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Input</span> <span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># I&#39;ll use comments to explain how this test works.</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">bbb</span> <span class="o">=</span> <span class="n">cube</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>  <span class="c1"># Call the function with an input value of 4</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="k">assert</span> <span class="p">(</span><span class="n">bbb</span> <span class="o">==</span> <span class="mi">64</span><span class="p">)</span>  <span class="c1"># I&#39;m now checking that bbb is equal to 4**4 = 256. If it isn&#39;t the code will fail.</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span>                      <span class="c1"># Note that I&#39;m using the comparison operator == from last week. assert is new. This is</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span>                      <span class="c1"># another built-in function. It raises an error the input value is False, otherwise it does</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span>                      <span class="c1"># nothing.</span>
+
+<span class="ne">NameError</span>: name &#39;cube&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -678,10 +685,76 @@ title="Print to PDF"
 <section id="exercise">
 <h2>Exercise<a class="headerlink" href="#exercise" title="Permalink to this headline">#</a></h2>
 <p>Write a function that takes one input <code class="docutils literal notranslate"><span class="pre">x</span></code> and returns <code class="docutils literal notranslate"><span class="pre">x**4</span></code>. <strong>HINT</strong> this should look very similar to the case above!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run this cell to test if your function above works. Change the first line to match the name of your function</span>
+<span class="n">fn_handle</span> <span class="o">=</span> <span class="n">quartic</span>
+
+<span class="n">bbb</span> <span class="o">=</span> <span class="n">fn_handle</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>  <span class="c1"># Call the function with an input value of 4</span>
+<span class="k">assert</span> <span class="p">(</span><span class="n">bbb</span> <span class="o">==</span> <span class="mi">256</span><span class="p">)</span>  <span class="c1"># I&#39;m now checking that bbb is equal to 4**4 = 256. If it isn&#39;t the code will fail.</span>
+                     <span class="c1"># Note that I&#39;m using the comparison operator == from last week. assert is new. This is</span>
+                     <span class="c1"># another built-in function. It raises an error the input value is False, otherwise it does</span>
+                     <span class="c1"># nothing.</span>
+
+<span class="n">bbb2</span> <span class="o">=</span> <span class="n">fn_handle</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span>
+<span class="k">assert</span> <span class="p">(</span><span class="n">bbb2</span> <span class="o">==</span> <span class="mi">81</span><span class="p">)</span>
+
+<span class="n">bbb3</span> <span class="o">=</span> <span class="n">fn_handle</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span>
+<span class="k">assert</span><span class="p">(</span><span class="n">bbb3</span> <span class="o">==</span> <span class="mi">14641</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Congratulations, it looks like your function works!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Input</span> <span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Run this cell to test if your function above works. Change the first line to match the name of your function</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">fn_handle</span> <span class="o">=</span> <span class="n">quartic</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">bbb</span> <span class="o">=</span> <span class="n">fn_handle</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>  <span class="c1"># Call the function with an input value of 4</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="k">assert</span> <span class="p">(</span><span class="n">bbb</span> <span class="o">==</span> <span class="mi">256</span><span class="p">)</span>  <span class="c1"># I&#39;m now checking that bbb is equal to 4**4 = 256. If it isn&#39;t the code will fail.</span>
+
+<span class="ne">NameError</span>: name &#39;quartic&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 <section id="id1">
 <h2>Exercise<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
 <p>Write a function that takes one input <code class="docutils literal notranslate"><span class="pre">x</span></code> and returns <span class="math notranslate nohighlight">\(x^5 - \frac{x^2}{24.1} + \sqrt{x}\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run this cell to test if your function above works. Change the first line to match the name of your function</span>
+<span class="n">fn_handle</span> <span class="o">=</span> <span class="n">exercise3</span>
+
+<span class="n">bbb</span> <span class="o">=</span> <span class="n">fn_handle</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>  <span class="c1"># Call the function with an input value of 4</span>
+<span class="k">assert</span> <span class="p">(</span><span class="n">bbb</span> <span class="o">&gt;</span> <span class="mf">1025.336099</span> <span class="ow">and</span> <span class="n">bbb</span> <span class="o">&lt;</span> <span class="mf">1025.336100</span><span class="p">)</span> <span class="c1"># This is a float value, so check approximate value  </span>
+
+<span class="n">bbb2</span> <span class="o">=</span> <span class="n">fn_handle</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span>
+<span class="c1"># This one is complex, so more involved checking needed.</span>
+<span class="k">assert</span> <span class="p">(</span><span class="n">bbb2</span><span class="o">.</span><span class="n">real</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mf">243.3735</span> <span class="ow">and</span> <span class="n">bbb2</span><span class="o">.</span><span class="n">real</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mf">243.3734</span> <span class="ow">and</span> <span class="n">bbb2</span><span class="o">.</span><span class="n">imag</span> <span class="o">&gt;</span> <span class="mf">1.732050</span> <span class="ow">and</span> <span class="n">bbb2</span><span class="o">.</span><span class="n">imag</span> <span class="o">&lt;</span> <span class="mf">1.732051</span><span class="p">)</span>
+
+<span class="n">bbb3</span> <span class="o">=</span> <span class="n">fn_handle</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span>
+<span class="k">assert</span><span class="p">(</span><span class="n">bbb3</span> <span class="o">&gt;</span> <span class="mf">161049.29</span> <span class="ow">and</span> <span class="n">bbb3</span> <span class="o">&lt;</span> <span class="mf">161049.30</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Congratulations, it looks like your function works!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Input</span> <span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Run this cell to test if your function above works. Change the first line to match the name of your function</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">fn_handle</span> <span class="o">=</span> <span class="n">exercise3</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">bbb</span> <span class="o">=</span> <span class="n">fn_handle</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>  <span class="c1"># Call the function with an input value of 4</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="k">assert</span> <span class="p">(</span><span class="n">bbb</span> <span class="o">&gt;</span> <span class="mf">1025.336099</span> <span class="ow">and</span> <span class="n">bbb</span> <span class="o">&lt;</span> <span class="mf">1025.336100</span><span class="p">)</span> <span class="c1"># This is a float value, so check approximate value  </span>
+
+<span class="ne">NameError</span>: name &#39;exercise3&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 </section>
 
@@ -716,7 +789,7 @@ title="Print to PDF"
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Writing functions - an Overview</p>
+            <p class="prev-next-title">How to write your own function</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="5_Writing_functions_exercises_2.html" title="next page">
