@@ -9,18 +9,23 @@ chapters:
    - file: lecture_1/Introduction.ipynb
    - file: lecture_1/Python_types.ipynb
    - file: lecture_1/Python_types_interactive.ipynb
+   - file: lecture_1/Python_types_interactive_SOLVED.ipynb
    - file: lecture_1/Operators_summary.ipynb
    - file: lecture_1/Arithmetic_exercises.ipynb
+   - file: lecture_1/Arithmetic_exercises_SOLVED.ipynb
    - file: lecture_1/Operations_mixing_types.ipynb
    - file: lecture_1/Variables.ipynb
+   - file: lecture_1/Variables_SOLVED.ipynb
    - file: lecture_1/Variable_swap.ipynb
    - file: lecture_1/Comparison_operators.ipynb
    - file: lecture_1/String_type.ipynb
+   - file: lecture_1/String_type_SOLVED.ipynb
    - file: lecture_1/Type_conversion.ipynb
+   - file: lecture_1/Type_conversion_SOLVED.ipynb
    - file: lecture_1/Errors.ipynb
    - file: lecture_1/Summary.ipynb
    - file: lecture_1/Summary_exercises.ipynb
-   - file: lecture_1/CompSMAP_Lect01_Introduction.ipynb
+   - file: lecture_1/Summary_exercises_SOLVED.ipynb
 - file: lecture_2/overview
   sections:
     - file: lecture_2/1_Functions_overview.ipynb
@@ -36,4 +41,3 @@ chapters:
     - file: lecture_2/10_Conditional_Exercises.ipynb
     - file: lecture_2/11_Summary.ipynb
     - file: lecture_2/12_Summary_Exercises.ipynb
-    - file: lecture_2/CompSMAP_Lect02_FunctionsCondtionalsLogic.ipynb
