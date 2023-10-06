@@ -4,12 +4,14 @@
 title: M24568 and M20741 Intro to CompSMAP
 author: Ian Harry, Samantha Penny and Judi Thurlby
 logo: logo.png
+only_build_toc_files: True
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
 execute:
   execute_notebooks: force
   allow_errors: True
+  exclude_patterns: [lecture_3/Part_4_while_loops.ipynb]
 
 # Define the name of the latex output file for PDF builds
 latex:
