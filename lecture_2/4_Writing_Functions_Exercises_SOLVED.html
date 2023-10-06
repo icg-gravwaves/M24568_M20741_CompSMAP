@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Conditional statements &#8212; M24568 and M20741 Intro to CompSMAP</title>
+    <title>Writing Functions - Exercises &#8212; M24568 and M20741 Intro to CompSMAP</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -50,10 +50,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Conditionals - Exercises" href="10_Conditional_Exercises.html" />
-    <link rel="prev" title="Logical Operators - Exercises" href="8_Logical_Exercises_SOLVED.html" />
+    <link rel="next" title="Writing functions with multiple inputs and outputs" href="5_Writing_functions_exercises_2.html" />
+    <link rel="prev" title="Writing Functions - Exercises" href="4_Writing_Functions_Exercises.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -261,8 +263,8 @@ const thebe_selector_output = ".output, .cell_output"
      Writing Functions - Exercises
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="4_Writing_Functions_Exercises_SOLVED.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Writing Functions - Exercises
     </a>
    </li>
@@ -301,8 +303,8 @@ const thebe_selector_output = ".output, .cell_output"
      Logical Operators - Exercises
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="9_Conditionals.html">
      Conditional statements
     </a>
    </li>
@@ -454,7 +456,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/icg-gravwaves/M24568_M20741_CompSMAP/main?urlpath=lab/tree/lecture_2/9_Conditionals.ipynb"
+        <a href="https://mybinder.org/v2/gh/icg-gravwaves/M24568_M20741_CompSMAP/main?urlpath=lab/tree/lecture_2/4_Writing_Functions_Exercises_SOLVED.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -472,7 +474,7 @@ title="Launch on Binder"
       </li>
       
       <li>
-        <a href="https://colab.research.google.com/github/icg-gravwaves/M24568_M20741_CompSMAP/blob/main/lecture_2/9_Conditionals.ipynb"
+        <a href="https://colab.research.google.com/github/icg-gravwaves/M24568_M20741_CompSMAP/blob/main/lecture_2/4_Writing_Functions_Exercises_SOLVED.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -550,7 +552,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/icg-gravwaves/M24568_M20741_CompSMAP/issues/new?title=Issue%20on%20page%20%2Flecture_2/9_Conditionals.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/icg-gravwaves/M24568_M20741_CompSMAP/issues/new?title=Issue%20on%20page%20%2Flecture_2/4_Writing_Functions_Exercises_SOLVED.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -578,7 +580,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/lecture_2/9_Conditionals.ipynb"
+        <a href="../_sources/lecture_2/4_Writing_Functions_Exercises_SOLVED.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -638,18 +640,35 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#binary-decision-if-xx-do-yy-else-do-zz-diagrams">
-   Binary decision (if XX do YY else do ZZ) diagrams
+  <a class="reference internal nav-link" href="#walkthrough-example">
+   Walkthrough example
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#testing-your-function">
+     Testing your function.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#calling-the-function-yourself">
+     Calling the function yourself.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#final-note">
+     Final note
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise">
+   Exercise
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#conditionals-if-elif-and-else-general-structure">
-   Conditionals - If, elif and else (General Structure)
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#nested-conditionals">
-   Nested conditionals
+  <a class="reference internal nav-link" href="#id1">
+   Exercise
   </a>
  </li>
 </ul>
@@ -661,7 +680,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Conditional statements</h1>
+                <h1>Writing Functions - Exercises</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -672,18 +691,35 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#binary-decision-if-xx-do-yy-else-do-zz-diagrams">
-   Binary decision (if XX do YY else do ZZ) diagrams
+  <a class="reference internal nav-link" href="#walkthrough-example">
+   Walkthrough example
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#testing-your-function">
+     Testing your function.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#calling-the-function-yourself">
+     Calling the function yourself.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#final-note">
+     Final note
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise">
+   Exercise
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#conditionals-if-elif-and-else-general-structure">
-   Conditionals - If, elif and else (General Structure)
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#nested-conditionals">
-   Nested conditionals
+  <a class="reference internal nav-link" href="#id1">
+   Exercise
   </a>
  </li>
 </ul>
@@ -696,126 +732,168 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="conditional-statements">
-<h1>Conditional statements<a class="headerlink" href="#conditional-statements" title="Permalink to this headline">#</a></h1>
-<section id="binary-decision-if-xx-do-yy-else-do-zz-diagrams">
-<h2>Binary decision (if XX do YY else do ZZ) diagrams<a class="headerlink" href="#binary-decision-if-xx-do-yy-else-do-zz-diagrams" title="Permalink to this headline">#</a></h2>
-<p>In code you often need to make a decision. Do I want to do “thing YY” or should I do “thing ZZ”. In the case that there are two choices, this is a “binary decision”. More complex logic branches are possible, and we refer to these as “branching statements”.</p>
-<p>The simplest branching statement is a  <b>conditional</b>:</p>
-<ul>
-    <li> A test that evaluates the logical value of the expression. </li>
-    <li> Code to be executed if the test is true (Branch 1).  </li>
-    <li> Code to be executed if the test is false (Branch 2) </li>
-</ul>
-<p><img alt="image.png" src="../_images/Lecture2_Image2.png" /></p>
-</section>
-<section id="conditionals-if-elif-and-else-general-structure">
-<h2>Conditionals - If, elif and else (General Structure)<a class="headerlink" href="#conditionals-if-elif-and-else-general-structure" title="Permalink to this headline">#</a></h2>
-<p>In python conditional statements (including ones with more than two branches) can be written using <code class="docutils literal notranslate"><span class="pre">if</span></code> <code class="docutils literal notranslate"><span class="pre">elif</span></code> and <code class="docutils literal notranslate"><span class="pre">else</span></code>. As with functions, these will require us to correctly indent our code. Indentation is <em>crucial</em> in writing and reading python. Things <strong>within</strong> the conditional will be indented with respect to those outside. If we want a conditional within a conditional (an if statement within an if statement) we indent a second layer. Perhaps, as with most things in python, this is easier demonstrated. First with a diagram:</p>
-<p><img alt="image.png" src="../_images/Lecture2_Image3.png" /></p>
-<p>Then with some code</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_number</span> <span class="o">=</span> <span class="mi">4</span>  <span class="c1"># You can change this number around and run this cell to test other possibilities</span>
-
-<span class="k">if</span> <span class="n">my_number</span><span class="o">%</span><span class="k">2</span> == 0:
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Cool, your number is even&quot;</span><span class="p">)</span>  <span class="c1"># If condition is True, do this. Note the indentation.</span>
-<span class="k">else</span><span class="p">:</span>  <span class="c1"># Else statement is *not* indented.</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I&#39;m afraid your number is odd&quot;</span><span class="p">)</span>  <span class="c1"># If condition is False, do this. Also indented</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Cool, your number is even
-</pre></div>
-</div>
-</div>
-</div>
-<p>Some observations on this:</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="writing-functions-exercises">
+<h1>Writing Functions - Exercises<a class="headerlink" href="#writing-functions-exercises" title="Permalink to this headline">#</a></h1>
+<section id="walkthrough-example">
+<h2>Walkthrough example<a class="headerlink" href="#walkthrough-example" title="Permalink to this headline">#</a></h2>
+<p>Write a function that takes a single input value, <span class="math notranslate nohighlight">\(x\)</span> and returns that number cubed <span class="math notranslate nohighlight">\(x^3\)</span>. The function should be called <code class="docutils literal notranslate"><span class="pre">cube</span></code>.</p>
+<p>If you think you know how to do this, or how to do <em>parts</em> of this, please go ahead. If not, or if you need hints on parts of this, please read through the steps below.</p>
 <ul class="simple">
-<li><p>The expression <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">my_number%2</span> <span class="pre">==</span> <span class="pre">0</span></code> evaluates to <code class="docutils literal notranslate"><span class="pre">True</span></code> if our input <code class="docutils literal notranslate"><span class="pre">my_number</span></code> is even.</p></li>
-<li><p>Here <code class="docutils literal notranslate"><span class="pre">==</span></code> is used for comparison, once again make sure that you don’t confuse it with the assignment operator <code class="docutils literal notranslate"><span class="pre">=</span></code></p></li>
-<li><p>The <strong>indentation</strong> is important! Each intended set of expressions stands for a block (branch) of instructions.</p></li>
+<li><p>Step 1: Add a  <code class="docutils literal notranslate"><span class="pre">def</span></code> line. All functions begin with a <code class="docutils literal notranslate"><span class="pre">def</span></code> line. This provides two things: The <em>name</em> of the function, the <em>input parameters</em> to the function. So write a line that looks something like <code class="docutils literal notranslate"><span class="pre">def</span> <span class="pre">cube(x):</span></code> The <code class="docutils literal notranslate"><span class="pre">def</span></code> says that this is a function, the <code class="docutils literal notranslate"><span class="pre">cube</span></code> is the name of the function, <code class="docutils literal notranslate"><span class="pre">x</span></code> is the <em>one</em> input parameter. Don’t forget the <code class="docutils literal notranslate"><span class="pre">:</span></code>, which is used to indicate that the function will now start and the next line will be indented.</p></li>
+<li><p>Step 2: Add the docstring. Add another line explaining what the function will do. This step is <em>optional</em> but helps to document your code. So something like <code class="docutils literal notranslate"><span class="pre">&quot;&quot;&quot;Cube</span> <span class="pre">a</span> <span class="pre">number&quot;&quot;&quot;</span></code>. If you need more space, write this over more than one line (that’s why we use triple quotes here).</p></li>
+<li><p>Step 3: Add the function body. This is the bulk of writing a function, and as we get further in the course the function bodies will get larger and more complex. In this case we just need to assign a new variable to store <span class="math notranslate nohighlight">\(x^3\)</span>. So add something like <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">=</span> <span class="pre">x**3</span></code>. <strong>Remember indentation here</strong>. The body (and docstring) of a function should be indented. So this should actually be <code class="docutils literal notranslate">&#160;&#160;&#160; <span class="pre">y</span> <span class="pre">=</span> <span class="pre">x**3</span></code>. 4 spaces (one level of indentation) and then the code.</p></li>
+<li><p>Step 4: Add the return statement. Most (but not all) functions will have a <code class="docutils literal notranslate"><span class="pre">return</span></code> statement (functions will have an implicit <code class="docutils literal notranslate"><span class="pre">return</span> <span class="pre">None</span></code> if you don’t write a <code class="docutils literal notranslate"><span class="pre">return</span></code>, or the function never reaches a <code class="docutils literal notranslate"><span class="pre">return</span></code> statement). In this case we want to <code class="docutils literal notranslate"><span class="pre">return</span></code> the value of <span class="math notranslate nohighlight">\(x^3\)</span> that we have computed and stored in <code class="docutils literal notranslate"><span class="pre">y</span></code>. So we would do <code class="docutils literal notranslate">&#160;&#160;&#160; <span class="pre">return</span> <span class="pre">y</span></code> (remembering indentation again).</p></li>
 </ul>
-<p>Now we can make this an example with some more branches. Feel free to run the cell below after choosing a range of different values for my_num. This now has 3 logical branches:</p>
-<ul class="simple">
-<li><p>The number is less than 5</p></li>
-<li><p>The number is less than 10, but <em>not</em> less than 5</p></li>
-<li><p>The number is not less than 10</p></li>
-</ul>
-<p>(You could say reword this, to say things like “the number is greater than or equal to 10”, but the words above are directly what the computer will test)</p>
+<p>Please ask us if you are not clear on any of this!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_num</span> <span class="o">=</span> <span class="mi">4</span>
-
-<span class="k">if</span> <span class="n">my_num</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;My number is less than 5&quot;</span><span class="p">)</span>
-<span class="k">elif</span> <span class="n">my_num</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;My number is less than 10 but greater or equal to 5&quot;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;My number has to be greater or equal to 10&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">cube</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return the cube of x&quot;&quot;&quot;</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="o">**</span><span class="mi">3</span>
+    <span class="k">return</span> <span class="n">y</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cube</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>My number is less than 5
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>64
 </pre></div>
 </div>
 </div>
 </div>
-<p>We can use the <code class="docutils literal notranslate"><span class="pre">elif</span></code> statement multiple times to add more branches. This example has 5 branches:</p>
+<section id="testing-your-function">
+<h3>Testing your function.<a class="headerlink" href="#testing-your-function" title="Permalink to this headline">#</a></h3>
+<p>Run the cell below to test your function. It will print “Your function works” if your function works, and raise an error if it doesn’t. If it doesn’t work, see if you can figure out what is wrong. If you can’t, talk to us!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_num</span> <span class="o">=</span> <span class="mi">4</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># I&#39;ll use comments to explain how this test works.</span>
+<span class="n">bbb</span> <span class="o">=</span> <span class="n">cube</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>  <span class="c1"># Call the function with an input value of 4</span>
+<span class="k">assert</span> <span class="p">(</span><span class="n">bbb</span> <span class="o">==</span> <span class="mi">64</span><span class="p">)</span>  <span class="c1"># I&#39;m now checking that bbb is equal to 4**4 = 256. If it isn&#39;t the code will fail.</span>
+                     <span class="c1"># Note that I&#39;m using the comparison operator == from last week. assert is new. This is</span>
+                     <span class="c1"># another built-in function. It raises an error the input value is False, otherwise it does</span>
+                     <span class="c1"># nothing.</span>
 
-<span class="k">if</span> <span class="n">my_num</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;My number is less than 5&quot;</span><span class="p">)</span>
-<span class="k">elif</span> <span class="n">my_num</span> <span class="o">&lt;</span> <span class="mi">7</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;My number is less than 7 but greater or equal to 5&quot;</span><span class="p">)</span>
-<span class="k">elif</span> <span class="n">my_num</span> <span class="o">&lt;</span> <span class="mf">8.5</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;My number is less than 8.5 but greater or equal to 7&quot;</span><span class="p">)</span>
-<span class="k">elif</span> <span class="n">my_num</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;My number is less than 10 but greater or equal to 8.5&quot;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;My number has to be greater or equal to 10&quot;</span><span class="p">)</span>
+<span class="n">bbb2</span> <span class="o">=</span> <span class="n">cube</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span>
+<span class="k">assert</span> <span class="p">(</span><span class="n">bbb2</span> <span class="o">==</span> <span class="o">-</span><span class="mi">27</span><span class="p">)</span>
+
+<span class="n">bbb3</span> <span class="o">=</span> <span class="n">cube</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span>
+<span class="k">assert</span><span class="p">(</span><span class="n">bbb3</span> <span class="o">==</span> <span class="mi">1331</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your function works, well done!&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>My number is less than 5
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Your function works, well done!
 </pre></div>
 </div>
 </div>
 </div>
 </section>
-<section id="nested-conditionals">
-<h2>Nested conditionals<a class="headerlink" href="#nested-conditionals" title="Permalink to this headline">#</a></h2>
-<p>Finally, let’s look at if statements within if statements …. This is where indentation <em>really</em> helps python to be readable. Nested conditionals can sometimes be easier to read than unnested statements, and are sometimes quicker to evaluate. Let’s illustrate:</p>
+<section id="calling-the-function-yourself">
+<h3>Calling the function yourself.<a class="headerlink" href="#calling-the-function-yourself" title="Permalink to this headline">#</a></h3>
+<p>Finally, call your <code class="docutils literal notranslate"><span class="pre">cube</span></code> function to figure out what <span class="math notranslate nohighlight">\(6.78^3\)</span> is equal to.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mf">5.2</span>  <span class="c1"># Again, feel free to change this number and run the cell again.</span>
-
-<span class="k">if</span> <span class="n">x</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">x</span><span class="o">&lt;=</span><span class="mi">10</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Your input is less than or equal to 10&#39;</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Your input is greater than 10&#39;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">x</span><span class="o">&gt;-</span><span class="mi">10</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;your input is negative and it is greater than -10&#39;</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;your input is less or equal to -10&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cube</span><span class="p">(</span><span class="mf">6.78</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>your input is negative and it is greater than -10
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>311.66575200000005
 </pre></div>
 </div>
 </div>
 </div>
-<p>Is it clear what’s going on here? How will the code walk through all of this? If it’s not clear ask one of us and let’s walk through it together!</p>
-<p>The next section will also take us through some examples at writing and using conditionals.</p>
+</section>
+<section id="final-note">
+<h3>Final note<a class="headerlink" href="#final-note" title="Permalink to this headline">#</a></h3>
+<p>You have now written your first function. Well done!</p>
+<p>I do note that using a function to compute <span class="math notranslate nohighlight">\(x^3\)</span> is probably overkill. You could just type <code class="docutils literal notranslate"><span class="pre">x**3</span></code> directly. However, as we work on more complex examples functions will save us having to write the same block of code repeatedly.</p>
+</section>
+</section>
+<section id="exercise">
+<h2>Exercise<a class="headerlink" href="#exercise" title="Permalink to this headline">#</a></h2>
+<p>Write a function that takes one input <code class="docutils literal notranslate"><span class="pre">x</span></code> and returns <code class="docutils literal notranslate"><span class="pre">x**4</span></code>. <strong>HINT</strong> this should look very similar to the case above!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">quartic</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return the quartic of x&quot;&quot;&quot;</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="o">**</span><span class="mi">4</span>
+    <span class="k">return</span> <span class="n">y</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run this cell to test if your function above works. Change the first line to match the name of your function</span>
+<span class="n">fn_handle</span> <span class="o">=</span> <span class="n">quartic</span>
+
+<span class="n">bbb</span> <span class="o">=</span> <span class="n">fn_handle</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>  <span class="c1"># Call the function with an input value of 4</span>
+<span class="k">assert</span> <span class="p">(</span><span class="n">bbb</span> <span class="o">==</span> <span class="mi">256</span><span class="p">)</span>  <span class="c1"># I&#39;m now checking that bbb is equal to 4**4 = 256. If it isn&#39;t the code will fail.</span>
+                     <span class="c1"># Note that I&#39;m using the comparison operator == from last week. assert is new. This is</span>
+                     <span class="c1"># another built-in function. It raises an error the input value is False, otherwise it does</span>
+                     <span class="c1"># nothing.</span>
+
+<span class="n">bbb2</span> <span class="o">=</span> <span class="n">fn_handle</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span>
+<span class="k">assert</span> <span class="p">(</span><span class="n">bbb2</span> <span class="o">==</span> <span class="mi">81</span><span class="p">)</span>
+
+<span class="n">bbb3</span> <span class="o">=</span> <span class="n">fn_handle</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span>
+<span class="k">assert</span><span class="p">(</span><span class="n">bbb3</span> <span class="o">==</span> <span class="mi">14641</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Congratulations, it looks like your function works!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Congratulations, it looks like your function works!
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id1">
+<h2>Exercise<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+<p>Write a function that takes one input <code class="docutils literal notranslate"><span class="pre">x</span></code> and returns <span class="math notranslate nohighlight">\(x^5 - \frac{x^2}{24.1} + \sqrt{x}\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">exercise3</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return weird math function x**5 - x**2/24.1 + x**0.5&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">5</span> <span class="o">-</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="mf">24.1</span> <span class="o">+</span> <span class="n">x</span><span class="o">**</span><span class="mf">0.5</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run this cell to test if your function above works. Change the first line to match the name of your function</span>
+<span class="n">fn_handle</span> <span class="o">=</span> <span class="n">exercise3</span>
+
+<span class="n">bbb</span> <span class="o">=</span> <span class="n">fn_handle</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>  <span class="c1"># Call the function with an input value of 4</span>
+<span class="k">assert</span> <span class="p">(</span><span class="n">bbb</span> <span class="o">&gt;</span> <span class="mf">1025.336099</span> <span class="ow">and</span> <span class="n">bbb</span> <span class="o">&lt;</span> <span class="mf">1025.336100</span><span class="p">)</span> <span class="c1"># This is a float value, so check approximate value</span>
+
+<span class="n">bbb2</span> <span class="o">=</span> <span class="n">fn_handle</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span>
+<span class="c1"># This one is complex, so more involved checking needed.</span>
+<span class="k">assert</span> <span class="p">(</span><span class="n">bbb2</span><span class="o">.</span><span class="n">real</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mf">243.3735</span> <span class="ow">and</span> <span class="n">bbb2</span><span class="o">.</span><span class="n">real</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mf">243.3734</span> <span class="ow">and</span> <span class="n">bbb2</span><span class="o">.</span><span class="n">imag</span> <span class="o">&gt;</span> <span class="mf">1.732050</span> <span class="ow">and</span> <span class="n">bbb2</span><span class="o">.</span><span class="n">imag</span> <span class="o">&lt;</span> <span class="mf">1.732051</span><span class="p">)</span>
+
+<span class="n">bbb3</span> <span class="o">=</span> <span class="n">fn_handle</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span>
+<span class="k">assert</span><span class="p">(</span><span class="n">bbb3</span> <span class="o">&gt;</span> <span class="mf">161049.29</span> <span class="ow">and</span> <span class="n">bbb3</span> <span class="o">&lt;</span> <span class="mf">161049.30</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Congratulations, it looks like your function works!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Congratulations, it looks like your function works!
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 </section>
 
@@ -846,17 +924,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="8_Logical_Exercises_SOLVED.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="4_Writing_Functions_Exercises.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Logical Operators - Exercises</p>
+            <p class="prev-next-title">Writing Functions - Exercises</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="10_Conditional_Exercises.html" title="next page">
+    <a class='right-next' id="next-link" href="5_Writing_functions_exercises_2.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Conditionals - Exercises</p>
+        <p class="prev-next-title">Writing functions with multiple inputs and outputs</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

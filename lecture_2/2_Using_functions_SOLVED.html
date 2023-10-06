@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Lecture 2: Functions, Logic and Conditionals &#8212; M24568 and M20741 Intro to CompSMAP</title>
+    <title>Using (or “calling”) a function - Interactive &#8212; M24568 and M20741 Intro to CompSMAP</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -50,10 +50,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Functions - An overview" href="1_Functions_overview.html" />
-    <link rel="prev" title="Summary exercises - SOLVED" href="../lecture_1/Summary_exercises_SOLVED.html" />
+    <link rel="next" title="How to write your own function" href="3_Writing_Functions.html" />
+    <link rel="prev" title="Using (or “calling”) a function - Interactive" href="2_Using_functions.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -227,7 +229,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
+  <a class="reference internal" href="overview.html">
    Lecture 2: Functions, Logic and Conditionals
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
@@ -235,7 +237,7 @@ const thebe_selector_output = ".output, .cell_output"
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="1_Functions_overview.html">
      Functions - An overview
@@ -246,8 +248,8 @@ const thebe_selector_output = ".output, .cell_output"
      Using (or “calling”) a function - Interactive
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="2_Using_functions_SOLVED.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Using (or “calling”) a function - Interactive
     </a>
    </li>
@@ -446,6 +448,71 @@ title="Toggle navigation"
         
     </div>
     <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/icg-gravwaves/M24568_M20741_CompSMAP/main?urlpath=lab/tree/lecture_2/2_Using_functions_SOLVED.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://colab.research.google.com/github/icg-gravwaves/M24568_M20741_CompSMAP/blob/main/lecture_2/2_Using_functions_SOLVED.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Colab"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_colab.png">
+  </span>
+<span class="headerbtn__text-container">Colab</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="initThebeSBT()"
+  class="headerbtn headerbtn-launch-thebe"
+  data-toggle="tooltip"
+data-placement="left"
+title="Launch Thebe"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="headerbtn__text-container">Live Code</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
 <button onclick="toggleFullScreen()"
   class="headerbtn"
   data-toggle="tooltip"
@@ -485,7 +552,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/icg-gravwaves/M24568_M20741_CompSMAP/issues/new?title=Issue%20on%20page%20%2Flecture_2/overview.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/icg-gravwaves/M24568_M20741_CompSMAP/issues/new?title=Issue%20on%20page%20%2Flecture_2/2_Using_functions_SOLVED.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -513,7 +580,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/lecture_2/overview.md"
+        <a href="../_sources/lecture_2/2_Using_functions_SOLVED.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -524,7 +591,7 @@ title="Download source file"
 <span class="headerbtn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.md</span>
+<span class="headerbtn__text-container">.ipynb</span>
 </a>
 
       </li>
@@ -573,8 +640,23 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#weekly-tasks">
-   Weekly tasks
+  <a class="reference internal nav-link" href="#exercise">
+   Exercise
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Exercise
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   Exercise
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   Exercise
   </a>
  </li>
 </ul>
@@ -586,7 +668,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Lecture 2: Functions, Logic and Conditionals</h1>
+                <h1>Using (or “calling”) a function - Interactive</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -597,8 +679,23 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#weekly-tasks">
-   Weekly tasks
+  <a class="reference internal nav-link" href="#exercise">
+   Exercise
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Exercise
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   Exercise
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   Exercise
   </a>
  </li>
 </ul>
@@ -611,44 +708,132 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="lecture-2-functions-logic-and-conditionals">
-<h1>Lecture 2: Functions, Logic and Conditionals<a class="headerlink" href="#lecture-2-functions-logic-and-conditionals" title="Permalink to this headline">#</a></h1>
-<p>In Lecture 2 we’ll continue our introduction to python. In particular we
-will teach you</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="using-or-calling-a-function-interactive">
+<h1>Using (or “calling”) a function - Interactive<a class="headerlink" href="#using-or-calling-a-function-interactive" title="Permalink to this headline">#</a></h1>
+<p>You’ve also already used at least one useful function, the <code class="docutils literal notranslate"><span class="pre">print</span></code> function. (Technically <code class="docutils literal notranslate"><span class="pre">range</span></code> is something different, but we’ll explore that later on).</p>
+<p>Another example is <code class="docutils literal notranslate"><span class="pre">abs</span></code>, which gives the absolute value of a number, or the magnitude of a complex number. Give that a try (as this is another interactive notebook, open this in Colab, just like we did last week!)</p>
+<section id="exercise">
+<h2>Exercise<a class="headerlink" href="#exercise" title="Permalink to this headline">#</a></h2>
+<p>What does <code class="docutils literal notranslate"><span class="pre">abs(3)</span></code> give? Try using <code class="docutils literal notranslate"><span class="pre">abs</span></code> on a negative integer, or on a complex number (look back to last week for definition of complex numbers). What does it give?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">abs</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="nb">abs</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">),</span> <span class="nb">abs</span><span class="p">(</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">8</span><span class="n">j</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(3, 3, 8.246211251235321)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id1">
+<h2>Exercise<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+<p>Assign the value of <code class="docutils literal notranslate"><span class="pre">abs(-4)</span></code> to a variable named <code class="docutils literal notranslate"><span class="pre">abs_of_minus_4</span></code>. Then compute the square root of <code class="docutils literal notranslate"><span class="pre">abs_of_minus_4</span></code> and assign this to a new, suitably named variable.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">abs_of_minus_4</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">sqrt_of_abs_of_minus_4</span> <span class="o">=</span> <span class="n">abs_of_minus_4</span><span class="o">**</span><span class="mf">0.5</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sqrt_of_abs_of_minus_4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.0
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id2">
+<h2>Exercise<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h2>
+<p>Another two functions built-in to python are <code class="docutils literal notranslate"><span class="pre">min</span></code> and <code class="docutils literal notranslate"><span class="pre">max</span></code>. These take a number of input argument and return the minimum, or maximum value from among the inputs, respectively. To demonstrate this:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Minimum value out of 4, 1 and 2 is&quot;</span><span class="p">,</span> <span class="nb">min</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Minimum value out of -4, 10 and 12 is&quot;</span><span class="p">,</span> <span class="nb">min</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">12</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Minimum value out of 3.4, 2.1 and 11.9 is&quot;</span><span class="p">,</span> <span class="nb">min</span><span class="p">(</span><span class="mf">3.4</span><span class="p">,</span><span class="mf">2.1</span><span class="p">,</span><span class="mf">11.9</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Maximum value out of 4, 1 and 2 is&quot;</span><span class="p">,</span> <span class="nb">max</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Maximum value out of -4, 10 and 12 is&quot;</span><span class="p">,</span> <span class="nb">max</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">12</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Maximum value out of 3.4, 2.1 and 11.9 is&quot;</span><span class="p">,</span> <span class="nb">max</span><span class="p">(</span><span class="mf">3.4</span><span class="p">,</span><span class="mf">2.1</span><span class="p">,</span><span class="mf">11.9</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Minimum value out of 4, 1 and 2 is 1
+Minimum value out of -4, 10 and 12 is -4
+Minimum value out of 3.4, 2.1 and 11.9 is 2.1
+Maximum value out of 4, 1 and 2 is 4
+Maximum value out of -4, 10 and 12 is 12
+Maximum value out of 3.4, 2.1 and 11.9 is 11.9
+</pre></div>
+</div>
+</div>
+</div>
+<p>Find the minimum values in the following sets of numbers:</p>
 <ul class="simple">
-<li><p>How to write functions to perform particular tasks.</p>
-<ul>
-<li><p><strong>NOTE</strong> All the coursework questions will require you to use functions. Please ask us and/or use the drop-in sessions to get help if you are confused about functions after going through today’s material</p></li>
+<li><p>4, 10 and 100</p></li>
+<li><p>1, 2, 3, 4, 5, 6, 7, 8, 9 and 10</p></li>
+<li><p>-10, -100 and -1000</p></li>
 </ul>
-</li>
-<li><p>How to write conditional statements (“if” and “while” blocks) using python.</p></li>
-<li><p>How to use logical operators (and, not, or) in python.</p></li>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">100</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span><span class="o">-</span><span class="mi">1000</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
+1
+-1000
+</pre></div>
+</div>
+</div>
+</div>
+<p>Find the maximum values from the following sets of numbers:</p>
+<ul class="simple">
+<li><p>1, 1.1 and 1.2</p></li>
+<li><p>9, 10, 11, 12 and 100</p></li>
+<li><p>e, <span class="math notranslate nohighlight">\(\pi\)</span> and 0</p></li>
 </ul>
-<p>The weekly tasks are split up into a series of <em>sequential</em> notebooks. Any of these can be opened below by clicking on them. Some of these are interactive notebooks, where you will run and/or write code in the cells. To open any of the notebooks interactively, first click on the section, then click on the rocket and select “Colab”.</p>
-<section id="weekly-tasks">
-<h2>Weekly tasks<a class="headerlink" href="#weekly-tasks" title="Permalink to this headline">#</a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="1_Functions_overview.html">Functions - An overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="2_Using_functions.html">Using (or “calling”) a function - Interactive</a></li>
-<li class="toctree-l1"><a class="reference internal" href="2_Using_functions_SOLVED.html">Using (or “calling”) a function - Interactive</a></li>
-<li class="toctree-l1"><a class="reference internal" href="3_Writing_Functions.html">How to write your own function</a></li>
-<li class="toctree-l1"><a class="reference internal" href="4_Writing_Functions_Exercises.html">Writing Functions - Exercises</a></li>
-<li class="toctree-l1"><a class="reference internal" href="4_Writing_Functions_Exercises_SOLVED.html">Writing Functions - Exercises</a></li>
-<li class="toctree-l1"><a class="reference internal" href="5_Writing_functions_exercises_2.html">Writing functions with multiple inputs and outputs</a></li>
-<li class="toctree-l1"><a class="reference internal" href="5_Writing_functions_exercises_2_SOLVED.html">Writing functions with multiple inputs and outputs</a></li>
-<li class="toctree-l1"><a class="reference internal" href="6_Importing_functions.html">Importing a function</a></li>
-<li class="toctree-l1"><a class="reference internal" href="6a_Function_Failures.html">The most common reasons people use functions wrong and don’t pass coursework questions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="7_Logical_operators.html">Logical operators</a></li>
-<li class="toctree-l1"><a class="reference internal" href="8_Logical_Exercises.html">Logical Operators - Exercises</a></li>
-<li class="toctree-l1"><a class="reference internal" href="8_Logical_Exercises_SOLVED.html">Logical Operators - Exercises</a></li>
-<li class="toctree-l1"><a class="reference internal" href="9_Conditionals.html">Conditional statements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="10_Conditional_Exercises.html">Conditionals - Exercises</a></li>
-<li class="toctree-l1"><a class="reference internal" href="10_Conditional_Exercises_SOLVED.html">Conditionals - Exercises</a></li>
-<li class="toctree-l1"><a class="reference internal" href="11_Summary.html">Summary</a></li>
-<li class="toctree-l1"><a class="reference internal" href="12_Summary_Exercises.html">End of class exercises</a></li>
-<li class="toctree-l1"><a class="reference internal" href="12_Summary_Exercises_SOLVED.html">End of class exercises</a></li>
-</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mf">1.1</span><span class="p">,</span><span class="mf">1.2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">100</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="mf">2.7</span><span class="p">,</span> <span class="mf">3.1</span><span class="p">,</span><span class="mi">0</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.2
+100
+3.1
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id3">
+<h2>Exercise<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h2>
+<p>You’ve also used <code class="docutils literal notranslate"><span class="pre">print</span></code> already. You can use this to print many values. For example try doing <code class="docutils literal notranslate"><span class="pre">print(1,2,3)</span></code>. Or to make this fancy. <code class="docutils literal notranslate"><span class="pre">print(f&quot;My</span> <span class="pre">3</span> <span class="pre">values</span> <span class="pre">are</span> <span class="pre">{1},</span> <span class="pre">{2}</span> <span class="pre">and</span> <span class="pre">{3}&quot;</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fav_num1</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">fav_num2</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">fav_num3</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;My 3 favourite numbers are </span><span class="si">{</span><span class="n">fav_num1</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">fav_num2</span><span class="si">}</span><span class="s2"> and </span><span class="si">{</span><span class="n">fav_num3</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>My 3 favourite numbers are 10, 20 and 30
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 </section>
@@ -680,17 +865,17 @@ will teach you</p>
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../lecture_1/Summary_exercises_SOLVED.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="2_Using_functions.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Summary exercises - SOLVED</p>
+            <p class="prev-next-title">Using (or “calling”) a function - Interactive</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="1_Functions_overview.html" title="next page">
+    <a class='right-next' id="next-link" href="3_Writing_Functions.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Functions - An overview</p>
+        <p class="prev-next-title">How to write your own function</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
