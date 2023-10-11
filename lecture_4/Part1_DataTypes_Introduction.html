@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Computational SMAP &#8212; M24568 and M20741 Intro to CompSMAP</title>
+    <title>The File object: A brief introduction &#8212; M24568 and M20741 Intro to CompSMAP</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,7 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Computational SMAP" href="Part2_DataTypes_tuple_set_dictionary.html" />
+    <link rel="next" title="Introducing tuples, sets and dictionaries" href="Part2_DataTypes_tuple_set_dictionary.html" />
     <link rel="prev" title="Lecture 4: Data types" href="overview.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -407,27 +407,27 @@ const thebe_selector_output = ".output, .cell_output"
   <ul class="current">
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Computational SMAP
+     The File object: A brief introduction
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Part2_DataTypes_tuple_set_dictionary.html">
-     Computational SMAP
+     Introducing tuples, sets and dictionaries
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Part3_DataTypes_13_14.html">
-     Computational SMAP
+    <a class="reference internal" href="Part3_DataTypes_further_exercises.html">
+     Further exercises on sets, tuples and dictionaries
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Part4_DataTypes_challenge_exercises.html">
-     Computational SMAP
+     Challenge exercises
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Part5_DataTypes_further_exercises.html">
-     Computational SMAP
+    <a class="reference internal" href="Part5_DataTypes_13_14.html">
+     Additional resources
     </a>
    </li>
   </ul>
@@ -652,84 +652,23 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Computational SMAP
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#lecture-4-delving-deeper-into-data-types">
-     Lecture 4 - Delving deeper into data types
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-file-object-a-brief-introduction">
-   1. The File object: A brief introduction
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Computational SMAP</h1>
+                <h1>The File object: A brief introduction</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Computational SMAP
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#lecture-4-delving-deeper-into-data-types">
-     Lecture 4 - Delving deeper into data types
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-file-object-a-brief-introduction">
-   1. The File object: A brief introduction
-  </a>
- </li>
-</ul>
-
-                        </nav>
                     </div>
                 </div>
             </div>
@@ -737,23 +676,8 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="computational-smap">
-<h1>Computational SMAP<a class="headerlink" href="#computational-smap" title="Permalink to this headline">#</a></h1>
-<section id="lecture-4-delving-deeper-into-data-types">
-<h2>Lecture 4 - Delving deeper into data types<a class="headerlink" href="#lecture-4-delving-deeper-into-data-types" title="Permalink to this headline">#</a></h2>
-<p>In this lecture, we’ll continue to introduce you to some of the critical components of the python language. Lists, tuples, dictionaries and sets are all important in their own way and knowing when to use these various types is important.</p>
-<p>We’ll also introduce the <code class="docutils literal notranslate"><span class="pre">File</span></code> object, used for reading/writing information to file.</p>
-<p>OUTLINE:</p>
-<ol class="simple">
-<li><p>The file object</p></li>
-<li><p>Tuples</p></li>
-<li><p>Sets</p></li>
-<li><p>Dictionaries</p></li>
-</ol>
-</section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="the-file-object-a-brief-introduction">
-<h1>1. The File object: A brief introduction<a class="headerlink" href="#the-file-object-a-brief-introduction" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="the-file-object-a-brief-introduction">
+<h1>The File object: A brief introduction<a class="headerlink" href="#the-file-object-a-brief-introduction" title="Permalink to this headline">#</a></h1>
 <p>Python uses a <code class="docutils literal notranslate"><span class="pre">File</span></code> object to enable you to read and write data from a file. Here’s a short example of this:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -870,7 +794,7 @@ World
     <a class='right-next' id="next-link" href="Part2_DataTypes_tuple_set_dictionary.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Computational SMAP</p>
+        <p class="prev-next-title">Introducing tuples, sets and dictionaries</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
