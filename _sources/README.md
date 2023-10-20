@@ -18,3 +18,4 @@ Follow the links below, or the links on the side, to access individual lectures'
 * [Lecture 1: Introduction](lecture_1/overview.md)
 * [Lecture 2: Functions, Logic and Conditionals](lecture_2/overview.md)
 * [Lecture 3: Loops and Lists](lecture_3/overview.md)
+* [Lecture 4: Data Types](lecture_4/overview.md)
