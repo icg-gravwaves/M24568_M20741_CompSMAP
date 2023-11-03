@@ -50,8 +50,6 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -872,116 +870,105 @@ title="Print to PDF"
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Introduction to plotting in matplotlib
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#making-a-basic-plot-in-python-with-matplotlib">
+   Making a basic plot in python with matplotlib
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#making-a-basic-plot-in-python-with-matplotlib">
-     Making a basic plot in python with matplotlib
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#adding-axis-labels-titles-and-legends">
-     Adding axis labels, titles and legends
-    </a>
-   </li>
-  </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#adding-axis-labels-titles-and-legends">
+   Adding axis labels, titles and legends
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercise-0-1">
    Exercise 0.1
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercise-0-2">
    Exercise 0.2
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#line-formatting">
-     Line formatting
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercise-0-3">
-     Exercise 0.3
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercise-0-4">
-     Exercise 0.4
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#scatter-plots">
-     Scatter plots
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercise-0-5">
-     Exercise 0.5
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercise-0-6">
-     <strong>
-      Exercise 0.6
-     </strong>
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercise-0-7">
-     <strong>
-      Exercise 0.7
-     </strong>
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#histograms">
-     Histograms
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#using-histograms-to-explore-data">
-     Using histograms to explore data
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercise-0-8">
-     <strong>
-      Exercise 0.8
-     </strong>
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercise-0-9">
-     <strong>
-      Exercise 0.9
-     </strong>
-    </a>
-   </li>
-  </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#line-formatting">
+   Line formatting
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-0-3">
+   Exercise 0.3
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-0-4">
+   Exercise 0.4
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#scatter-plots">
+   Scatter plots
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-0-5">
+   Exercise 0.5
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-0-6">
+   <strong>
+    Exercise 0.6
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-0-7">
+   <strong>
+    Exercise 0.7
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#histograms">
+   Histograms
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#using-histograms-to-explore-data">
+   Using histograms to explore data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-0-8">
+   <strong>
+    Exercise 0.8
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-0-9">
+   <strong>
+    Exercise 0.9
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercise-0-10">
    <strong>
     Exercise 0.10
    </strong>
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-figure-environment">
-     The figure environment
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercise-0-11-putting-this-all-together">
-     Exercise 0.11: putting this all together
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-figure-environment">
+   The figure environment
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-0-11-putting-this-all-together">
+   Exercise 0.11: putting this all together
+  </a>
  </li>
 </ul>
 
@@ -1002,116 +989,105 @@ title="Print to PDF"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Introduction to plotting in matplotlib
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#making-a-basic-plot-in-python-with-matplotlib">
+   Making a basic plot in python with matplotlib
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#making-a-basic-plot-in-python-with-matplotlib">
-     Making a basic plot in python with matplotlib
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#adding-axis-labels-titles-and-legends">
-     Adding axis labels, titles and legends
-    </a>
-   </li>
-  </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#adding-axis-labels-titles-and-legends">
+   Adding axis labels, titles and legends
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercise-0-1">
    Exercise 0.1
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercise-0-2">
    Exercise 0.2
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#line-formatting">
-     Line formatting
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercise-0-3">
-     Exercise 0.3
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercise-0-4">
-     Exercise 0.4
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#scatter-plots">
-     Scatter plots
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercise-0-5">
-     Exercise 0.5
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercise-0-6">
-     <strong>
-      Exercise 0.6
-     </strong>
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercise-0-7">
-     <strong>
-      Exercise 0.7
-     </strong>
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#histograms">
-     Histograms
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#using-histograms-to-explore-data">
-     Using histograms to explore data
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercise-0-8">
-     <strong>
-      Exercise 0.8
-     </strong>
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercise-0-9">
-     <strong>
-      Exercise 0.9
-     </strong>
-    </a>
-   </li>
-  </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#line-formatting">
+   Line formatting
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-0-3">
+   Exercise 0.3
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-0-4">
+   Exercise 0.4
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#scatter-plots">
+   Scatter plots
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-0-5">
+   Exercise 0.5
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-0-6">
+   <strong>
+    Exercise 0.6
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-0-7">
+   <strong>
+    Exercise 0.7
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#histograms">
+   Histograms
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#using-histograms-to-explore-data">
+   Using histograms to explore data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-0-8">
+   <strong>
+    Exercise 0.8
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-0-9">
+   <strong>
+    Exercise 0.9
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercise-0-10">
    <strong>
     Exercise 0.10
    </strong>
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-figure-environment">
-     The figure environment
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercise-0-11-putting-this-all-together">
-     Exercise 0.11: putting this all together
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-figure-environment">
+   The figure environment
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-0-11-putting-this-all-together">
+   Exercise 0.11: putting this all together
+  </a>
  </li>
 </ul>
 
@@ -1214,9 +1190,8 @@ title="Print to PDF"
 </pre></div>
 </div>
 </section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="exercise-0-1">
-<h1>Exercise 0.1<a class="headerlink" href="#exercise-0-1" title="Permalink to this headline">#</a></h1>
+<section id="exercise-0-1">
+<h2>Exercise 0.1<a class="headerlink" href="#exercise-0-1" title="Permalink to this headline">#</a></h2>
 <p>Reproduce the plot showing <span class="math notranslate nohighlight">\(f(x) = \sin{x}\)</span> and <span class="math notranslate nohighlight">\(f(x) = \tan{x}\)</span>, adding the required lines, axis labels, a title and a plot legend. In this plot, <span class="math notranslate nohighlight">\(f(x)\)</span> should be plotted on the <span class="math notranslate nohighlight">\(y\)</span>-axis (ordinate-axis), and <span class="math notranslate nohighlight">\(x\)</span> on the <span class="math notranslate nohighlight">\(x\)</span>-axis (abscissa).</p>
 <p>Unfortunately the range of tan(x) is much larger than sin(x) and we can’t see the latter! A grid may also help us explore the behaviour of the two functions in more detail.</p>
 <p>We can remove some of the white space around the plot using <code class="docutils literal notranslate"><span class="pre">plt.ylim(lower</span> <span class="pre">limit,</span> <span class="pre">upper</span> <span class="pre">limit)</span></code>:</p>
@@ -1230,9 +1205,10 @@ title="Print to PDF"
 </pre></div>
 </div>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="exercise-0-2">
-<h1>Exercise 0.2<a class="headerlink" href="#exercise-0-2" title="Permalink to this headline">#</a></h1>
+<section id="exercise-0-2">
+<h2>Exercise 0.2<a class="headerlink" href="#exercise-0-2" title="Permalink to this headline">#</a></h2>
 <p>Remake your plot from exercise 0.1, setting the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> axis limits to more sensible values such that the behaviour of both <span class="math notranslate nohighlight">\(\tan{x}\)</span> and <span class="math notranslate nohighlight">\(\sin{x}\)</span> can be seen. It may be useful to use the <code class="docutils literal notranslate"><span class="pre">max()</span></code> and <code class="docutils literal notranslate"><span class="pre">min()</span></code> commands to explore the behaviour of <span class="math notranslate nohighlight">\(\sin{x}\)</span> and identify an appropriate range for the ordinate (<span class="math notranslate nohighlight">\(y\)</span>) axis.</p>
+</section>
 <section id="line-formatting">
 <h2>Line formatting<a class="headerlink" href="#line-formatting" title="Permalink to this headline">#</a></h2>
 <p>You might want lines that are different colours to the default <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> colour scheme, or use a different line style. Different line styles and colours are often needed to separate datasets or functions that have been plotted on the same set of axes. These can be adjusted by adding formatting strings to the plot command:</p>
@@ -1314,7 +1290,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x12ea9d1c0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x120af9250&gt;
 </pre></div>
 </div>
 <img alt="../_images/Part01_Introduction_to_Plotting_22_1.png" src="../_images/Part01_Introduction_to_Plotting_22_1.png" />
@@ -1614,11 +1590,11 @@ title="Print to PDF"
 <li><p>Save each of these plots.</p></li>
 </ol>
 </section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="exercise-0-10">
-<h1><strong>Exercise 0.10</strong><a class="headerlink" href="#exercise-0-10" title="Permalink to this headline">#</a></h1>
+<section id="exercise-0-10">
+<h2><strong>Exercise 0.10</strong><a class="headerlink" href="#exercise-0-10" title="Permalink to this headline">#</a></h2>
 <p>You may have noticed that some of the exam results are over 100. Given these results are percentages, these results need to be flagged.</p>
 <p>Write a function that takes the exam results array as an input, and returns the student ID and subject for any incorrect marks. You can write this function using a numerical method of your choice (i.e. we don’t mind how you code this, use a method that makes sense to you).</p>
+</section>
 <section id="the-figure-environment">
 <h2>The figure environment<a class="headerlink" href="#the-figure-environment" title="Permalink to this headline">#</a></h2>
 <p>So far, we have mainly made use of the <code class="docutils literal notranslate"><span class="pre">plt</span></code> command to make simple plots. This is a very quick, convenient method of plotting, but doesn’t always produce the nicest looking results.</p>
