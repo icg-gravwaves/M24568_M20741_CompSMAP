@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Lecture 5: Numpy &#8212; M24568 and M20741 Intro to CompSMAP</title>
+    <title>Using particular axis of an array - SOLVED &#8212; M24568 and M20741 Intro to CompSMAP</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,8 +54,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Introduction" href="Part01_numpy_introduction.html" />
-    <link rel="prev" title="Additional resources" href="../lecture_4/Part5_DataTypes_13_14.html" />
+    <link rel="next" title="Summary Exercises" href="Part09_numpy_summary_exercises.html" />
+    <link rel="prev" title="Using a particular axis of an array" href="Part08_numpy_array_axes.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -500,7 +500,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
+  <a class="reference internal" href="overview.html">
    Lecture 5: Numpy
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
@@ -508,7 +508,7 @@ const thebe_selector_output = ".output, .cell_output"
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="Part01_numpy_introduction.html">
      Introduction
@@ -584,8 +584,8 @@ const thebe_selector_output = ".output, .cell_output"
      Using a particular axis of an array
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Part08_numpy_array_axes_solutions.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Using particular axis of an array - SOLVED
     </a>
    </li>
@@ -679,6 +679,71 @@ title="Toggle navigation"
         
     </div>
     <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/icg-gravwaves/M24568_M20741_CompSMAP/main?urlpath=lab/tree/lecture_5/Part08_numpy_array_axes_solutions.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://colab.research.google.com/github/icg-gravwaves/M24568_M20741_CompSMAP/blob/main/lecture_5/Part08_numpy_array_axes_solutions.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Colab"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_colab.png">
+  </span>
+<span class="headerbtn__text-container">Colab</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="initThebeSBT()"
+  class="headerbtn headerbtn-launch-thebe"
+  data-toggle="tooltip"
+data-placement="left"
+title="Launch Thebe"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="headerbtn__text-container">Live Code</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
 <button onclick="toggleFullScreen()"
   class="headerbtn"
   data-toggle="tooltip"
@@ -718,7 +783,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/icg-gravwaves/M24568_M20741_CompSMAP/issues/new?title=Issue%20on%20page%20%2Flecture_5/overview.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/icg-gravwaves/M24568_M20741_CompSMAP/issues/new?title=Issue%20on%20page%20%2Flecture_5/Part08_numpy_array_axes_solutions.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -746,7 +811,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/lecture_5/overview.md"
+        <a href="../_sources/lecture_5/Part08_numpy_array_axes_solutions.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -757,7 +822,7 @@ title="Download source file"
 <span class="headerbtn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.md</span>
+<span class="headerbtn__text-container">.ipynb</span>
 </a>
 
       </li>
@@ -806,8 +871,8 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#weekly-tasks">
-   Weekly tasks
+  <a class="reference internal nav-link" href="#exercise-7-1">
+   Exercise 7.1
   </a>
  </li>
 </ul>
@@ -819,7 +884,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Lecture 5: Numpy</h1>
+                <h1>Using particular axis of an array - SOLVED</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -830,8 +895,8 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#weekly-tasks">
-   Weekly tasks
+  <a class="reference internal nav-link" href="#exercise-7-1">
+   Exercise 7.1
   </a>
  </li>
 </ul>
@@ -844,45 +909,83 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="lecture-5-numpy">
-<h1>Lecture 5: Numpy<a class="headerlink" href="#lecture-5-numpy" title="Permalink to this headline">#</a></h1>
-<p>In this lecture, we will introduce you to the numerical Python library <code class="docutils literal notranslate"><span class="pre">numpy</span></code>. Numpy is used almost in every field of science and engineering. This library provides the universal standard for working with numerical data in Python, and it also the essential scientific tool.</p>
-<ol class="simple">
-<li><p>How to create basic arrays</p></li>
-<li><p>Basic array operations</p></li>
-<li><p>Indices and slicing.</p></li>
-<li><p>Iterating over a numpy array</p></li>
-<li><p>Sorting, adding and removing elements of an array</p></li>
-<li><p>Broadcasting.</p></li>
-<li><p>Using a particular axis.</p></li>
-<li><p>Summary Exercises.</p></li>
-</ol>
-<p>The weekly tasks are split up into a series of <em>sequential</em> notebooks. Any of these can be opened below by clicking on them. The first 4 notebooks are all interactive notebooks, where you will run and/or write code in the cells. To open any of the notebooks interactively, first click on the section, then click on the rocket and select “Colab”.</p>
-<section id="weekly-tasks">
-<h2>Weekly tasks<a class="headerlink" href="#weekly-tasks" title="Permalink to this headline">#</a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="Part01_numpy_introduction.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Part01_numpy_introduction_solution.html">Introduction - SOLVED</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Part02_numpy_basic_arrays.html">How to create basic arrays</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Part02_numpy_basic_arrays_solutions.html">How to create basic arrays - SOLVED</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Part03_numpy_array_operations.html">Basic array operations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Part03_numpy_array_operations_solutions.html">Basic array operations - SOLVED</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Part04_numpy_indexing_slicing.html">Indexing and Slicing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Part04_numpy_indexing_slicing_solution.html">Indexing and Slicing - SOLVED</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Part05_numpy_iterating.html">Iterating over an numpy array</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Part05_numpy_iterating_solutions.html">Iterating over an numpy array - SOLVED</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Part06_numpy_sorting_arrays.html">Sorting, adding and removing elements from an array</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Part06_numpy_sorting_arrays_solutions.html">Sorting, adding and removing elements from an array - SOLVED</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Part07_numpy_broadcasting.html">Broadcasting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Part07_numpy_broadcasting_solutions.html">Broadcasting - SOLVED</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Part08_numpy_array_axes.html">Using a particular axis of an array</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Part08_numpy_array_axes_solutions.html">Using particular axis of an array - SOLVED</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Part09_numpy_summary_exercises.html">Summary Exercises</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Part09_numpy_summary_exercises.html#external-links-to-other-numpy-tutorials">External links to other numpy tutorials</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Part09_numpy_summary_exercises_solution.html">Summary Exercises - SOLVED</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Part09_numpy_summary_exercises_solution.html#external-links-to-other-numpy-tutorials">External links to other numpy tutorials</a></li>
+  <section class="tex2jax_ignore mathjax_ignore" id="using-particular-axis-of-an-array-solved">
+<h1>Using particular axis of an array - SOLVED<a class="headerlink" href="#using-particular-axis-of-an-array-solved" title="Permalink to this headline">#</a></h1>
+<p>Many numpy functions comes with an extra argument <code class="docutils literal notranslate"><span class="pre">axis</span></code> this allow you to perform them only with respect to a specified axis. The numbering of <code class="docutils literal notranslate"><span class="pre">axis</span></code> starts with <code class="docutils literal notranslate"><span class="pre">0</span></code>. So a two dimensional array has two axis, <code class="docutils literal notranslate"><span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span> <span class="c1">#Run this cell or none of the np commands will work</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">example_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">]])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The regular sum is&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">example_array</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The sum with respect to axis=0 is&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">example_array</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The sum with respect to axis=1 is&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">example_array</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The regular sum is
+24
+The sum with respect to axis=0 is
+[ 6  8 10]
+The sum with respect to axis=1 is
+[ 6 18]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">array1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
+<span class="n">array2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">array1</span><span class="p">,</span> <span class="n">array2</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[1 2]
+ [3 4]
+ [5 6]]
+</pre></div>
+</div>
+</div>
+</div>
+<section id="exercise-7-1">
+<h2>Exercise 7.1<a class="headerlink" href="#exercise-7-1" title="Permalink to this headline">#</a></h2>
+<p>Write a function that has one input</p>
+<ul class="simple">
+<li><p>a two dimensional numpy array.</p></li>
 </ul>
+<p>You function should calculate the mean of every row of the input array, and return the largest mean.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">largest_mean</span><span class="p">(</span><span class="n">arr1</span><span class="p">):</span>
+  <span class="n">mean_vals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">arr1</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+  <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">mean_vals</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">input_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">]])</span>
+<span class="n">largest_mean</span><span class="p">(</span><span class="n">input_matrix</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6.0
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 </section>
@@ -914,17 +1017,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../lecture_4/Part5_DataTypes_13_14.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="Part08_numpy_array_axes.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Additional resources</p>
+            <p class="prev-next-title">Using a particular axis of an array</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="Part01_numpy_introduction.html" title="next page">
+    <a class='right-next' id="next-link" href="Part09_numpy_summary_exercises.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Introduction</p>
+        <p class="prev-next-title">Summary Exercises</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

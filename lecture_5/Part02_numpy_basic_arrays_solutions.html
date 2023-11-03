@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Lecture 5: Numpy &#8212; M24568 and M20741 Intro to CompSMAP</title>
+    <title>How to create basic arrays - SOLVED &#8212; M24568 and M20741 Intro to CompSMAP</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,10 +52,12 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Introduction" href="Part01_numpy_introduction.html" />
-    <link rel="prev" title="Additional resources" href="../lecture_4/Part5_DataTypes_13_14.html" />
+    <link rel="next" title="Basic array operations" href="Part03_numpy_array_operations.html" />
+    <link rel="prev" title="How to create basic arrays" href="Part02_numpy_basic_arrays.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -500,7 +502,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
+  <a class="reference internal" href="overview.html">
    Lecture 5: Numpy
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
@@ -508,7 +510,7 @@ const thebe_selector_output = ".output, .cell_output"
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="Part01_numpy_introduction.html">
      Introduction
@@ -524,8 +526,8 @@ const thebe_selector_output = ".output, .cell_output"
      How to create basic arrays
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Part02_numpy_basic_arrays_solutions.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      How to create basic arrays - SOLVED
     </a>
    </li>
@@ -679,6 +681,71 @@ title="Toggle navigation"
         
     </div>
     <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/icg-gravwaves/M24568_M20741_CompSMAP/main?urlpath=lab/tree/lecture_5/Part02_numpy_basic_arrays_solutions.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://colab.research.google.com/github/icg-gravwaves/M24568_M20741_CompSMAP/blob/main/lecture_5/Part02_numpy_basic_arrays_solutions.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Colab"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_colab.png">
+  </span>
+<span class="headerbtn__text-container">Colab</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="initThebeSBT()"
+  class="headerbtn headerbtn-launch-thebe"
+  data-toggle="tooltip"
+data-placement="left"
+title="Launch Thebe"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="headerbtn__text-container">Live Code</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
 <button onclick="toggleFullScreen()"
   class="headerbtn"
   data-toggle="tooltip"
@@ -718,7 +785,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/icg-gravwaves/M24568_M20741_CompSMAP/issues/new?title=Issue%20on%20page%20%2Flecture_5/overview.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/icg-gravwaves/M24568_M20741_CompSMAP/issues/new?title=Issue%20on%20page%20%2Flecture_5/Part02_numpy_basic_arrays_solutions.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -746,7 +813,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/lecture_5/overview.md"
+        <a href="../_sources/lecture_5/Part02_numpy_basic_arrays_solutions.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -757,7 +824,7 @@ title="Download source file"
 <span class="headerbtn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.md</span>
+<span class="headerbtn__text-container">.ipynb</span>
 </a>
 
       </li>
@@ -806,9 +873,72 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#weekly-tasks">
-   Weekly tasks
+  <a class="reference internal nav-link" href="#exercise-1-1">
+   Exercise 1.1
   </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-1-2">
+   Exercise 1.2
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-1-3">
+   Exercise 1.3
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ranging-values">
+     Ranging values
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-1-4">
+   Exercise 1.4
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-1-5">
+   Exercise 1.5
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#linear-space">
+     Linear space
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-1-6">
+   Exercise 1.6
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#differences-and-similarities-between-arange-and-linspace">
+   Differences and similarities between
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     arange
+    </span>
+   </code>
+   and
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     linspace
+    </span>
+   </code>
+   .
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#caution">
+     Caution
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -819,7 +949,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Lecture 5: Numpy</h1>
+                <h1>How to create basic arrays - SOLVED</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -830,9 +960,72 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#weekly-tasks">
-   Weekly tasks
+  <a class="reference internal nav-link" href="#exercise-1-1">
+   Exercise 1.1
   </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-1-2">
+   Exercise 1.2
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-1-3">
+   Exercise 1.3
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ranging-values">
+     Ranging values
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-1-4">
+   Exercise 1.4
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-1-5">
+   Exercise 1.5
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#linear-space">
+     Linear space
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-1-6">
+   Exercise 1.6
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#differences-and-similarities-between-arange-and-linspace">
+   Differences and similarities between
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     arange
+    </span>
+   </code>
+   and
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     linspace
+    </span>
+   </code>
+   .
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#caution">
+     Caution
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -844,46 +1037,278 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="lecture-5-numpy">
-<h1>Lecture 5: Numpy<a class="headerlink" href="#lecture-5-numpy" title="Permalink to this headline">#</a></h1>
-<p>In this lecture, we will introduce you to the numerical Python library <code class="docutils literal notranslate"><span class="pre">numpy</span></code>. Numpy is used almost in every field of science and engineering. This library provides the universal standard for working with numerical data in Python, and it also the essential scientific tool.</p>
-<ol class="simple">
-<li><p>How to create basic arrays</p></li>
-<li><p>Basic array operations</p></li>
-<li><p>Indices and slicing.</p></li>
-<li><p>Iterating over a numpy array</p></li>
-<li><p>Sorting, adding and removing elements of an array</p></li>
-<li><p>Broadcasting.</p></li>
-<li><p>Using a particular axis.</p></li>
-<li><p>Summary Exercises.</p></li>
-</ol>
-<p>The weekly tasks are split up into a series of <em>sequential</em> notebooks. Any of these can be opened below by clicking on them. The first 4 notebooks are all interactive notebooks, where you will run and/or write code in the cells. To open any of the notebooks interactively, first click on the section, then click on the rocket and select “Colab”.</p>
-<section id="weekly-tasks">
-<h2>Weekly tasks<a class="headerlink" href="#weekly-tasks" title="Permalink to this headline">#</a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="Part01_numpy_introduction.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Part01_numpy_introduction_solution.html">Introduction - SOLVED</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Part02_numpy_basic_arrays.html">How to create basic arrays</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Part02_numpy_basic_arrays_solutions.html">How to create basic arrays - SOLVED</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Part03_numpy_array_operations.html">Basic array operations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Part03_numpy_array_operations_solutions.html">Basic array operations - SOLVED</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Part04_numpy_indexing_slicing.html">Indexing and Slicing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Part04_numpy_indexing_slicing_solution.html">Indexing and Slicing - SOLVED</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Part05_numpy_iterating.html">Iterating over an numpy array</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Part05_numpy_iterating_solutions.html">Iterating over an numpy array - SOLVED</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Part06_numpy_sorting_arrays.html">Sorting, adding and removing elements from an array</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Part06_numpy_sorting_arrays_solutions.html">Sorting, adding and removing elements from an array - SOLVED</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Part07_numpy_broadcasting.html">Broadcasting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Part07_numpy_broadcasting_solutions.html">Broadcasting - SOLVED</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Part08_numpy_array_axes.html">Using a particular axis of an array</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Part08_numpy_array_axes_solutions.html">Using particular axis of an array - SOLVED</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Part09_numpy_summary_exercises.html">Summary Exercises</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Part09_numpy_summary_exercises.html#external-links-to-other-numpy-tutorials">External links to other numpy tutorials</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Part09_numpy_summary_exercises_solution.html">Summary Exercises - SOLVED</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Part09_numpy_summary_exercises_solution.html#external-links-to-other-numpy-tutorials">External links to other numpy tutorials</a></li>
-</ul>
+  <section class="tex2jax_ignore mathjax_ignore" id="how-to-create-basic-arrays-solved">
+<h1>How to create basic arrays - SOLVED<a class="headerlink" href="#how-to-create-basic-arrays-solved" title="Permalink to this headline">#</a></h1>
+<p>To create an array of a specified number of zeros we use:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span> <span class="c1"># Run this cell or the numpy commands won&#39;t run</span>
+</pre></div>
 </div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">array_of_zeros</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">array_of_zeros</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0. 0. 0. 0. 0.]
+</pre></div>
+</div>
+</div>
+</div>
+<section id="exercise-1-1">
+<h2>Exercise 1.1<a class="headerlink" href="#exercise-1-1" title="Permalink to this headline">#</a></h2>
+<p>In the cell below create a numpy array that is filled with 50 zeros. Then print it.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">array_zeros_2</span> <span class="o">=</span>  <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">array_zeros_2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0.]
+</pre></div>
+</div>
+</div>
+</div>
+<p>To create an array of a specified number of ones we use:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">m</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="n">array_of_ones</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">array_of_ones</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1. 1. 1. 1. 1. 1.]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="exercise-1-2">
+<h2>Exercise 1.2<a class="headerlink" href="#exercise-1-2" title="Permalink to this headline">#</a></h2>
+<p>In the cell below create a numpy array that is filled with 65 ones. Then print it.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">array_ones_2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">65</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">array_ones_2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.]
+</pre></div>
+</div>
+</div>
+</div>
+<p>To create an array of a specified number of some other value we use:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">r</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="n">value</span> <span class="o">=</span> <span class="mf">2.</span>
+<span class="n">array_of_same_val</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">full</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">array_of_same_val</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[2. 2. 2. 2. 2. 2. 2.]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Note that the first argument of <code class="docutils literal notranslate"><span class="pre">np.full</span></code> is its shape, and the second argument is the value that we wish to fill.</p>
+</section>
+<section id="exercise-1-3">
+<h2>Exercise 1.3<a class="headerlink" href="#exercise-1-3" title="Permalink to this headline">#</a></h2>
+<p>In the cell below create a numpy array that is filled with 40 occurences of a string “I’m only a clone”.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">40</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;I am only a clone&quot;</span>
+<span class="n">clone_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">full</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">s</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">clone_array</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;I am only a clone&#39; &#39;I am only a clone&#39; &#39;I am only a clone&#39;
+ &#39;I am only a clone&#39; &#39;I am only a clone&#39; &#39;I am only a clone&#39;
+ &#39;I am only a clone&#39; &#39;I am only a clone&#39; &#39;I am only a clone&#39;
+ &#39;I am only a clone&#39; &#39;I am only a clone&#39; &#39;I am only a clone&#39;
+ &#39;I am only a clone&#39; &#39;I am only a clone&#39; &#39;I am only a clone&#39;
+ &#39;I am only a clone&#39; &#39;I am only a clone&#39; &#39;I am only a clone&#39;
+ &#39;I am only a clone&#39; &#39;I am only a clone&#39; &#39;I am only a clone&#39;
+ &#39;I am only a clone&#39; &#39;I am only a clone&#39; &#39;I am only a clone&#39;
+ &#39;I am only a clone&#39; &#39;I am only a clone&#39; &#39;I am only a clone&#39;
+ &#39;I am only a clone&#39; &#39;I am only a clone&#39; &#39;I am only a clone&#39;
+ &#39;I am only a clone&#39; &#39;I am only a clone&#39; &#39;I am only a clone&#39;
+ &#39;I am only a clone&#39; &#39;I am only a clone&#39; &#39;I am only a clone&#39;
+ &#39;I am only a clone&#39; &#39;I am only a clone&#39; &#39;I am only a clone&#39;
+ &#39;I am only a clone&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<section id="ranging-values">
+<h3>Ranging values<a class="headerlink" href="#ranging-values" title="Permalink to this headline">#</a></h3>
+<p>To create an array with elements to match the <code class="docutils literal notranslate"><span class="pre">range</span></code> function, so that we specify the start, stop and the step we use:</p>
+<p><code class="docutils literal notranslate"><span class="pre">np.arange(start,</span> <span class="pre">stop,</span> <span class="pre">step)</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">start</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">stop</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">step</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">stop</span><span class="p">,</span> <span class="n">step</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[5 7 9]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="exercise-1-4">
+<h2>Exercise 1.4<a class="headerlink" href="#exercise-1-4" title="Permalink to this headline">#</a></h2>
+<p>In the cell below create an array of consecutive 50 integers, starting from 100 (ie, [100,101,102, 103, …]. Use the np.arange function, not range. Then print the resulting array.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">start</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">stop</span> <span class="o">=</span> <span class="mi">150</span>
+<span class="n">step</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">start</span><span class="p">,</span><span class="n">stop</span><span class="p">,</span><span class="n">step</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117
+ 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135
+ 136 137 138 139 140 141 142 143 144 145 146 147 148 149]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="exercise-1-5">
+<h2>Exercise 1.5<a class="headerlink" href="#exercise-1-5" title="Permalink to this headline">#</a></h2>
+<p>In the cell below create an array of all even integers in the interval <span class="math notranslate nohighlight">\([0, 100]\)</span>. Then print the resulting array.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">start</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">stop</span> <span class="o">=</span> <span class="mi">101</span>
+<span class="n">step</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">stepped_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">start</span><span class="p">,</span><span class="n">stop</span><span class="p">,</span><span class="n">step</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">stepped_array</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[  0   2   4   6   8  10  12  14  16  18  20  22  24  26  28  30  32  34
+  36  38  40  42  44  46  48  50  52  54  56  58  60  62  64  66  68  70
+  72  74  76  78  80  82  84  86  88  90  92  94  96  98 100]
+</pre></div>
+</div>
+</div>
+</div>
+<section id="linear-space">
+<h3>Linear space<a class="headerlink" href="#linear-space" title="Permalink to this headline">#</a></h3>
+<p>To create an array with values that are spaced linearly in a specific interval, we use:</p>
+<p><code class="docutils literal notranslate"><span class="pre">np.linspace(start_int,</span> <span class="pre">end_int,</span> <span class="pre">num_points)</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">start_int</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">end_int</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">num_points</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">start_int</span><span class="p">,</span> <span class="n">end_int</span><span class="p">,</span> <span class="n">num_points</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[ 0.   2.5  5.   7.5 10. ]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="exercise-1-6">
+<h2>Exercise 1.6<a class="headerlink" href="#exercise-1-6" title="Permalink to this headline">#</a></h2>
+<p>In the cell below create an array of 100 equally spaced points from an interval <span class="math notranslate nohighlight">\([0, 1]\)</span>. First find the start of the interval, that the end point of the interval, and then specify the number of equally spaced points.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">start</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">stop</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">num_points</span> <span class="o">=</span><span class="mi">100</span>
+
+<span class="n">new_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">start</span><span class="p">,</span><span class="n">stop</span><span class="p">,</span><span class="n">num_points</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">new_array</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.         0.01010101 0.02020202 0.03030303 0.04040404 0.05050505
+ 0.06060606 0.07070707 0.08080808 0.09090909 0.1010101  0.11111111
+ 0.12121212 0.13131313 0.14141414 0.15151515 0.16161616 0.17171717
+ 0.18181818 0.19191919 0.2020202  0.21212121 0.22222222 0.23232323
+ 0.24242424 0.25252525 0.26262626 0.27272727 0.28282828 0.29292929
+ 0.3030303  0.31313131 0.32323232 0.33333333 0.34343434 0.35353535
+ 0.36363636 0.37373737 0.38383838 0.39393939 0.4040404  0.41414141
+ 0.42424242 0.43434343 0.44444444 0.45454545 0.46464646 0.47474747
+ 0.48484848 0.49494949 0.50505051 0.51515152 0.52525253 0.53535354
+ 0.54545455 0.55555556 0.56565657 0.57575758 0.58585859 0.5959596
+ 0.60606061 0.61616162 0.62626263 0.63636364 0.64646465 0.65656566
+ 0.66666667 0.67676768 0.68686869 0.6969697  0.70707071 0.71717172
+ 0.72727273 0.73737374 0.74747475 0.75757576 0.76767677 0.77777778
+ 0.78787879 0.7979798  0.80808081 0.81818182 0.82828283 0.83838384
+ 0.84848485 0.85858586 0.86868687 0.87878788 0.88888889 0.8989899
+ 0.90909091 0.91919192 0.92929293 0.93939394 0.94949495 0.95959596
+ 0.96969697 0.97979798 0.98989899 1.        ]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="differences-and-similarities-between-arange-and-linspace">
+<h2>Differences and similarities between <code class="docutils literal notranslate"><span class="pre">arange</span></code> and <code class="docutils literal notranslate"><span class="pre">linspace</span></code>.<a class="headerlink" href="#differences-and-similarities-between-arange-and-linspace" title="Permalink to this headline">#</a></h2>
+<p>Note the difference and similarities between <code class="docutils literal notranslate"><span class="pre">np.arange</span></code> and <code class="docutils literal notranslate"><span class="pre">np.linspace</span></code>.</p>
+<p>With <code class="docutils literal notranslate"><span class="pre">np.arange</span></code> similarly to <code class="docutils literal notranslate"><span class="pre">range</span></code> function the last value is <code class="docutils literal notranslate"><span class="pre">stop</span> <span class="pre">-</span> <span class="pre">step</span></code>, while in the <code class="docutils literal notranslate"><span class="pre">np.linspace</span></code> the last value is <code class="docutils literal notranslate"><span class="pre">end_int</span></code>.</p>
+<p>Unlike <code class="docutils literal notranslate"><span class="pre">range</span></code> <code class="docutils literal notranslate"><span class="pre">np.arange</span></code> allows the step to be a float; in <code class="docutils literal notranslate"><span class="pre">range</span></code> only <code class="docutils literal notranslate"><span class="pre">ints</span></code> are accepted for the step.</p>
+<p><code class="docutils literal notranslate"><span class="pre">np.linspace</span></code> finds the right step automatically, based on the number of points. In <code class="docutils literal notranslate"><span class="pre">np.arange</span></code> we specify the step that then determines the number of points.</p>
+<section id="caution">
+<h3>Caution<a class="headerlink" href="#caution" title="Permalink to this headline">#</a></h3>
+<p>In some cases it is recommended to use <code class="docutils literal notranslate"><span class="pre">np.linspace</span></code> over <code class="docutils literal notranslate"><span class="pre">np.arange</span></code>. With steps being floats <code class="docutils literal notranslate"><span class="pre">np.arange</span></code> sometimes returns unexpected outputs due to a floating point error. See the example below:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.3</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1. , 1.1, 1.2, 1.3])
+</pre></div>
+</div>
+</div>
+</div>
+<p>Due to a floating point error it includes 1.3, and does not follow the rule of the last element of an array being <code class="docutils literal notranslate"><span class="pre">stop</span> <span class="pre">-</span> <span class="pre">step</span></code>.</p>
+<p>This issue can occur only if the step is a float.</p>
+<p><strong>NOTE</strong> both <code class="docutils literal notranslate"><span class="pre">np.linspace</span></code> and <code class="docutils literal notranslate"><span class="pre">np.arange</span></code> are very useful tools where “iterating” (or looping) over a range of values. Think again about the differences between both and consider which one is more appropriate for what you are doing!</p>
+</section>
 </section>
 </section>
 
@@ -914,17 +1339,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../lecture_4/Part5_DataTypes_13_14.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="Part02_numpy_basic_arrays.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Additional resources</p>
+            <p class="prev-next-title">How to create basic arrays</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="Part01_numpy_introduction.html" title="next page">
+    <a class='right-next' id="next-link" href="Part03_numpy_array_operations.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Introduction</p>
+        <p class="prev-next-title">Basic array operations</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
