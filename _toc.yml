@@ -104,3 +104,13 @@ chapters:
     - file: lecture_6/Part01_Introduction_to_Plotting.ipynb
     - file: lecture_6/Part02_Interactive_plots.ipynb
     - file: lecture_6/Part03_Challenge_exercises.ipynb
+- file: lecture_7/overview
+  sections:
+    - file: lecture_7/Part_1_Introduction.ipynb
+    - file: lecture_7/Part_2_Introducing_PDB.ipynb
+    - file: lecture_7/Part_3_Syntax_Errors.ipynb
+    - file: lecture_7/Part_4_Short_Failing_Examples.ipynb
+    - file: lecture_7/Part_5_Variable_Scope.ipynb
+    - file: lecture_7/Part_6_Exercises_4_to_6.ipynb
+    - file: lecture_7/Part_7_Exercises_7_to_9.ipynb
+    - file: lecture_7/Part_8_Acknowledgements.ipynb
