@@ -102,8 +102,11 @@ chapters:
 - file: lecture_6/overview
   sections:
     - file: lecture_6/Part01_Introduction_to_Plotting.ipynb
+    - file: lecture_6/Part01_Introduction_to_Plotting_SOLVED.ipynb
     - file: lecture_6/Part02_Interactive_plots.ipynb
+    - file: lecture_6/Part02_Interactive_plots_SOLVED.ipynb
     - file: lecture_6/Part03_Challenge_exercises.ipynb
+    - file: lecture_6/Part03_Challenge_exercises_SOLVED.ipynb
 - file: lecture_7/overview
   sections:
     - file: lecture_7/Part_1_Introduction.ipynb
