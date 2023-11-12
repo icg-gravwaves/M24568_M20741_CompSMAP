@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Lecture 6: Visualisation &#8212; M24568 and M20741 Intro to CompSMAP</title>
+    <title>Challenge exercises - SOLVED &#8212; M24568 and M20741 Intro to CompSMAP</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,10 +52,12 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Introduction to plotting in matplotlib" href="Part01_Introduction_to_Plotting.html" />
-    <link rel="prev" title="Summary Exercises - SOLVED" href="../lecture_5/Part09_numpy_summary_exercises_solution.html" />
+    <link rel="next" title="Lecture 7: Understanding and fixing problems in python code" href="../lecture_7/overview.html" />
+    <link rel="prev" title="Challenge exercises" href="Part03_Challenge_exercises.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -602,7 +604,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
+  <a class="reference internal" href="overview.html">
    Lecture 6: Visualisation
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
@@ -610,7 +612,7 @@ const thebe_selector_output = ".output, .cell_output"
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="Part01_Introduction_to_Plotting.html">
      Introduction to plotting in matplotlib
@@ -636,8 +638,8 @@ const thebe_selector_output = ".output, .cell_output"
      Challenge exercises
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Part03_Challenge_exercises_SOLVED.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Challenge exercises - SOLVED
     </a>
    </li>
@@ -746,6 +748,71 @@ title="Toggle navigation"
         
     </div>
     <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/icg-gravwaves/M24568_M20741_CompSMAP/main?urlpath=lab/tree/lecture_6/Part03_Challenge_exercises_SOLVED.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://colab.research.google.com/github/icg-gravwaves/M24568_M20741_CompSMAP/blob/main/lecture_6/Part03_Challenge_exercises_SOLVED.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Colab"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_colab.png">
+  </span>
+<span class="headerbtn__text-container">Colab</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="initThebeSBT()"
+  class="headerbtn headerbtn-launch-thebe"
+  data-toggle="tooltip"
+data-placement="left"
+title="Launch Thebe"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="headerbtn__text-container">Live Code</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
 <button onclick="toggleFullScreen()"
   class="headerbtn"
   data-toggle="tooltip"
@@ -785,7 +852,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/icg-gravwaves/M24568_M20741_CompSMAP/issues/new?title=Issue%20on%20page%20%2Flecture_6/overview.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/icg-gravwaves/M24568_M20741_CompSMAP/issues/new?title=Issue%20on%20page%20%2Flecture_6/Part03_Challenge_exercises_SOLVED.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -813,7 +880,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/lecture_6/overview.md"
+        <a href="../_sources/lecture_6/Part03_Challenge_exercises_SOLVED.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -824,7 +891,7 @@ title="Download source file"
 <span class="headerbtn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.md</span>
+<span class="headerbtn__text-container">.ipynb</span>
 </a>
 
       </li>
@@ -872,9 +939,25 @@ title="Print to PDF"
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#weekly-tasks">
-   Weekly tasks
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Challenge exercises - SOLVED
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#challenge-exercise-1">
+     <strong>
+      Challenge exercise 1
+     </strong>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#longer-exercise-2">
+   <strong>
+    Longer exercise 2
+   </strong>
   </a>
  </li>
 </ul>
@@ -886,7 +969,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Lecture 6: Visualisation</h1>
+                <h1>Challenge exercises - SOLVED</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -896,9 +979,25 @@ title="Print to PDF"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#weekly-tasks">
-   Weekly tasks
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Challenge exercises - SOLVED
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#challenge-exercise-1">
+     <strong>
+      Challenge exercise 1
+     </strong>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#longer-exercise-2">
+   <strong>
+    Longer exercise 2
+   </strong>
   </a>
  </li>
 </ul>
@@ -911,38 +1010,167 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="lecture-6-visualisation">
-<h1>Lecture 6: Visualisation<a class="headerlink" href="#lecture-6-visualisation" title="Permalink to this headline">#</a></h1>
-<p>Today we’ll be introducing the matplotlib package. matplotlib is a powerful tool, capable of producing publication quality figures in both 2D and 3D. For more information on matplotlib, including tutorials, visit <a class="reference external" href="https://matplotlib.org/">https://matplotlib.org/</a>. A comprehensive gallery of the possible plots you can produce with matplotlib is available at <a class="reference external" href="https://matplotlib.org/stable/gallery/index.html">https://matplotlib.org/stable/gallery/index.html</a>.</p>
-<p>In this lecture, we’ll be covering the basics of creating 2D graphs and images using the matplotlib package. These skills will be crucial in presenting work to others, and will be tested in both courseworks… This also provides you a means to create any plots you might need to produce in your 3rd- or 4th-year project!</p>
-<p>In papers/reports we commonly see presentational problems in plots/graphs such as:</p>
-<ul class="simple">
-<li><p>font size is small</p></li>
-<li><p>font type is ugly</p></li>
-<li><p>tick size is small</p></li>
-<li><p>lines are too thin</p></li>
-<li><p>colours unsuitable for people who are colour blind</p></li>
-<li><p>ugly legend formatting</p></li>
-</ul>
-<p>Using matplotlib, you have complete control over all of these!</p>
-<p>The weekly tasks are split up into a series of <em>sequential</em> notebooks. Any of these can be opened below by clicking on them. To open any of the notebooks interactively, first click on the section, then click on the rocket and select “Colab”.</p>
-<section id="weekly-tasks">
-<h2>Weekly tasks<a class="headerlink" href="#weekly-tasks" title="Permalink to this headline">#</a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="Part01_Introduction_to_Plotting.html">Introduction to plotting in matplotlib</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Part01_Introduction_to_Plotting_SOLVED.html">Introduction to plotting in matplotlib - SOLVED</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Part01_Introduction_to_Plotting_SOLVED.html#exercise-0-1">Exercise 0.1</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Part01_Introduction_to_Plotting_SOLVED.html#exercise-0-2">Exercise 0.2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Part01_Introduction_to_Plotting_SOLVED.html#exercise-0-10"><strong>Exercise 0.10</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="Part02_Interactive_plots.html">Adding Interactive Elements: Sliders</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Part02_Interactive_plots_SOLVED.html">Adding Interactive Elements: Sliders - SOLVED</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Part03_Challenge_exercises.html">Challenge exercises</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Part03_Challenge_exercises_SOLVED.html">Challenge exercises - SOLVED</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Part03_Challenge_exercises_SOLVED.html#longer-exercise-2"><strong>Longer exercise 2</strong></a></li>
-</ul>
+  <section class="tex2jax_ignore mathjax_ignore" id="challenge-exercises-solved">
+<h1>Challenge exercises - SOLVED<a class="headerlink" href="#challenge-exercises-solved" title="Permalink to this headline">#</a></h1>
+<section id="challenge-exercise-1">
+<h2><strong>Challenge exercise 1</strong><a class="headerlink" href="#challenge-exercise-1" title="Permalink to this headline">#</a></h2>
+<p>Let’s practice these plotting skills by making some further plots from a set of sunspot data.</p>
+<ol class="simple">
+<li><p>Download the datafile <code class="docutils literal notranslate"><span class="pre">sunspot.month.csv</span></code> from Moodle and upload it to the same directory in which this notebook is running.</p></li>
+<li><p>The data is read in using the supplied functions below.</p></li>
+<li><p>Plot the number of sunspots as a function of time. Make sure the plot is properly labelled.</p></li>
+<li><p>Add Poisson counting error bars to the y-values. (Poisson counting error bars are simply +/-sqrt N).</p></li>
+<li><p>Limit the extent of your axes to 30 years for an interval of your choice.</p></li>
+<li><p>Save this plot.</p></li>
+<li><p>Create a histogram of the number of sunspots</p></li>
+<li><p>Label etc. the plot as needed</p></li>
+<li><p>Save this plot as well.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">interact</span><span class="p">,</span> <span class="n">interactive</span><span class="p">,</span> <span class="n">fixed</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># We read in the data using the pandas module.</span>
+<span class="c1"># This could have been read using the File object and techniques shown earlier ... And in fact that&#39;s what pandas</span>
+<span class="c1"># will do internally, but if someone else has already provided a good solution its often good to just use it.</span>
+
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">dat1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;sunspot.month.csv&#39;</span><span class="p">)</span>
+<span class="c1">#What does the following line of code do? Make a note of this.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dat1</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+
+<span class="c1"># We need time and number of sunspots</span>
+<span class="n">year</span> <span class="o">=</span> <span class="n">dat1</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">]</span>
+<span class="n">number_of_sunspots</span> <span class="o">=</span> <span class="n">dat1</span><span class="p">[</span><span class="s1">&#39;number&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   entry         time  number
+0      1  1749.000000    58.0
+1      2  1749.083333    62.6
+2      3  1749.166667    70.0
+3      4  1749.250000    55.7
+4      5  1749.333333    85.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">err_y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">number_of_sunspots</span><span class="p">)</span>
+
+<span class="c1">#Write your plotting code here</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
+<span class="c1">#ax.plot(year, number_of_sunspots)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">number_of_sunspots</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Sunspots&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">number_of_sunspots</span><span class="p">,</span> <span class="n">xerr</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">yerr</span><span class="o">=</span><span class="n">err_y</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">capsize</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">elinewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Year&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Number of sunspots&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Sunspot frequency versus year&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">((</span><span class="mi">1970</span><span class="p">,</span><span class="mi">2000</span><span class="p">))</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;sunspot_frequency.png&quot;</span><span class="p">,</span><span class="n">dpi</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/Part03_Challenge_exercises_SOLVED_3_0.png" src="../_images/Part03_Challenge_exercises_SOLVED_3_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#plot of the histogram</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
+<span class="c1">#ax.plot(year, number_of_sunspots)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">number_of_sunspots</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Number of sunspots&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Frequency&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Histogram of sunspot frequency&quot;</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;sunspot_frequency_histogram.png&quot;</span><span class="p">,</span><span class="n">dpi</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/Part03_Challenge_exercises_SOLVED_5_0.png" src="../_images/Part03_Challenge_exercises_SOLVED_5_0.png" />
+</div>
 </div>
 </section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="longer-exercise-2">
+<h1><strong>Longer exercise 2</strong><a class="headerlink" href="#longer-exercise-2" title="Permalink to this headline">#</a></h1>
+<p>The Taylor series expansion for the function <span class="math notranslate nohighlight">\(f(x) = e^x\)</span> is an <span class="math notranslate nohighlight">\(n^{th}\)</span> order polynomial that approximates <span class="math notranslate nohighlight">\(f(x) = e^{x}\)</span> for a given value of <span class="math notranslate nohighlight">\(x\)</span>. In this exercise, you will visualise how this approximation improves the more terms you add to the Taylor Series expansion. This exercise makes use of functions and for loops.</p>
+<p>The Taylor series for <span class="math notranslate nohighlight">\(f(x) = e^{x}\)</span> is:</p>
+<div class="math notranslate nohighlight">
+\[e^{x} \approx \sum^{\infty}_{n=0}\frac{x^{n}}{n!} = 1+x+\frac{x^{2}}{2!} + \frac{x^{3}}{3!} + \frac{x^{4}}{4!} + \frac{x^{5}}{5!} + \cdots\]</div>
+<ol class="simple">
+<li><p>Write a function n_factorial that computes the factorial of any positive integer. This should take a single integer <span class="math notranslate nohighlight">\(m\)</span> as an input, and return <span class="math notranslate nohighlight">\(m!\)</span> You may need the result <span class="math notranslate nohighlight">\(0! = 1\)</span>.</p></li>
+<li><p>Write a function approx_e that takes a value of x and the order <span class="math notranslate nohighlight">\(n\)</span> of the polynomial used to approximate <span class="math notranslate nohighlight">\(f(x) = e^{x}\)</span>. The function should return an approximation of <span class="math notranslate nohighlight">\(f(x) = e^x\)</span> computed using a Taylor series expansion.</p></li>
+<li><p>Produce a plot of <span class="math notranslate nohighlight">\(f(x) = e^{x}\)</span> for values of <span class="math notranslate nohighlight">\(x\)</span> between 0 and 3. You should calculate <span class="math notranslate nohighlight">\(e^{x}\)</span> using <code class="docutils literal notranslate"><span class="pre">np.exp()</span></code>. <code class="docutils literal notranslate"><span class="pre">np.exp(2)</span></code> finds <span class="math notranslate nohighlight">\(e^{2}\)</span>.</p></li>
+<li><p>Using your functions, plot the Taylor series approximations of <span class="math notranslate nohighlight">\(f(x) = e^{x}\)</span> for <span class="math notranslate nohighlight">\(3^{rd}\)</span>, <span class="math notranslate nohighlight">\(5^{th}\)</span> and <span class="math notranslate nohighlight">\(7^{th}\)</span> order polynomial approximations on the same set of axes. Be sure to include a legend to identify each approximation plotted.</p></li>
+<li><p>Save the resulting plot.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">n_factorial</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
+  <span class="k">if</span> <span class="n">m</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">nfact</span> <span class="o">=</span> <span class="mi">1</span>
+  <span class="k">else</span><span class="p">:</span>
+    <span class="n">nfact</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">m</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+      <span class="n">nfact</span> <span class="o">*=</span> <span class="n">i</span>
+  <span class="k">return</span> <span class="n">nfact</span>
+
+
+<span class="k">def</span> <span class="nf">approx_e</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
+  <span class="n">ex</span> <span class="o">=</span> <span class="mi">1</span>
+  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+    <span class="n">ex</span> <span class="o">+=</span> <span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="n">i</span><span class="p">)</span> <span class="o">/</span><span class="n">n_factorial</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+  <span class="k">return</span> <span class="n">ex</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="n">y3</span> <span class="o">=</span> <span class="n">approx_e</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">y5</span> <span class="o">=</span> <span class="n">approx_e</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">y8</span> <span class="o">=</span> <span class="n">approx_e</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">7</span><span class="p">)</span>
+<span class="c1">#y12= approx_e(x,12)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">clf</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;e$^</span><span class="si">{x}</span><span class="s2">$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;3rd order&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;5th order&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y8</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;7th order&quot;</span><span class="p">)</span>
+<span class="c1">#plt.plot(x,y12, label=&quot;12th order&quot;)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;y&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/Part03_Challenge_exercises_SOLVED_9_0.png" src="../_images/Part03_Challenge_exercises_SOLVED_9_0.png" />
+</div>
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -972,17 +1200,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../lecture_5/Part09_numpy_summary_exercises_solution.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="Part03_Challenge_exercises.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Summary Exercises - SOLVED</p>
+            <p class="prev-next-title">Challenge exercises</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="Part01_Introduction_to_Plotting.html" title="next page">
+    <a class='right-next' id="next-link" href="../lecture_7/overview.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Introduction to plotting in matplotlib</p>
+        <p class="prev-next-title">Lecture 7: Understanding and fixing problems in python code</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
