@@ -711,7 +711,17 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_8/Part00_Week_8_into_solved.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../lecture_8/Part01_week8_data_frames.html">
+     Part 1: data frames (extra powerful dictionaries)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_8/Part01_week8_data_frames_solutions.html">
      Part 1: data frames (extra powerful dictionaries)
     </a>
    </li>
@@ -721,7 +731,17 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_8/Part02_week8_viewing_data_solved.html">
+     Part 2: viewing data
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../lecture_8/Part03_week8_selecting_elements.html">
+     Part 3: selecting elements from a data frame
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_8/Part03_week8_selecting_elements_solutions.html">
      Part 3: selecting elements from a data frame
     </a>
    </li>
@@ -731,7 +751,17 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_8/Part04_week8_more_operations_solutions.html">
+     Part 4: More operations on DataFrames
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../lecture_8/Part05_week8_grouping.html">
+     Parts 5 and 6: grouping and visualising data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_8/Part05_week8_grouping_solutions.html">
      Parts 5 and 6: grouping and visualising data
     </a>
    </li>
@@ -741,8 +771,55 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_8/Part06_week8_importing_files_solutions.html">
+     Part 7: Importing and exporting files / spreadsheets
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../lecture_8/Part07_week8_summary_exercises.html">
      Part 8: Summary exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_8/Part07_week8_summary_exercises_solutions.html">
+     Part 8: Summary exercises
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../lecture_9/overview.html">
+   Lecture 9: Root finding
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_9/Part_1_Introduction.html">
+     What is root finding and why do it on a computer?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_9/Part_2_Continuous_Functions.html">
+     Continuous functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_9/Part_3_Bolzanos_Theorem.html">
+     Bolzano’s Theorem
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_9/Part_4_Bisection_Method.html">
+     Writing a root finding algorithm using the bisection method
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_9/Part_5_Newtons_Method.html">
+     Newton’s Method
     </a>
    </li>
   </ul>
@@ -1089,20 +1166,20 @@ the row is [1.5 3.2 6.7]
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>######################
-the square root of the row [60.76748694 28.01758228 95.77923341 61.31776057 42.00307826 65.72615966
- 76.54041558 55.04516678 50.17800872 62.29062733] is 17.496689510851947.
+the square root of the row [18.56140048  5.69253101 22.85225725  0.06473763 35.52702244 41.53896023
+ 12.10803207 39.00974371 36.49418365 34.65409688] is 14.182877398770591.
 ######################
-the square root of the row [88.30964079 88.11682501 79.21639873  3.32756856 44.5507936   4.29119476
- 87.47125337 91.19410886 55.483808   12.82481567] is 35.049086059671154.
+the square root of the row [75.0598281  86.04593016 60.37986499 78.48398975 45.46129368 59.11484533
+ 40.78561066  8.99574887 47.57411964 94.24014082] is 23.98973903975139.
 ######################
-the square root of the row [62.62216538 54.92969592 14.82542777 35.70544982 25.07665231 39.19731638
- 78.82576525  5.22162724 78.86447328 27.69698329] is 24.36443335102108.
+the square root of the row [ 5.43480237 76.64799674 90.97269752 75.58903707 65.56200376 19.36181802
+ 32.42820688 60.4190976  83.85701097 20.94481707] is 29.19071887613573.
 ######################
-the square root of the row [ 2.06749931 33.02290647 12.65299722 65.31574258 95.5325375  35.46474421
- 72.54215245 13.18762121 98.51940844 30.70984907] is 33.04719665780499.
+the square root of the row [24.14080656 41.711998   78.32128607 78.71979435 61.93228632 65.26926532
+ 28.32105659 83.94418998 30.33336475 52.50109157] is 21.33259752894929.
 ######################
-the square root of the row [46.38926487  8.85363087 96.04415644 77.1265941  52.37460928 87.16114364
- 52.89414164 94.61345491 92.69957667 29.29383671] is 28.827141517105428.
+the square root of the row [28.65677462 31.64840553 60.41522056 76.72523718  5.13000053 42.44380414
+ 50.31595493 33.56260411  8.78584298 30.6933941 ] is 20.723481392270806.
 </pre></div>
 </div>
 </div>
@@ -1172,30 +1249,30 @@ the element is 6.7
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[[5.46436832 9.19782169]
-  [5.77028662 8.40051395]
-  [1.67793899 5.28050948]
-  [6.3916202  4.66247205]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[[5.00021365 6.20953884]
+  [1.5093141  7.45000059]
+  [0.77350582 9.15454255]
+  [8.02566757 9.64622679]]
 
- [[0.90682678 9.30747571]
-  [7.33672637 3.23289106]
-  [1.8880731  8.09953303]
-  [8.70059975 1.20173378]]
+ [[3.17605146 0.80899799]
+  [6.42184294 1.35913647]
+  [0.79105698 8.58812406]
+  [8.51892041 0.72580716]]
 
- [[8.79921638 5.25861526]
-  [5.1240333  5.14703023]
-  [6.35254056 7.6975756 ]
-  [2.66032753 9.97929319]]
+ [[6.64822845 5.72668609]
+  [7.12113802 8.03843623]
+  [1.68723663 8.57329415]
+  [8.38908053 8.13538598]]
 
- [[9.80891638 5.68286723]
-  [3.28315541 9.49586835]
-  [7.05808915 0.15942726]
-  [5.41995913 9.3114444 ]]
+ [[5.50080167 8.90722289]
+  [3.61900897 5.55348186]
+  [9.00160192 8.24866981]
+  [3.16939544 8.95710665]]
 
- [[6.96757579 9.23380372]
-  [1.40513053 8.7487955 ]
-  [9.52082287 4.09028442]
-  [4.89936177 2.81625189]]]
+ [[3.84773018 5.66745658]
+  [7.46248008 3.9151574 ]
+  [9.084443   6.37234264]
+  [4.49964091 5.60680003]]]
 </pre></div>
 </div>
 </div>
@@ -1211,46 +1288,46 @@ the element is 6.7
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5.464368315385149
-9.197821691218811
-5.770286615205478
-8.400513947624706
-1.6779389948829804
-5.2805094806526025
-6.391620200546568
-4.662472051494408
-0.9068267784557116
-9.307475712497576
-7.3367263682671
-3.2328910567978153
-1.8880730989337213
-8.099533034551746
-8.700599752406738
-1.2017337834548092
-8.799216375785829
-5.258615257808387
-5.124033304772901
-5.147030228984589
-6.352540560198564
-7.697575603312842
-2.6603275282321337
-9.979293185898005
-9.808916377178159
-5.6828672326431064
-3.283155411037283
-9.495868351623654
-7.058089151777512
-0.15942725734117258
-5.41995913335549
-9.311444403443268
-6.967575785941138
-9.23380372125323
-1.4051305317075435
-8.748795501979442
-9.520822872834888
-4.090284424429532
-4.899361772861158
-2.8162518944779613
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5.000213653784988
+6.209538837198321
+1.5093140962975637
+7.450000594758435
+0.7735058180500842
+9.154542546873923
+8.025667566718841
+9.646226790276748
+3.1760514621122695
+0.8089979910727552
+6.421842937310812
+1.3591364652490778
+0.7910569775779874
+8.588124059477854
+8.518920406148188
+0.7258071631047813
+6.6482284450759455
+5.72668608666455
+7.121138019600365
+8.038436234197746
+1.6872366329911914
+8.573294152077208
+8.389080531484606
+8.135385984780143
+5.500801666232728
+8.90722289132263
+3.6190089659616884
+5.553481859050229
+9.001601920261646
+8.248669814975685
+3.169395442919698
+8.957106649386072
+3.847730184762125
+5.667456583357049
+7.462480080788954
+3.9151574044861217
+9.084442999740208
+6.372342638200214
+4.499640909260663
+5.6068000329107175
 </pre></div>
 </div>
 </div>

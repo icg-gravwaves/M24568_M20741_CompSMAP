@@ -50,10 +50,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Part 3: selecting elements from a data frame" href="Part03_week8_selecting_elements.html" />
-    <link rel="prev" title="Part 1: data frames (extra powerful dictionaries)" href="Part01_week8_data_frames.html" />
+    <link rel="next" title="Part 2: viewing data" href="Part02_week8_viewing_data_solved.html" />
+    <link rel="prev" title="Part 1: data frames (extra powerful dictionaries)" href="Part01_week8_data_frames_solutions.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -709,7 +711,17 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="Part00_Week_8_into_solved.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="Part01_week8_data_frames.html">
+     Part 1: data frames (extra powerful dictionaries)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Part01_week8_data_frames_solutions.html">
      Part 1: data frames (extra powerful dictionaries)
     </a>
    </li>
@@ -719,7 +731,17 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="Part02_week8_viewing_data_solved.html">
+     Part 2: viewing data
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="Part03_week8_selecting_elements.html">
+     Part 3: selecting elements from a data frame
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Part03_week8_selecting_elements_solutions.html">
      Part 3: selecting elements from a data frame
     </a>
    </li>
@@ -729,7 +751,17 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="Part04_week8_more_operations_solutions.html">
+     Part 4: More operations on DataFrames
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="Part05_week8_grouping.html">
+     Parts 5 and 6: grouping and visualising data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Part05_week8_grouping_solutions.html">
      Parts 5 and 6: grouping and visualising data
     </a>
    </li>
@@ -739,8 +771,55 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="Part06_week8_importing_files_solutions.html">
+     Part 7: Importing and exporting files / spreadsheets
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="Part07_week8_summary_exercises.html">
      Part 8: Summary exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Part07_week8_summary_exercises_solutions.html">
+     Part 8: Summary exercises
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../lecture_9/overview.html">
+   Lecture 9: Root finding
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_9/Part_1_Introduction.html">
+     What is root finding and why do it on a computer?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_9/Part_2_Continuous_Functions.html">
+     Continuous functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_9/Part_3_Bolzanos_Theorem.html">
+     Bolzano’s Theorem
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_9/Part_4_Bisection_Method.html">
+     Writing a root finding algorithm using the bisection method
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_9/Part_5_Newtons_Method.html">
+     Newton’s Method
     </a>
    </li>
   </ul>
@@ -1074,9 +1153,17 @@ title="Print to PDF"
 <p>Load the <code class="docutils literal notranslate"><span class="pre">titanic</span></code> and <code class="docutils literal notranslate"><span class="pre">avocado</span></code> data sets as a <code class="docutils literal notranslate"><span class="pre">pandas</span></code> dataframes in the code block below:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load the Titanic and avocado data sets</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load the Titanic and  data sets</span>
 <span class="n">df_titanic</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s2">&quot;titanic.xlsx&quot;</span><span class="p">)</span>
-<span class="n">avocado</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s2">&quot;avocado.xlsx&quot;</span><span class="p">)</span>
+ <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s2">&quot;.xlsx&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Input</span> <span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+    <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s2">&quot;.xlsx&quot;</span><span class="p">)</span>
+    <span class="o">^</span>
+<span class="ne">IndentationError</span>: unexpected indent
 </pre></div>
 </div>
 </div>
@@ -1091,7 +1178,12 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>RangeIndex(start=0, stop=891, step=1)
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Input</span> <span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">df_titanic</span><span class="o">.</span><span class="n">index</span>
+
+<span class="ne">NameError</span>: name &#39;df_titanic&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -1107,9 +1199,12 @@ We do it as follows:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;PassengerId&#39;, &#39;Name&#39;, &#39;Sex&#39;, &#39;Age&#39;, &#39;Ticket&#39;, &#39;Fare&#39;, &#39;Cabin&#39;,
-       &#39;Survived&#39;],
-      dtype=&#39;object&#39;)
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Input</span> <span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">df_titanic</span><span class="o">.</span><span class="n">columns</span>
+
+<span class="ne">NameError</span>: name &#39;df_titanic&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -1122,7 +1217,12 @@ We do it as follows:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;PassengerId&#39;, &#39;Survived&#39;)
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Input</span> <span class="n">In</span> <span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">df_titanic</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">df_titanic</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="ne">NameError</span>: name &#39;df_titanic&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -1137,18 +1237,12 @@ We do it as follows:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0      0.0
-1      1.0
-2      1.0
-3      1.0
-4      0.0
-      ... 
-886    0.0
-887    1.0
-888    0.0
-889    1.0
-890    0.0
-Name: Survived, Length: 891, dtype: float64
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Input</span> <span class="n">In</span> <span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">df_titanic</span><span class="o">.</span><span class="n">Survived</span>
+
+<span class="ne">NameError</span>: name &#39;df_titanic&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -1161,59 +1255,12 @@ Name: Survived, Length: 891, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0., 1., 1., 1., 0., 0., 0., 0., 1., 1., 1., 1., 0., 0., 0., 1., 0.,
-       1., 0., 1., 0., 1., 1., 1., 0., 1., 0., 0., 1., 0., 0., 1., 1., 0.,
-       0., 0., 1., 0., 0., 1., 0., 0., 0., 1., 1., 0., 0., 1., 0., 0., 0.,
-       0., 1., 1., 0., 1., 1., 0., 1., 0., 0., 1., 0., 0., 0., 1., 1., 0.,
-       1., 0., 0., 0., 0., 0., 1., 0., 0., 0., 1., 1., 0., 1., 1., 0., 1.,
-       1., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0., 0., 1., 1., 0., 0., 0.,
-       0., 0., 0., 0., 1., 1., 0., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
-       0., 0., 0., 0., 1., 0., 1., 0., 1., 1., 0., 0., 0., 0., 1., 0., 0.,
-       1., 0., 0., 0., 0., 1., 1., 0., 0., 0., 1., 0., 0., 0., 0., 1., 0.,
-       0., 0., 0., 1., 0., 0., 0., 0., 1., 0., 0., 0., 1., 1., 0., 0., 0.,
-       0., 0., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 1., 1., 0., 1.,
-       1., 0., 0., 1., 0., 1., 1., 1., 1., 0., 0., 1., 0., 0., 0., 0., 0.,
-       1., 0., 0., 1., 1., 1., 0., 1., 0., 0., 0., 1., 1., 0., 1., 0., 1.,
-       0., 0., 0., 1., 0., 1., 0., 0., 0., 1., 0., 0., 1., 0., 0., 0., 1.,
-       0., 0., 0., 1., 0., 0., 0., 0., 0., 1., 1., 0., 0., 0., 0., 0., 0.,
-       1., 1., 1., 1., 1., 0., 1., 0., 0., 0., 0., 0., 1., 1., 1., 0., 1.,
-       1., 0., 1., 1., 0., 0., 0., 1., 0., 0., 0., 1., 0., 0., 1., 0., 1.,
-       1., 1., 1., 0., 0., 0., 0., 0., 0., 1., 1., 1., 1., 0., 1., 0., 1.,
-       1., 1., 0., 1., 1., 1., 0., 0., 0., 1., 1., 0., 1., 1., 0., 0., 1.,
-       1., 0., 1., 0., 1., 1., 1., 1., 0., 0., 0., 1., 0., 0., 1., 1., 0.,
-       1., 1., 0., 0., 0., 1., 1., 1., 1., 0., 0., 0., 0., 0., 0., 0., 1.,
-       0., 1., 1., 0., 0., 0., 0., 0., 0., 1., 1., 1., 1., 1., 0., 0., 0.,
-       0., 1., 1., 0., 0., 0., 1., 1., 0., 1., 0., 0., 0., 1., 0., 1., 1.,
-       1., 0., 1., 1., 0., 0., 0., 0., 1., 1., 0., 0., 0., 0., 0., 0., 1.,
-       0., 0., 0., 0., 1., 0., 1., 0., 1., 1., 0., 0., 0., 0., 0., 0., 0.,
-       0., 1., 1., 0., 1., 1., 1., 1., 0., 0., 1., 0., 1., 0., 0., 1., 0.,
-       0., 1., 1., 1., 1., 1., 1., 1., 0., 0., 0., 1., 0., 1., 0., 1., 1.,
-       0., 1., 0., 0., 0., 0., 0., 0., 0., 0., 1., 0., 0., 1., 1., 0., 0.,
-       0., 0., 0., 1., 0., 0., 0., 1., 1., 0., 1., 0., 0., 1., 0., 0., 0.,
-       0., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0., 1., 0., 1., 1., 0., 1.,
-       1., 0., 1., 1., 0., 0., 1., 0., 1., 0., 1., 0., 0., 1., 0., 0., 1.,
-       0., 0., 0., 1., 0., 0., 1., 0., 1., 0., 1., 0., 1., 1., 0., 0., 1.,
-       0., 0., 1., 1., 0., 1., 1., 0., 0., 1., 1., 0., 1., 0., 1., 1., 0.,
-       0., 0., 0., 0., 0., 0., 0., 0., 1., 1., 1., 1., 1., 0., 0., 1., 1.,
-       0., 1., 1., 1., 0., 0., 0., 1., 0., 1., 0., 0., 0., 1., 0., 0., 0.,
-       0., 1., 0., 0., 1., 1., 0., 0., 0., 1., 0., 0., 1., 1., 1., 0., 0.,
-       1., 0., 0., 1., 0., 0., 1., 0., 0., 1., 1., 0., 0., 0., 0., 1., 0.,
-       0., 1., 0., 1., 0., 0., 1., 0., 0., 0., 0., 0., 1., 0., 1., 1., 1.,
-       0., 1., 0., 1., 0., 1., 0., 1., 0., 0., 0., 0., 0., 0., 1., 0., 0.,
-       0., 1., 0., 0., 0., 0., 1., 1., 0., 0., 1., 0., 0., 0., 1., 0., 1.,
-       0., 1., 0., 0., 0., 0., 0., 0., 0., 1., 1., 1., 1., 0., 0., 0., 0.,
-       1., 0., 0., 1., 1., 0., 0., 0., 0., 1., 1., 1., 1., 1., 0., 1., 0.,
-       0., 0., 1., 1., 0., 0., 1., 0., 0., 0., 1., 0., 1., 1., 0., 0., 1.,
-       0., 0., 0., 0., 0., 0., 1., 0., 0., 1., 0., 1., 0., 1., 0., 0., 1.,
-       0., 0., 1., 1., 0., 0., 1., 1., 0., 0., 0., 1., 0., 0., 1., 1., 0.,
-       1., 0., 0., 0., 0., 0., 0., 0., 0., 1., 0., 0., 1., 0., 1., 1., 1.,
-       0., 0., 0., 0., 1., 0., 1., 0., 0., 0., 0., 0., 0., 0., 1., 1., 0.,
-       0., 0., 1., 1., 1., 1., 0., 0., 0., 0., 1., 0., 0., 0., 0., 0., 0.,
-       0., 0., 0., 0., 1., 1., 0., 1., 0., 0., 0., 1., 1., 1., 1., 1., 0.,
-       0., 0., 1., 0., 0., 1., 1., 0., 0., 1., 0., 0., 0., 0., 0., 0., 1.,
-       0., 0., 0., 1., 0., 1., 1., 1., 1., 0., 0., 0., 1., 0., 0., 1., 1.,
-       0., 0., 1., 0., 1., 0., 0., 1., 1., 0., 0., 0., 1., 1., 0., 0., 0.,
-       0., 0., 0., 1., 0., 1., 0.])
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Input</span> <span class="n">In</span> <span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">df_titanic</span><span class="o">.</span><span class="n">Survived</span><span class="o">.</span><span class="n">values</span>
+
+<span class="ne">NameError</span>: name &#39;df_titanic&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -1227,15 +1274,13 @@ Name: Survived, Length: 891, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[1.0 &#39;Braund, Mr. Owen Harris&#39; &#39;male&#39; ... 7.25 nan 0.0]
- [2.0 &#39;Cumings, Mrs. John Bradley (Florence Briggs Thayer)&#39; &#39;female&#39; ...
-  71.2833 &#39;C85&#39; 1.0]
- [3.0 &#39;Heikkinen, Miss. Laina&#39; &#39;female&#39; ... 7.925 nan 1.0]
- ...
- [889.0 &#39;Johnston, Miss. Catherine Helen &quot;Carrie&quot;&#39; &#39;female&#39; ... 23.45 nan
-  0.0]
- [890.0 &#39;Behr, Mr. Karl Howell&#39; &#39;male&#39; ... 30.0 &#39;C148&#39; 1.0]
- [891.0 &#39;Dooley, Mr. Patrick&#39; &#39;male&#39; ... 7.75 nan 0.0]]
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Input</span> <span class="n">In</span> <span class="p">[</span><span class="mi">8</span><span class="p">],</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">titanic_np_array</span> <span class="o">=</span> <span class="n">df_titanic</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="nb">print</span><span class="p">(</span><span class="n">titanic_np_array</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;df_titanic&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -1248,90 +1293,15 @@ Name: Survived, Length: 891, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Input</span> <span class="n">In</span> <span class="p">[</span><span class="mi">9</span><span class="p">],</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">df_titanic</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>PassengerId</th>
-      <th>Age</th>
-      <th>Fare</th>
-      <th>Survived</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>count</th>
-      <td>891.000000</td>
-      <td>714.000000</td>
-      <td>891.000000</td>
-      <td>891.000000</td>
-    </tr>
-    <tr>
-      <th>mean</th>
-      <td>446.000000</td>
-      <td>29.699118</td>
-      <td>32.204208</td>
-      <td>0.383838</td>
-    </tr>
-    <tr>
-      <th>std</th>
-      <td>257.353842</td>
-      <td>14.526497</td>
-      <td>49.693429</td>
-      <td>0.486592</td>
-    </tr>
-    <tr>
-      <th>min</th>
-      <td>1.000000</td>
-      <td>0.420000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-    </tr>
-    <tr>
-      <th>25%</th>
-      <td>223.500000</td>
-      <td>20.125000</td>
-      <td>7.910400</td>
-      <td>0.000000</td>
-    </tr>
-    <tr>
-      <th>50%</th>
-      <td>446.000000</td>
-      <td>28.000000</td>
-      <td>14.454200</td>
-      <td>0.000000</td>
-    </tr>
-    <tr>
-      <th>75%</th>
-      <td>668.500000</td>
-      <td>38.000000</td>
-      <td>31.000000</td>
-      <td>1.000000</td>
-    </tr>
-    <tr>
-      <th>max</th>
-      <td>891.000000</td>
-      <td>80.000000</td>
-      <td>512.329200</td>
-      <td>1.000000</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
+<span class="ne">NameError</span>: name &#39;df_titanic&#39; is not defined
+</pre></div>
+</div>
+</div>
 </div>
 <p>Note that for pandas <code class="docutils literal notranslate"><span class="pre">displaying</span></code> produces nicer outputs than <code class="docutils literal notranslate"><span class="pre">printing</span></code></p>
 <div class="cell docutils container">
@@ -1341,15 +1311,12 @@ Name: Survived, Length: 891, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       PassengerId         Age        Fare    Survived
-count   891.000000  714.000000  891.000000  891.000000
-mean    446.000000   29.699118   32.204208    0.383838
-std     257.353842   14.526497   49.693429    0.486592
-min       1.000000    0.420000    0.000000    0.000000
-25%     223.500000   20.125000    7.910400    0.000000
-50%     446.000000   28.000000   14.454200    0.000000
-75%     668.500000   38.000000   31.000000    1.000000
-max     891.000000   80.000000  512.329200    1.000000
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Input</span> <span class="n">In</span> <span class="p">[</span><span class="mi">10</span><span class="p">],</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">print</span><span class="p">(</span><span class="n">df_titanic</span><span class="o">.</span><span class="n">describe</span><span class="p">())</span>
+
+<span class="ne">NameError</span>: name &#39;df_titanic&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -1362,90 +1329,15 @@ max     891.000000   80.000000  512.329200    1.000000
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Input</span> <span class="n">In</span> <span class="p">[</span><span class="mi">11</span><span class="p">],</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">display</span><span class="p">(</span><span class="n">df_titanic</span><span class="o">.</span><span class="n">describe</span><span class="p">())</span>
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>PassengerId</th>
-      <th>Age</th>
-      <th>Fare</th>
-      <th>Survived</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>count</th>
-      <td>891.000000</td>
-      <td>714.000000</td>
-      <td>891.000000</td>
-      <td>891.000000</td>
-    </tr>
-    <tr>
-      <th>mean</th>
-      <td>446.000000</td>
-      <td>29.699118</td>
-      <td>32.204208</td>
-      <td>0.383838</td>
-    </tr>
-    <tr>
-      <th>std</th>
-      <td>257.353842</td>
-      <td>14.526497</td>
-      <td>49.693429</td>
-      <td>0.486592</td>
-    </tr>
-    <tr>
-      <th>min</th>
-      <td>1.000000</td>
-      <td>0.420000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-    </tr>
-    <tr>
-      <th>25%</th>
-      <td>223.500000</td>
-      <td>20.125000</td>
-      <td>7.910400</td>
-      <td>0.000000</td>
-    </tr>
-    <tr>
-      <th>50%</th>
-      <td>446.000000</td>
-      <td>28.000000</td>
-      <td>14.454200</td>
-      <td>0.000000</td>
-    </tr>
-    <tr>
-      <th>75%</th>
-      <td>668.500000</td>
-      <td>38.000000</td>
-      <td>31.000000</td>
-      <td>1.000000</td>
-    </tr>
-    <tr>
-      <th>max</th>
-      <td>891.000000</td>
-      <td>80.000000</td>
-      <td>512.329200</td>
-      <td>1.000000</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
+<span class="ne">NameError</span>: name &#39;df_titanic&#39; is not defined
+</pre></div>
+</div>
+</div>
 </div>
 <p>Note that the above stats are only for the numerical columns.</p>
 <section id="exercise-2-1">
@@ -1486,244 +1378,16 @@ Transposed matrix
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Input</span> <span class="n">In</span> <span class="p">[</span><span class="mi">13</span><span class="p">],</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">df_titanic_t</span> <span class="o">=</span> <span class="n">df_titanic</span><span class="o">.</span><span class="n">T</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">df_titanic_t</span>
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>0</th>
-      <th>1</th>
-      <th>2</th>
-      <th>3</th>
-      <th>4</th>
-      <th>5</th>
-      <th>6</th>
-      <th>7</th>
-      <th>8</th>
-      <th>9</th>
-      <th>...</th>
-      <th>881</th>
-      <th>882</th>
-      <th>883</th>
-      <th>884</th>
-      <th>885</th>
-      <th>886</th>
-      <th>887</th>
-      <th>888</th>
-      <th>889</th>
-      <th>890</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>PassengerId</th>
-      <td>1.0</td>
-      <td>2.0</td>
-      <td>3.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>6.0</td>
-      <td>7.0</td>
-      <td>8.0</td>
-      <td>9.0</td>
-      <td>10.0</td>
-      <td>...</td>
-      <td>882.0</td>
-      <td>883.0</td>
-      <td>884.0</td>
-      <td>885.0</td>
-      <td>886.0</td>
-      <td>887.0</td>
-      <td>888.0</td>
-      <td>889.0</td>
-      <td>890.0</td>
-      <td>891.0</td>
-    </tr>
-    <tr>
-      <th>Name</th>
-      <td>Braund, Mr. Owen Harris</td>
-      <td>Cumings, Mrs. John Bradley (Florence Briggs Th...</td>
-      <td>Heikkinen, Miss. Laina</td>
-      <td>Futrelle, Mrs. Jacques Heath (Lily May Peel)</td>
-      <td>Allen, Mr. William Henry</td>
-      <td>Moran, Mr. James</td>
-      <td>McCarthy, Mr. Timothy J</td>
-      <td>Palsson, Master. Gosta Leonard</td>
-      <td>Johnson, Mrs. Oscar W (Elisabeth Vilhelmina Berg)</td>
-      <td>Nasser, Mrs. Nicholas (Adele Achem)</td>
-      <td>...</td>
-      <td>Markun, Mr. Johann</td>
-      <td>Dahlberg, Miss. Gerda Ulrika</td>
-      <td>Banfield, Mr. Frederick James</td>
-      <td>Sutehall, Mr. Henry Jr</td>
-      <td>Rice, Mrs. William (Margaret Norton)</td>
-      <td>Montvila, Rev. Juozas</td>
-      <td>Graham, Miss. Margaret Edith</td>
-      <td>Johnston, Miss. Catherine Helen "Carrie"</td>
-      <td>Behr, Mr. Karl Howell</td>
-      <td>Dooley, Mr. Patrick</td>
-    </tr>
-    <tr>
-      <th>Sex</th>
-      <td>male</td>
-      <td>female</td>
-      <td>female</td>
-      <td>female</td>
-      <td>male</td>
-      <td>male</td>
-      <td>male</td>
-      <td>male</td>
-      <td>female</td>
-      <td>female</td>
-      <td>...</td>
-      <td>male</td>
-      <td>female</td>
-      <td>male</td>
-      <td>male</td>
-      <td>female</td>
-      <td>male</td>
-      <td>female</td>
-      <td>female</td>
-      <td>male</td>
-      <td>male</td>
-    </tr>
-    <tr>
-      <th>Age</th>
-      <td>22.0</td>
-      <td>38.0</td>
-      <td>26.0</td>
-      <td>35.0</td>
-      <td>35.0</td>
-      <td>NaN</td>
-      <td>54.0</td>
-      <td>2.0</td>
-      <td>27.0</td>
-      <td>14.0</td>
-      <td>...</td>
-      <td>33.0</td>
-      <td>22.0</td>
-      <td>28.0</td>
-      <td>25.0</td>
-      <td>39.0</td>
-      <td>27.0</td>
-      <td>19.0</td>
-      <td>NaN</td>
-      <td>26.0</td>
-      <td>32.0</td>
-    </tr>
-    <tr>
-      <th>Ticket</th>
-      <td>A/5 21171</td>
-      <td>PC 17599</td>
-      <td>STON/O2. 3101282</td>
-      <td>113803.0</td>
-      <td>373450.0</td>
-      <td>330877.0</td>
-      <td>17463.0</td>
-      <td>349909.0</td>
-      <td>347742.0</td>
-      <td>237736.0</td>
-      <td>...</td>
-      <td>349257.0</td>
-      <td>7552.0</td>
-      <td>C.A./SOTON 34068</td>
-      <td>SOTON/OQ 392076</td>
-      <td>382652.0</td>
-      <td>211536.0</td>
-      <td>112053.0</td>
-      <td>W./C. 6607</td>
-      <td>111369.0</td>
-      <td>370376.0</td>
-    </tr>
-    <tr>
-      <th>Fare</th>
-      <td>7.25</td>
-      <td>71.2833</td>
-      <td>7.925</td>
-      <td>53.1</td>
-      <td>8.05</td>
-      <td>8.4583</td>
-      <td>51.8625</td>
-      <td>21.075</td>
-      <td>11.1333</td>
-      <td>30.0708</td>
-      <td>...</td>
-      <td>7.8958</td>
-      <td>10.5167</td>
-      <td>10.5</td>
-      <td>7.05</td>
-      <td>29.125</td>
-      <td>13.0</td>
-      <td>30.0</td>
-      <td>23.45</td>
-      <td>30.0</td>
-      <td>7.75</td>
-    </tr>
-    <tr>
-      <th>Cabin</th>
-      <td>NaN</td>
-      <td>C85</td>
-      <td>NaN</td>
-      <td>C123</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>E46</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>...</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>B42</td>
-      <td>NaN</td>
-      <td>C148</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>Survived</th>
-      <td>0.0</td>
-      <td>1.0</td>
-      <td>1.0</td>
-      <td>1.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>1.0</td>
-      <td>1.0</td>
-      <td>...</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>1.0</td>
-      <td>0.0</td>
-      <td>1.0</td>
-      <td>0.0</td>
-    </tr>
-  </tbody>
-</table>
-<p>8 rows × 891 columns</p>
-</div></div></div>
+<span class="ne">NameError</span>: name &#39;df_titanic&#39; is not defined
+</pre></div>
+</div>
+</div>
 </div>
 <p>With this particular example it is not the best thing to do. However, we have got an interesting data frame. Let’s spend some time on it.</p>
 </section>
@@ -1762,17 +1426,17 @@ Transposed matrix
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="Part01_week8_data_frames.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="Part01_week8_data_frames_solutions.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
             <p class="prev-next-title">Part 1: data frames (extra powerful dictionaries)</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="Part03_week8_selecting_elements.html" title="next page">
+    <a class='right-next' id="next-link" href="Part02_week8_viewing_data_solved.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Part 3: selecting elements from a data frame</p>
+        <p class="prev-next-title">Part 2: viewing data</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
