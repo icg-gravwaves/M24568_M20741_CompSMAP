@@ -117,3 +117,28 @@ chapters:
     - file: lecture_7/Part_6_Exercises_4_to_6.ipynb
     - file: lecture_7/Part_7_Exercises_7_to_9.ipynb
     - file: lecture_7/Part_8_Acknowledgements.ipynb
+- file: lecture_8/overview
+  sections:
+    - file: lecture_8/Part00_Week_8_into.ipynb
+    - file: lecture_8/Part00_Week_8_into_solved.ipynb
+    - file: lecture_8/Part01_week8_data_frames.ipynb
+    - file: lecture_8/Part01_week8_data_frames_solutions.ipynb
+    - file: lecture_8/Part02_week8_viewing_data.ipynb
+    - file: lecture_8/Part02_week8_viewing_data_solved.ipynb
+    - file: lecture_8/Part03_week8_selecting_elements.ipynb
+    - file: lecture_8/Part03_week8_selecting_elements_solutions.ipynb
+    - file: lecture_8/Part04_week8_more_operations.ipynb
+    - file: lecture_8/Part04_week8_more_operations_solutions.ipynb
+    - file: lecture_8/Part05_week8_grouping.ipynb
+    - file: lecture_8/Part05_week8_grouping_solutions.ipynb
+    - file: lecture_8/Part06_week8_importing_files.ipynb
+    - file: lecture_8/Part06_week8_importing_files_solutions.ipynb
+    - file: lecture_8/Part07_week8_summary_exercises.ipynb
+    - file: lecture_8/Part07_week8_summary_exercises_solutions.ipynb
+- file: lecture_9/overview
+  sections:
+    - file: lecture_9/Part_1_Introduction.ipynb
+    - file: lecture_9/Part_2_Continuous_Functions.ipynb
+    - file: lecture_9/Part_3_Bolzanos_Theorem.ipynb
+    - file: lecture_9/Part_4_Bisection_Method.ipynb
+    - file: lecture_9/Part_5_Newtons_Method.ipynb
