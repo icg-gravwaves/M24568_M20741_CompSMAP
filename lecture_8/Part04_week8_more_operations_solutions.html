@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Part 4: More operations on DataFrames &#8212; M24568 and M20741 Intro to CompSMAP</title>
+    <title>Part 4: More operations on DataFrames - SOLVED &#8212; M24568 and M20741 Intro to CompSMAP</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -50,8 +50,6 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -714,7 +712,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Part00_Week_8_into_solved.html">
-     Introduction
+     Introduction - SOLVED
     </a>
    </li>
    <li class="toctree-l2">
@@ -724,7 +722,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Part01_week8_data_frames_solutions.html">
-     Part 1: data frames (extra powerful dictionaries)
+     Part 1: data frames (extra powerful dictionaries) - SOLVED
     </a>
    </li>
    <li class="toctree-l2">
@@ -734,7 +732,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Part02_week8_viewing_data_solved.html">
-     Part 2: viewing data
+     Part 2: viewing data - SOLVED
     </a>
    </li>
    <li class="toctree-l2">
@@ -744,7 +742,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Part03_week8_selecting_elements_solutions.html">
-     Part 3: selecting elements from a data frame
+     Part 3: selecting elements from a data frame - SOLVED
     </a>
    </li>
    <li class="toctree-l2">
@@ -754,7 +752,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Part 4: More operations on DataFrames
+     Part 4: More operations on DataFrames - SOLVED
     </a>
    </li>
    <li class="toctree-l2">
@@ -764,7 +762,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Part05_week8_grouping_solutions.html">
-     Parts 5 and 6: grouping and visualising data
+     Parts 5 and 6: grouping and visualising data - SOLVED
     </a>
    </li>
    <li class="toctree-l2">
@@ -774,7 +772,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Part06_week8_importing_files_solutions.html">
-     Part 7: Importing and exporting files / spreadsheets
+     Part 7: Importing and exporting files / spreadsheets - SOLVED
     </a>
    </li>
    <li class="toctree-l2">
@@ -784,7 +782,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Part07_week8_summary_exercises_solutions.html">
-     Part 8: Summary exercises
+     Part 8: Summary exercises - SOLVED
     </a>
    </li>
   </ul>
@@ -1123,7 +1121,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Part 4: More operations on DataFrames</h1>
+                <h1>Part 4: More operations on DataFrames - SOLVED</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -1189,8 +1187,8 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="part-4-more-operations-on-dataframes">
-<h1>Part 4: More operations on DataFrames<a class="headerlink" href="#part-4-more-operations-on-dataframes" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="part-4-more-operations-on-dataframes-solved">
+<h1>Part 4: More operations on DataFrames - SOLVED<a class="headerlink" href="#part-4-more-operations-on-dataframes-solved" title="Permalink to this headline">#</a></h1>
 <p>This notebook will make use of the <code class="docutils literal notranslate"><span class="pre">titanic</span></code> dataset, which you will need to load. You will also need to import <code class="docutils literal notranslate"><span class="pre">pandas</span></code> and <code class="docutils literal notranslate"><span class="pre">numpy</span></code> by completing the cells below:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1221,7 +1219,7 @@ How about individual stats?</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/67/1t4_rwdj441c8g3j147_fwrh0000gs/T/ipykernel_22317/1622720641.py:1: FutureWarning: Dropping of nuisance columns in DataFrame reductions (with &#39;numeric_only=None&#39;) is deprecated; in a future version this will raise TypeError.  Select only valid columns before calling the reduction.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/67/1t4_rwdj441c8g3j147_fwrh0000gs/T/ipykernel_22895/1622720641.py:1: FutureWarning: Dropping of nuisance columns in DataFrame reductions (with &#39;numeric_only=None&#39;) is deprecated; in a future version this will raise TypeError.  Select only valid columns before calling the reduction.
   df_titanic.mean()
 </pre></div>
 </div>
@@ -1243,7 +1241,7 @@ How about the average of every numerical row? Remember the axis argument in nump
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/67/1t4_rwdj441c8g3j147_fwrh0000gs/T/ipykernel_22317/1530827155.py:1: FutureWarning: Dropping of nuisance columns in DataFrame reductions (with &#39;numeric_only=None&#39;) is deprecated; in a future version this will raise TypeError.  Select only valid columns before calling the reduction.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/67/1t4_rwdj441c8g3j147_fwrh0000gs/T/ipykernel_22895/1530827155.py:1: FutureWarning: Dropping of nuisance columns in DataFrame reductions (with &#39;numeric_only=None&#39;) is deprecated; in a future version this will raise TypeError.  Select only valid columns before calling the reduction.
   df_titanic.mean(axis=1)
 </pre></div>
 </div>
@@ -1271,7 +1269,7 @@ Length: 891, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/67/1t4_rwdj441c8g3j147_fwrh0000gs/T/ipykernel_22317/4044131916.py:1: FutureWarning: Dropping of nuisance columns in DataFrame reductions (with &#39;numeric_only=None&#39;) is deprecated; in a future version this will raise TypeError.  Select only valid columns before calling the reduction.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/67/1t4_rwdj441c8g3j147_fwrh0000gs/T/ipykernel_22895/4044131916.py:1: FutureWarning: Dropping of nuisance columns in DataFrame reductions (with &#39;numeric_only=None&#39;) is deprecated; in a future version this will raise TypeError.  Select only valid columns before calling the reduction.
   df_titanic.sum()
 </pre></div>
 </div>
@@ -1294,7 +1292,7 @@ dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/67/1t4_rwdj441c8g3j147_fwrh0000gs/T/ipykernel_22317/139375681.py:1: FutureWarning: Dropping of nuisance columns in DataFrame reductions (with &#39;numeric_only=None&#39;) is deprecated; in a future version this will raise TypeError.  Select only valid columns before calling the reduction.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/67/1t4_rwdj441c8g3j147_fwrh0000gs/T/ipykernel_22895/139375681.py:1: FutureWarning: Dropping of nuisance columns in DataFrame reductions (with &#39;numeric_only=None&#39;) is deprecated; in a future version this will raise TypeError.  Select only valid columns before calling the reduction.
   df_titanic.std()
 </pre></div>
 </div>
@@ -1314,7 +1312,7 @@ dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/67/1t4_rwdj441c8g3j147_fwrh0000gs/T/ipykernel_22317/1917998602.py:1: FutureWarning: Dropping of nuisance columns in DataFrame reductions (with &#39;numeric_only=None&#39;) is deprecated; in a future version this will raise TypeError.  Select only valid columns before calling the reduction.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/67/1t4_rwdj441c8g3j147_fwrh0000gs/T/ipykernel_22895/1917998602.py:1: FutureWarning: Dropping of nuisance columns in DataFrame reductions (with &#39;numeric_only=None&#39;) is deprecated; in a future version this will raise TypeError.  Select only valid columns before calling the reduction.
   df_titanic.median()
 </pre></div>
 </div>
@@ -1334,7 +1332,7 @@ dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/67/1t4_rwdj441c8g3j147_fwrh0000gs/T/ipykernel_22317/1719243674.py:1: FutureWarning: Dropping of nuisance columns in DataFrame reductions (with &#39;numeric_only=None&#39;) is deprecated; in a future version this will raise TypeError.  Select only valid columns before calling the reduction.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/67/1t4_rwdj441c8g3j147_fwrh0000gs/T/ipykernel_22895/1719243674.py:1: FutureWarning: Dropping of nuisance columns in DataFrame reductions (with &#39;numeric_only=None&#39;) is deprecated; in a future version this will raise TypeError.  Select only valid columns before calling the reduction.
   df_titanic.max()
 </pre></div>
 </div>
@@ -1356,7 +1354,7 @@ dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/67/1t4_rwdj441c8g3j147_fwrh0000gs/T/ipykernel_22317/2649348952.py:1: FutureWarning: Dropping of nuisance columns in DataFrame reductions (with &#39;numeric_only=None&#39;) is deprecated; in a future version this will raise TypeError.  Select only valid columns before calling the reduction.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/67/1t4_rwdj441c8g3j147_fwrh0000gs/T/ipykernel_22895/2649348952.py:1: FutureWarning: Dropping of nuisance columns in DataFrame reductions (with &#39;numeric_only=None&#39;) is deprecated; in a future version this will raise TypeError.  Select only valid columns before calling the reduction.
   df_titanic.min()
 </pre></div>
 </div>
@@ -1548,7 +1546,7 @@ Name: Name, Length: 891, dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/67/1t4_rwdj441c8g3j147_fwrh0000gs/T/ipykernel_22317/1631070539.py:1: FutureWarning: The default value of regex will change from True to False in a future version. In addition, single character regular expressions will *not* be treated as literal strings when regex=True.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/67/1t4_rwdj441c8g3j147_fwrh0000gs/T/ipykernel_22895/1631070539.py:1: FutureWarning: The default value of regex will change from True to False in a future version. In addition, single character regular expressions will *not* be treated as literal strings when regex=True.
   df_titanic.Name.str.replace(&quot;.&quot;, &quot;||&quot;)
 </pre></div>
 </div>
@@ -1582,7 +1580,7 @@ Then display your result</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/67/1t4_rwdj441c8g3j147_fwrh0000gs/T/ipykernel_22317/1623192223.py:1: FutureWarning: The default value of regex will change from True to False in a future version. In addition, single character regular expressions will *not* be treated as literal strings when regex=True.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/67/1t4_rwdj441c8g3j147_fwrh0000gs/T/ipykernel_22895/1623192223.py:1: FutureWarning: The default value of regex will change from True to False in a future version. In addition, single character regular expressions will *not* be treated as literal strings when regex=True.
   name_col = df_titanic.Name.str.replace(&quot;.&quot;, &quot;|&quot;)
 </pre></div>
 </div>
