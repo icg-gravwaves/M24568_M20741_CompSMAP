@@ -1,0 +1,1542 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Simpson’s rule &#8212; M24568 and M20741 Intro to CompSMAP</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="APPENDIX" href="Appendix_code_for_graphs.html" />
+    <link rel="prev" title="The Trapezium rule" href="Part_3_Numerical_Integration_trapezium_rule.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">M24568 and M20741 Intro to CompSMAP</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../README.html">
+                    Welcome to Computational Mathematics and Introduction to Computational Physics!
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../lecture_1/overview.html">
+   Lecture 1: Introduction
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_1/Introduction.html">
+     A quick look at the Colab/Jupyter interface
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_1/Python_types.html">
+     Getting started - Python objects, basic types, and variables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_1/Python_types_interactive.html">
+     INTERACTIVE: Checking object types in Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_1/Python_types_interactive_SOLVED.html">
+     INTERACTIVE: Checking object types in Python - SOLVED
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_1/Operators_summary.html">
+     Python Main Operators
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_1/Arithmetic_exercises.html">
+     Arithmetic Operators - Interactive exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_1/Arithmetic_exercises_SOLVED.html">
+     Arithmetic Operators - Interactive exercises - SOLVED
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_1/Operations_mixing_types.html">
+     Operations with different types
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_1/Variables.html">
+     Variables - an interactive introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_1/Variables_SOLVED.html">
+     Variables - an interactive introduction - SOLVED
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_1/Variable_swap.html">
+     Swapping Variables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_1/Comparison_operators.html">
+     Comparison operators - interactively introduced
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_1/String_type.html">
+     The string type - interactive
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_1/String_type_SOLVED.html">
+     The string type - interactive - SOLVED
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_1/Type_conversion.html">
+     Type Conversion - A quick interactive intro
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_1/Type_conversion_SOLVED.html">
+     Type Conversion - A quick interactive intro - SOLVED
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_1/Errors.html">
+     Errors
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_1/Summary.html">
+     Summary
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_1/Summary_exercises.html">
+     Summary exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_1/Summary_exercises_SOLVED.html">
+     Summary exercises - SOLVED
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../lecture_2/overview.html">
+   Lecture 2: Functions, Logic and Conditionals
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_2/1_Functions_overview.html">
+     Functions - An overview
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_2/2_Using_functions.html">
+     Using (or “calling”) a function - Interactive
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_2/2_Using_functions_SOLVED.html">
+     Using (or “calling”) a function - Interactive - SOLVED
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_2/3_Writing_Functions.html">
+     How to write your own function
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_2/4_Writing_Functions_Exercises.html">
+     Writing Functions - Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_2/4_Writing_Functions_Exercises_SOLVED.html">
+     Writing Functions - Exercises - SOLVED
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_2/5_Writing_functions_exercises_2.html">
+     Writing functions with multiple inputs and outputs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_2/5_Writing_functions_exercises_2_SOLVED.html">
+     Writing functions with multiple inputs and outputs - SOLVED
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_2/6_Importing_functions.html">
+     Importing a function
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_2/6a_Function_Failures.html">
+     The most common reasons people use functions wrong and don’t pass coursework questions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_2/7_Logical_operators.html">
+     Logical operators
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_2/8_Logical_Exercises.html">
+     Logical Operators - Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_2/8_Logical_Exercises_SOLVED.html">
+     Logical Operators - Exercises - SOLVED
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_2/9_Conditionals.html">
+     Conditional statements
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_2/10_Conditional_Exercises.html">
+     Conditionals - Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_2/10_Conditional_Exercises_SOLVED.html">
+     Conditionals - Exercises - SOLVED
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_2/11_Summary.html">
+     Summary
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_2/12_Summary_Exercises.html">
+     End of class exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_2/12_Summary_Exercises_SOLVED.html">
+     End of class exercises - SOLVED
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../lecture_3/overview.html">
+   Lecture 3: Loops and lists
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_3/Part_1_loops_intro.html">
+     Loops and lists: an overview
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_3/Part_2_Writing_a_for_loop_interactive.html">
+     Using a for loop: interactive
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_3/Part_2_Writing%20a%20for%20loop_Interactive_SOLUTION.html">
+     Using a for loop: interactive - SOLVED
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_3/Part_3_for_loop_exercises.html">
+     For loops: exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_3/Part_3_for_loop_exercises_SOLUTION.html">
+     For loops: exercises - SOLVED
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_3/Part_4_while_loops.html">
+     The while loop: interactive
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_3/Part_4_while_loops_SOLUTION.html">
+     The while loop: interactive - SOLVED
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_3/Part_5_sums.html">
+     Writing sums as functions: INTERACTIVE
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_3/Part_5_sums_SOLUTION.html">
+     Writing sums as functions: INTERACTIVE - SOLVED
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_3/Part_6_lists.html">
+     Lists (interactive)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_3/Part_6_lists_SOLUTION.html">
+     Lists (interactive) - SOLVED
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_3/Part_7_list_exercises.html">
+     Lists: exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_3/Part_7_list_exercises_SOLUTION.html">
+     Lists: exercises - SOLVED
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_3/Part_8_indices.html">
+     Indices and ordering: INTERACTIVE
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_3/Part_8_indices_SOLUTION.html">
+     Indices and ordering: INTERACTIVE - SOLVED
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_3/Part_9_removing_from_list.html">
+     Lists: some other list operations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_3/Part_9_removing_from_list_SOLUTION.html">
+     Lists: some other list operations - SOLVED
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_3/Part_10_summary_exercises.html">
+     Summary exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_3/Part_10_summary_exercises_SOLUTION.html">
+     Summary exercises - SOLVED
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../lecture_4/overview.html">
+   Lecture 4: Data types
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_4/Part1_DataTypes_Introduction.html">
+     The File object: A brief introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_4/Part1_DataTypes_Introduction_SOLVED.html">
+     The File object: A brief introduction - SOLVED
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_4/Part2_DataTypes_tuple_set_dictionary.html">
+     Introducing tuples, sets and dictionaries
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_4/Part2_DataTypes_tuple_set_dictionary_SOLVED.html">
+     Introducing tuples, sets and dictionaries - SOLVED
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_4/Part3_DataTypes_further_exercises.html">
+     Further exercises on sets, tuples and dictionaries
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_4/Part3_DataTypes_further_exercises_SOLVED.html">
+     Further exercises on sets, tuples and dictionaries - SOLVED
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_4/Part4_DataTypes_challenge_exercises.html">
+     Challenge exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_4/Part4_DataTypes_challenge_exercises_SOLVED.html">
+     Challenge exercises - SOLVED
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_4/Part5_DataTypes_13_14.html">
+     Additional resources
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../lecture_5/overview.html">
+   Lecture 5: Numpy
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_5/Part01_numpy_introduction.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_5/Part01_numpy_introduction_solution.html">
+     Introduction - SOLVED
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_5/Part02_numpy_basic_arrays.html">
+     How to create basic arrays
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_5/Part02_numpy_basic_arrays_solutions.html">
+     How to create basic arrays - SOLVED
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_5/Part03_numpy_array_operations.html">
+     Basic array operations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_5/Part03_numpy_array_operations_solutions.html">
+     Basic array operations - SOLVED
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_5/Part04_numpy_indexing_slicing.html">
+     Indexing and Slicing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_5/Part04_numpy_indexing_slicing_solution.html">
+     Indexing and Slicing - SOLVED
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_5/Part05_numpy_iterating.html">
+     Iterating over an numpy array
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_5/Part05_numpy_iterating_solutions.html">
+     Iterating over an numpy array - SOLVED
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_5/Part06_numpy_sorting_arrays.html">
+     Sorting, adding and removing elements from an array
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_5/Part06_numpy_sorting_arrays_solutions.html">
+     Sorting, adding and removing elements from an array - SOLVED
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_5/Part07_numpy_broadcasting.html">
+     Broadcasting
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_5/Part07_numpy_broadcasting_solutions.html">
+     Broadcasting - SOLVED
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_5/Part08_numpy_array_axes.html">
+     Using a particular axis of an array
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_5/Part08_numpy_array_axes_solutions.html">
+     Using particular axis of an array - SOLVED
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_5/Part09_numpy_summary_exercises.html">
+     Summary Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_5/Part09_numpy_summary_exercises_solution.html">
+     Summary Exercises - SOLVED
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../lecture_6/overview.html">
+   Lecture 6: Visualisation
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_6/Part01_Introduction_to_Plotting.html">
+     Introduction to plotting in matplotlib
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_6/Part01_Introduction_to_Plotting_SOLVED.html">
+     Introduction to plotting in matplotlib - SOLVED
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_6/Part02_Interactive_plots.html">
+     Adding Interactive Elements: Sliders
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_6/Part02_Interactive_plots_SOLVED.html">
+     Adding Interactive Elements: Sliders - SOLVED
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_6/Part03_Challenge_exercises.html">
+     Challenge exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_6/Part03_Challenge_exercises_SOLVED.html">
+     Challenge exercises - SOLVED
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../lecture_7/overview.html">
+   Lecture 7: Understanding and fixing problems in python code
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_7/Part_1_Introduction.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_7/Part_2_Introducing_PDB.html">
+     Using PDB to debug code
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_7/Part_3_Syntax_Errors.html">
+     Exercise 1: Syntax errors
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_7/Part_4_Short_Failing_Examples.html">
+     Exercise 2 - Short failing examples
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_7/Part_5_Variable_Scope.html">
+     Exercise 3 - Variable Scope
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_7/Part_6_Exercises_4_to_6.html">
+     Exercises 4 - 6
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_7/Part_7_Exercises_7_to_9.html">
+     Exercises 7 to 9
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_7/Part_8_Acknowledgements.html">
+     Acknowledgements
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../lecture_8/overview.html">
+   Lecture 8: Data manipulation (with pandas)
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_8/Part00_Week_8_into.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_8/Part00_Week_8_into_solved.html">
+     Introduction - SOLVED
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_8/Part01_week8_data_frames.html">
+     Part 1: data frames (extra powerful dictionaries)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_8/Part01_week8_data_frames_solutions.html">
+     Part 1: data frames (extra powerful dictionaries) - SOLVED
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_8/Part02_week8_viewing_data.html">
+     Part 2: viewing data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_8/Part02_week8_viewing_data_solved.html">
+     Part 2: viewing data - SOLVED
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_8/Part03_week8_selecting_elements.html">
+     Part 3: selecting elements from a data frame
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_8/Part03_week8_selecting_elements_solutions.html">
+     Part 3: selecting elements from a data frame - SOLVED
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_8/Part04_week8_more_operations.html">
+     Part 4: More operations on DataFrames
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_8/Part04_week8_more_operations_solutions.html">
+     Part 4: More operations on DataFrames - SOLVED
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_8/Part05_week8_grouping.html">
+     Parts 5 and 6: grouping and visualising data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_8/Part05_week8_grouping_solutions.html">
+     Parts 5 and 6: grouping and visualising data - SOLVED
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_8/Part06_week8_importing_files.html">
+     Part 7: Importing and exporting files / spreadsheets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_8/Part06_week8_importing_files_solutions.html">
+     Part 7: Importing and exporting files / spreadsheets - SOLVED
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_8/Part07_week8_summary_exercises.html">
+     Part 8: Summary exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_8/Part07_week8_summary_exercises_solutions.html">
+     Part 8: Summary exercises - SOLVED
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../lecture_9/overview.html">
+   Lecture 9: Root finding
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_9/Part_1_Introduction.html">
+     What is root finding and why do it on a computer?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_9/Part_2_Continuous_Functions.html">
+     Continuous functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_9/Part_2_Continuous_Functions-SOLVED.html">
+     Continuous functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_9/Part_3_Bolzanos_Theorem.html">
+     Bolzano’s Theorem
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_9/Part_3_Bolzanos_Theorem-SOLVED.html">
+     Bolzano’s Theorem
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_9/Part_4_Bisection_Method.html">
+     Writing a root finding algorithm using the bisection method
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_9/Part_4_Bisection_Method-SOLVED.html">
+     Writing a root finding algorithm using the bisection method
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_9/Part_5_Newtons_Method.html">
+     Newton’s Method
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_9/Part_5_Newtons_Method-SOLVED.html">
+     Newton’s Method
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="overview.html">
+   Lecture 10: Numerical Integration
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="Part_1_Introduction.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Part_2_Numerical_Integration_rectangle_rule.html">
+     The rectangle rule
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Part_3_Numerical_Integration_trapezium_rule.html">
+     The Trapezium rule
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Simpson’s rule
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Appendix_code_for_graphs.html">
+     APPENDIX
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/icg-gravwaves/M24568_M20741_CompSMAP/main?urlpath=lab/tree/lecture_10/Part_4_Numerical_Integration_Simpson's_rule.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://colab.research.google.com/github/icg-gravwaves/M24568_M20741_CompSMAP/blob/main/lecture_10/Part_4_Numerical_Integration_Simpson's_rule.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Colab"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_colab.png">
+  </span>
+<span class="headerbtn__text-container">Colab</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="initThebeSBT()"
+  class="headerbtn headerbtn-launch-thebe"
+  data-toggle="tooltip"
+data-placement="left"
+title="Launch Thebe"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="headerbtn__text-container">Live Code</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/icg-gravwaves/M24568_M20741_CompSMAP"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/icg-gravwaves/M24568_M20741_CompSMAP/issues/new?title=Issue%20on%20page%20%2Flecture_10/Part_4_Numerical_Integration_Simpson's_rule.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/lecture_10/Part_4_Numerical_Integration_Simpson's_rule.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#step-1">
+   Step 1
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#step-2">
+   Step 2
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#some-optimization">
+     Some optimization
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise">
+   Exercise
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Exercise
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   Exercise
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   Exercise
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   Exercise
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id5">
+   Exercise
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id6">
+   Exercise
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Simpson’s rule</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#step-1">
+   Step 1
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#step-2">
+   Step 2
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#some-optimization">
+     Some optimization
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise">
+   Exercise
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Exercise
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   Exercise
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   Exercise
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   Exercise
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id5">
+   Exercise
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id6">
+   Exercise
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="simpson-s-rule">
+<h1>Simpson’s rule<a class="headerlink" href="#simpson-s-rule" title="Permalink to this headline">#</a></h1>
+<p>We have now demonstrated both the rectangular and trapezium integration methods. While the trapezium method looks like a visibly better fit, there are cases (including the cases above) where the rectangle method is actually more accurate. However, this can be improved by using a “2nd-order” solution to the problem.</p>
+<p>Simpson’s rule is that. In this case rather than assuming that the curve is a series of straight lines, we assume that the curve is a series of quadratic lines. A nice introduction to this can be seen here:</p>
+<p><a class="reference external" href="https://web.stanford.edu/group/sisl/k12/optimization/MO-unit4-pdfs/4.2simpsonintegrals.pdf">https://web.stanford.edu/group/sisl/k12/optimization/MO-unit4-pdfs/4.2simpsonintegrals.pdf</a></p>
+<p>(see up to slide 7). Let’s try and visualize how this will look for our <span class="math notranslate nohighlight">\(e^{-x^2}dx\)</span>. Here I will compare to using only one rectangle/trapezium to emphasize the difference.</p>
+<p>![image.png](data:image/png;base64,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)</p>
+<p>Here the red is the actual curve, the green is the rectangle, the orange the trapezium, and the black is the new quadrature fit. We can see that each is progressively fitting better.</p>
+<p>Now we just need to evaluate this integral. Now we <em>could</em> analytically integrate the quadratic curve at every point, but it turns out that the integral of a quadratic curve over the interval <span class="math notranslate nohighlight">\(a\)</span> to <span class="math notranslate nohighlight">\(b\)</span> (where the midpoint is <span class="math notranslate nohighlight">\(m\)</span>) is given by:</p>
+<div class="math notranslate nohighlight">
+\[\int_a^b f(x) dx \approx  \frac{(b-a)}{6}\left(f(a)+4f(m) + f(b) \right) \]</div>
+<p>We can code this up.</p>
+<section id="step-1">
+<h2>Step 1<a class="headerlink" href="#step-1" title="Permalink to this headline">#</a></h2>
+<p>Write a function <code class="docutils literal notranslate"><span class="pre">compute_quadrature_area(height_at_left,</span> <span class="pre">height_at_middle,</span> <span class="pre">height_at_right,</span> <span class="pre">width)</span></code> to compute the area of the shapes used in Simpson’s rule. As described above this function should return <code class="docutils literal notranslate"><span class="pre">width/6.</span> <span class="pre">*</span> <span class="pre">(height_at_left</span> <span class="pre">+</span> <span class="pre">4*height_at_middle</span> <span class="pre">+</span> <span class="pre">height_at_right)</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">compute_quadrature_area</span><span class="p">(</span><span class="n">height_at_left</span><span class="p">,</span> <span class="n">height_at_middle</span><span class="p">,</span> <span class="n">height_at_right</span><span class="p">,</span> <span class="n">width</span><span class="p">):</span>
+    <span class="c1"># Complete function below</span>
+
+
+
+<span class="c1"># One example to test this</span>
+<span class="n">example_area</span> <span class="o">=</span> <span class="n">compute_quadrature_area</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Should be 4.666666666666666&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Value computed was </span><span class="si">{</span><span class="n">example_area</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Input</span> <span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">example_area</span> <span class="o">=</span> <span class="n">compute_quadrature_area</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+    <span class="o">^</span>
+<span class="ne">IndentationError</span>: expected an indented block
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="step-2">
+<h2>Step 2<a class="headerlink" href="#step-2" title="Permalink to this headline">#</a></h2>
+<p>Now we can write a function <code class="docutils literal notranslate"><span class="pre">compute_simpsons_integral(function,</span> <span class="pre">lower_val,</span> <span class="pre">upper_val,</span> <span class="pre">num_rectangles)</span></code>. The <code class="docutils literal notranslate"><span class="pre">function</span></code> should be the function to compute (ie. compute_ex2) in the example above, <code class="docutils literal notranslate"><span class="pre">lower_val</span></code> is the lower value of integration, <code class="docutils literal notranslate"><span class="pre">upper_val</span></code> is the upper value and <code class="docutils literal notranslate"><span class="pre">num_trapeziums</span></code> is the number of trapeziums to use. Here’s roughly how this could work:</p>
+<ol class="simple">
+<li><p>Call <code class="docutils literal notranslate"><span class="pre">rectangle_edges</span></code> to get the edges of your shapes (maybe rename the function if you want to avoid the confusion of calling something with rectangle in the name)</p></li>
+<li><p>Call <code class="docutils literal notranslate"><span class="pre">compute_step_size</span></code> to get the step size.</p></li>
+<li><p>Call <code class="docutils literal notranslate"><span class="pre">f_midpoints</span></code> to get the midpoints of your shapes</p></li>
+<li><p>Call <code class="docutils literal notranslate"><span class="pre">function</span></code> to get the y_values (the heights) of your shapes at all the edges.</p></li>
+<li><p>Call <code class="docutils literal notranslate"><span class="pre">function</span></code> <em>again</em> to get the y_values of the shapes at all the midpoints.</p></li>
+<li><p>For all shapes use <code class="docutils literal notranslate"><span class="pre">compute_quadrature_area</span></code> to compute the area.</p></li>
+<li><p>Sum over all areas.</p></li>
+<li><p>Return the integral.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># copy the functions you want to use from the previous workbook</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">compute_simpsons_integral</span><span class="p">(</span><span class="n">function</span><span class="p">,</span> <span class="n">lower_val</span><span class="p">,</span> <span class="n">upper_val</span><span class="p">,</span> <span class="n">num_rectangles</span><span class="p">):</span>
+    <span class="c1"># COMPLETE CODE HERE</span>
+
+
+<span class="c1"># Checking that it works</span>
+<span class="n">integral</span> <span class="o">=</span> <span class="n">compute_simpsons_integral</span><span class="p">(</span><span class="n">compute_ex2</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Integral should be 0.4207871236381236&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Integral was computed to be </span><span class="si">{</span><span class="n">integral</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Input</span> <span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+    <span class="n">integral</span> <span class="o">=</span> <span class="n">compute_simpsons_integral</span><span class="p">(</span><span class="n">compute_ex2</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+    <span class="o">^</span>
+<span class="ne">IndentationError</span>: expected an indented block
+</pre></div>
+</div>
+</div>
+</div>
+<section id="some-optimization">
+<h3>Some optimization<a class="headerlink" href="#some-optimization" title="Permalink to this headline">#</a></h3>
+<p>If we examine this closely (with 2 shapes), we can see that the right edge of the first shape is the left edge of the second shape, therefore we don’t need to compute that twice. We can just compute the value of the function at all the points we need (which will be twice as many points as with the trapezium rule, as we need to compute midpoints). Then we just multiply each point by a <em>weighting</em>. This weighting will be 4 for all the midpoints, 1 for the first and last point, and 2 otherwise. So for example if we were doing this with 3 shapes we would do something like:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+	\begin{array}{|c|c|c|}\hline
+	x &amp; f(x) &amp; \mbox{weight} \\
+	\hline
+	0.5 &amp; 0.778801 &amp; 1\\
+	0.666667 &amp; 0.641180 &amp; 4\\
+	0.833333 &amp; 0.499352 &amp; 2\\
+	1 &amp; 0.367880 &amp; 4\\
+	1.166667 &amp; 0.256376 &amp; 2\\
+    1.333333 &amp; 0.169013 &amp; 4\\
+    1.5 &amp; 0.105399 &amp; 1\\
+	\hline
+	\end{array}
+\end{split}\]</div>
+<p>Then we just multiply all the f(x) values by the weights and sum everything up.</p>
+<p>Integral = (0.778801 + 0.641180*4 + 0.499352*2 + 0.367880*4 + 0.256376*2 + 0.169013*4 + 0.105399) * width / 6.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">simpson_rule</span><span class="p">(</span><span class="n">function</span><span class="p">,</span> <span class="n">lower_val</span><span class="p">,</span> <span class="n">upper_val</span><span class="p">,</span> <span class="n">num_shapes</span><span class="p">):</span>
+    <span class="n">h</span> <span class="o">=</span> <span class="p">(</span><span class="n">upper_val</span> <span class="o">-</span> <span class="n">lower_val</span><span class="p">)</span><span class="o">/</span><span class="n">num_shapes</span>
+    <span class="n">x_vals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">lower_val</span><span class="p">,</span> <span class="n">upper_val</span><span class="p">,</span> <span class="n">num_shapes</span><span class="o">*</span><span class="mi">2</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">f_vals</span> <span class="o">=</span> <span class="n">function</span><span class="p">(</span><span class="n">x_vals</span><span class="p">)</span>
+    <span class="n">weights</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">f_vals</span><span class="p">))</span> <span class="c1"># Start with all weights equal to 1, then use slicing magic</span>
+    <span class="n">weights</span><span class="p">[</span><span class="mi">1</span><span class="p">::</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">4</span> <span class="c1"># Set every other value, starting with the second, to 4</span>
+    <span class="n">weights</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span> <span class="c1"># Set every other value, starting with the third, and not including the last, to 2</span>
+    <span class="c1">#print(weights) # Definitely use a debug statement here to check we got what we expected!!</span>
+    <span class="k">return</span> <span class="n">h</span><span class="o">/</span><span class="mi">6</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">f_vals</span><span class="o">*</span><span class="n">weights</span><span class="p">)</span>
+
+<span class="n">current_area</span> <span class="o">=</span> <span class="n">simpson_rule</span><span class="p">(</span><span class="n">compute_ex2</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;I have computed the integral to be </span><span class="si">{</span><span class="n">current_area</span><span class="si">}</span><span class="s2"> with numerical integration using Simpson&#39;s rule&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Input</span> <span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span>     <span class="c1">#print(weights) # Definitely use a debug statement here to check we got what we expected!!</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span>     <span class="k">return</span> <span class="n">h</span><span class="o">/</span><span class="mi">6</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">f_vals</span><span class="o">*</span><span class="n">weights</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">11</span> <span class="n">current_area</span> <span class="o">=</span> <span class="n">simpson_rule</span><span class="p">(</span><span class="n">compute_ex2</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">13</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;I have computed the integral to be </span><span class="si">{</span><span class="n">current_area</span><span class="si">}</span><span class="s2"> with numerical integration using Simpson&#39;s rule&quot;</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;compute_ex2&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="exercise">
+<h2>Exercise<a class="headerlink" href="#exercise" title="Permalink to this headline">#</a></h2>
+<p>Make a plot of the accuracy of the integral of <span class="math notranslate nohighlight">\(e^{-x^2}dx\)</span> between <span class="math notranslate nohighlight">\(x=0.5\)</span> and <span class="math notranslate nohighlight">\(x=2\)</span> computed using Simpson’s rule.</p>
+<p>The x-axis of the plot should be the number of shapes used in the integral. Vary this between 1 shape and 100 shapes. The y-axis should show the value of the integral.</p>
+<p><strong>HINT</strong> As before, you don’t need to write any integration code here, it’s all provided above.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ADD CODE HERE</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id1">
+<h2>Exercise<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+<p>TL:DR: Now repeat the process but plot the accuracy using Simpson’s rule, Trapezium rule and rectangle rule on the same plot!</p>
+<p>Longer: Make a plot of the accuracy of the integral of <span class="math notranslate nohighlight">\(e^{-x^2}dx\)</span> between <span class="math notranslate nohighlight">\(x=0.5\)</span> and <span class="math notranslate nohighlight">\(x=2\)</span> computed using Simpson’s rule, Trapezium rule and the Rectangle rule. Show the 3 lines on the same plot.</p>
+<p>The x-axis of the plot should be the number of shapes used in the integral. Vary this between 1 shape and 100 shapes. The y-axis should show the value of the integral.</p>
+<p><strong>HINT</strong> As before, you don’t need to write any integration code here, it’s all provided above.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ADD CODE HERE</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id2">
+<h2>Exercise<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h2>
+<p>Again, repeat the process for the other two integrals:</p>
+<p>Make a plot of the accuracy of <span class="math notranslate nohighlight">\(\int_1^3\frac{\sin{x}}{x} dx\)</span> computed using the “rectangle rule”, the “trapezium rule” and “Simpson’s rule”</p>
+<p>The x-axis of the plot should be the number of shapes used in the integral vary this between 1 and 100 shapes. The y-axis should show the value of the integral.</p>
+<p><strong>HINT</strong> All you have to do is copy the previous solution and change the function used, and the range used. I computed the integral to be roughly 0.90257.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ADD CODE HERE</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Make a plot of the accuracy of <span class="math notranslate nohighlight">\(\int_1^3 \sqrt{\sin{x}} dx\)</span> computed using the “rectangle rule”, the “trapezium rule” and “Simpson’s rule”</p>
+<p>The x-axis of the plot should be the number of shapes used in the integral vary this between 1 and 100 shapes. The y-axis should show the value of the integral.</p>
+<p>I computed the integral to be 1.717835 here.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ADD CODE HERE</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id3">
+<h2>Exercise<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h2>
+<p>Compute the integral:</p>
+<div class="math notranslate nohighlight">
+\[\int_{0.2}^{0.5} \tan(x) dx\]</div>
+<p>using numerical integration</p>
+</section>
+<section id="id4">
+<h2>Exercise<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h2>
+<p>Compute the integral</p>
+<div class="math notranslate nohighlight">
+\[\int_0^{20} e ^ {\sin(x)} dx \]</div>
+</section>
+<section id="id5">
+<h2>Exercise<a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h2>
+<p>Compute the integral</p>
+<div class="math notranslate nohighlight">
+\[\int_1^{100} \frac{\ln (x + 1)}{x} dx \]</div>
+</section>
+<section id="id6">
+<h2>Exercise<a class="headerlink" href="#id6" title="Permalink to this headline">#</a></h2>
+<p>Compute the integral:</p>
+<div class="math notranslate nohighlight">
+\[\int_{1}^{2} \tan(x) dx\]</div>
+<p>using numerical integration.</p>
+<p><strong>WARNING</strong> There’s a catch in this one! Maybe try plotting <span class="math notranslate nohighlight">\(\tan(x)\)</span> in this interval first?? If you can see the catch, is it still possible to integrate this?</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "icg-gravwaves/M24568_M20741_CompSMAP",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./lecture_10"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="Part_3_Numerical_Integration_trapezium_rule.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">The Trapezium rule</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="Appendix_code_for_graphs.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">APPENDIX</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Ian Harry, Samantha Penny and Judi Thurlby<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
