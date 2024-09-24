@@ -82,23 +82,23 @@ chapters:
 - file: lecture_5/overview
   sections:
     - file: lecture_5/Part01_numpy_introduction.ipynb
-    - file: lecture_5/Part01_numpy_introduction_solution.ipynb
+    #    - file: lecture_5/Part01_numpy_introduction_solution.ipynb
     - file: lecture_5/Part02_numpy_basic_arrays.ipynb
-    - file: lecture_5/Part02_numpy_basic_arrays_solutions.ipynb
+    #    - file: lecture_5/Part02_numpy_basic_arrays_solutions.ipynb
     - file: lecture_5/Part03_numpy_array_operations.ipynb
-    - file: lecture_5/Part03_numpy_array_operations_solutions.ipynb
+    #    - file: lecture_5/Part03_numpy_array_operations_solutions.ipynb
     - file: lecture_5/Part04_numpy_indexing_slicing.ipynb
-    - file: lecture_5/Part04_numpy_indexing_slicing_solution.ipynb
+    #    - file: lecture_5/Part04_numpy_indexing_slicing_solution.ipynb
     - file: lecture_5/Part05_numpy_iterating.ipynb
-    - file: lecture_5/Part05_numpy_iterating_solutions.ipynb
+    #    - file: lecture_5/Part05_numpy_iterating_solutions.ipynb
     - file: lecture_5/Part06_numpy_sorting_arrays.ipynb
-    - file: lecture_5/Part06_numpy_sorting_arrays_solutions.ipynb
+    #    - file: lecture_5/Part06_numpy_sorting_arrays_solutions.ipynb
     - file: lecture_5/Part07_numpy_broadcasting.ipynb
-    - file: lecture_5/Part07_numpy_broadcasting_solutions.ipynb
+    #    - file: lecture_5/Part07_numpy_broadcasting_solutions.ipynb
     - file: lecture_5/Part08_numpy_array_axes.ipynb
-    - file: lecture_5/Part08_numpy_array_axes_solutions.ipynb
+    #    - file: lecture_5/Part08_numpy_array_axes_solutions.ipynb
     - file: lecture_5/Part09_numpy_summary_exercises.ipynb
-    - file: lecture_5/Part09_numpy_summary_exercises_solution.ipynb
+    #    - file: lecture_5/Part09_numpy_summary_exercises_solution.ipynb
 - file: lecture_6/overview
 #  sections:
 #    - file: lecture_6/Part01_Introduction_to_Plotting.ipynb
