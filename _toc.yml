@@ -139,13 +139,13 @@ chapters:
   sections:
     - file: lecture_9/Part_1_Introduction.ipynb
     - file: lecture_9/Part_2_Continuous_Functions.ipynb
-    - file: lecture_9/Part_2_Continuous_Functions-SOLVED.ipynb
+    #    - file: lecture_9/Part_2_Continuous_Functions-SOLVED.ipynb
     - file: lecture_9/Part_3_Bolzanos_Theorem.ipynb
-    - file: lecture_9/Part_3_Bolzanos_Theorem-SOLVED.ipynb
+    #    - file: lecture_9/Part_3_Bolzanos_Theorem-SOLVED.ipynb
     - file: lecture_9/Part_4_Bisection_Method.ipynb
-    - file: lecture_9/Part_4_Bisection_Method-SOLVED.ipynb
+    #    - file: lecture_9/Part_4_Bisection_Method-SOLVED.ipynb
     - file: lecture_9/Part_5_Newtons_Method.ipynb
-    - file: lecture_9/Part_5_Newtons_Method-SOLVED.ipynb
+    #    - file: lecture_9/Part_5_Newtons_Method-SOLVED.ipynb
 - file: lecture_10/overview
 #  sections:
 #    - file: lecture_10/Part_1_Introduction.ipynb
