@@ -120,21 +120,21 @@ chapters:
 - file: lecture_8/overview
   sections:
     - file: lecture_8/Part00_Week_8_into.ipynb
-    - file: lecture_8/Part00_Week_8_into_solved.ipynb
+    #    - file: lecture_8/Part00_Week_8_into_solved.ipynb
     - file: lecture_8/Part01_week8_data_frames.ipynb
-    - file: lecture_8/Part01_week8_data_frames_solutions.ipynb
+    #    - file: lecture_8/Part01_week8_data_frames_solutions.ipynb
     - file: lecture_8/Part02_week8_viewing_data.ipynb
-    - file: lecture_8/Part02_week8_viewing_data_solved.ipynb
+    #    - file: lecture_8/Part02_week8_viewing_data_solved.ipynb
     - file: lecture_8/Part03_week8_selecting_elements.ipynb
-    - file: lecture_8/Part03_week8_selecting_elements_solutions.ipynb
+    #    - file: lecture_8/Part03_week8_selecting_elements_solutions.ipynb
     - file: lecture_8/Part04_week8_more_operations.ipynb
-    - file: lecture_8/Part04_week8_more_operations_solutions.ipynb
+    #    - file: lecture_8/Part04_week8_more_operations_solutions.ipynb
     - file: lecture_8/Part05_week8_grouping.ipynb
-    - file: lecture_8/Part05_week8_grouping_solutions.ipynb
+    #    - file: lecture_8/Part05_week8_grouping_solutions.ipynb
     - file: lecture_8/Part06_week8_importing_files.ipynb
-    - file: lecture_8/Part06_week8_importing_files_solutions.ipynb
+    #    - file: lecture_8/Part06_week8_importing_files_solutions.ipynb
     - file: lecture_8/Part07_week8_summary_exercises.ipynb
-    - file: lecture_8/Part07_week8_summary_exercises_solutions.ipynb
+    #    - file: lecture_8/Part07_week8_summary_exercises_solutions.ipynb
 - file: lecture_9/overview
 #  sections:
     #- file: lecture_9/Part_1_Introduction.ipynb
