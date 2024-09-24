@@ -21,3 +21,7 @@ Follow the links below, or the links on the side, to access individual lectures'
 * [Lecture 4: Data Types](lecture_4/overview.md)
 * [Lecture 5: Numpy](lecture_5/overview.md)
 * [Lecture 6: Visualisation](lecture_6/overview.md)
+* [Lecture 7: Debugging](lecture_7/overview.md)
+* [Lecture 8: Pandas and dataframes](lecture_8/overview.md)
+* [Lecture 9: Root Finding](lecture_9/overview.md)
+* [Lecture 10: Numerical Integration](lecture_10/overview.md)
