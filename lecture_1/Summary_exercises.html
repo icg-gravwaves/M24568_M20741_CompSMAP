@@ -624,15 +624,18 @@ title="Print to PDF"
 </ul>
 <p>In the cell below, display</p>
 <p><code class="docutils literal notranslate"><span class="pre">fav_num1</span> <span class="pre">+</span> <span class="pre">fav_num2</span> <span class="pre">-</span> <span class="pre">fav_num3</span></code></p>
-<p>Now try:
-$<span class="math notranslate nohighlight">\(\frac{\mbox{fav_num1} + \mbox{fav_num2}}{\mbox{fav_num2} - \mbox{fav_num3}}\)</span>$
-you need to put both numerator and denominator in (separate) round brackets, and use / for the <strong>fraction bar</strong>.
+<p>Now try:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\mbox{fav_num1} + \mbox{fav_num2}}{\mbox{fav_num2} - \mbox{fav_num3}}\]</div>
+<p>you need to put both numerator and denominator in (separate) round brackets, and use / for the <strong>fraction bar</strong>.
 Please try it in the cell below.</p>
-<p>Now try
-$<span class="math notranslate nohighlight">\(\mbox{fav_num1}  + \frac{\mbox{fav_num2}}{\mbox{fav_num3}} - \mbox{fav_num2} \)</span>$</p>
-<p>In the cell below, display
-$<span class="math notranslate nohighlight">\((\mbox{fav_num1})^{ (\mbox{fav_num3})}\)</span>$
-that is, <strong>fav_num1</strong> to the power of <strong>fav_num3</strong>.</p>
+<p>Now try</p>
+<div class="math notranslate nohighlight">
+\[\mbox{fav_num1}  + \frac{\mbox{fav_num2}}{\mbox{fav_num3}} - \mbox{fav_num2} \]</div>
+<p>In the cell below, display</p>
+<div class="math notranslate nohighlight">
+\[(\mbox{fav_num1})^{ (\mbox{fav_num3})}\]</div>
+<p>that is, <strong>fav_num1</strong> to the power of <strong>fav_num3</strong>.</p>
 <p>Now try some boolean expressions:</p>
 <p>In the cells below evaluate the expressions above these empty cells:</p>
 <div class="math notranslate nohighlight">
@@ -671,8 +674,9 @@ that is, <strong>fav_num1</strong> to the power of <strong>fav_num3</strong>.</p
 </section>
 <section id="exercise-4">
 <h2>Exercise 4<a class="headerlink" href="#exercise-4" title="Permalink to this headline">#</a></h2>
-<p>In Maths and Physics, we often deal with expressions involving unknowns. What happens if you type the following into the cell below?
-$<span class="math notranslate nohighlight">\( 2 + x + x \)</span>$</p>
+<p>In Maths and Physics, we often deal with expressions involving unknowns. What happens if you type the following into the cell below?</p>
+<div class="math notranslate nohighlight">
+\[ 2 + x + x \]</div>
 <p>In general, Python requires all objects involved in an expression to have <b>known</b> values. Later in the year we will discuss symbolic programming, but let’s get the basics first.</p>
 </section>
 <section id="exercise-5">
@@ -698,7 +702,7 @@ What happens if you omit the quotation marks?</p>
 </section>
 <section id="exercise-7-the-importance-of-correct-bracketing">
 <h2>Exercise 7 - The importance of correct bracketing.<a class="headerlink" href="#exercise-7-the-importance-of-correct-bracketing" title="Permalink to this headline">#</a></h2>
-<p>The following is an attempt to calculate <span class="math notranslate nohighlight">\(\frac{2+4}{2}\)</span>. What does <code class="docutils literal notranslate"><span class="pre">2+4/2</span></code>
+<p>Let’s assume we are trying to compute <span class="math notranslate nohighlight">\(\frac{2+4}{2}\)</span>. What does <code class="docutils literal notranslate"><span class="pre">2+4/2</span></code>
 produce in Python? Try it in the cell below.</p>
 <p>Can you explain this behaviour? What needs to be done to fix the
 calculation? Try fixing it in the cell below.</p>
@@ -706,57 +710,66 @@ calculation? Try fixing it in the cell below.</p>
 <section id="exercise-8">
 <h2>Exercise 8<a class="headerlink" href="#exercise-8" title="Permalink to this headline">#</a></h2>
 <p>How should the following expression be entered in the below cell, in
-order to be sure to come up with the correct answer?
-$<span class="math notranslate nohighlight">\(\frac{1 + \sqrt{5}}{2} - 2^3 \)</span>$</p>
+order to be sure to come up with the correct answer?</p>
+<div class="math notranslate nohighlight">
+\[\frac{1 + \sqrt{5}}{2} - 2^3 \]</div>
 <p>HINT: You can get the square root by using 5 to the power of 0.5?</p>
 </section>
 <section id="exercise-9">
 <h2>Exercise 9<a class="headerlink" href="#exercise-9" title="Permalink to this headline">#</a></h2>
-<p>Now we assign the numbers to the following variables,
-\begin{align*}
-a = 1+ \sqrt{5},\
-b = 2, \
-c = b^3.
-\end{align*}
-Please do it in the cell below.</p>
-<p>Now in the cell below write the following
-$<span class="math notranslate nohighlight">\( \frac{a}{b} - c\)</span>$
-Compare the answer with the one from Exercise 8.</p>
+<p>Now we assign the numbers to the following variables,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+a = 1+ \sqrt{5},\\ 
+b = 2, \\
+c = b^3. 
+\end{split}\]</div>
+<p>Please do it in the cell below.</p>
+<p>Now in the cell below write the following</p>
+<div class="math notranslate nohighlight">
+\[ \frac{a}{b} - c\]</div>
+<p>Compare the answer with the one from Exercise 8.</p>
 </section>
 <section id="exercise-10-challenging">
 <h2>Exercise 10 - CHALLENGING(!)<a class="headerlink" href="#exercise-10-challenging" title="Permalink to this headline">#</a></h2>
-<p>The famous Fibonacci Numbers are given by the sequence
-\begin{equation}
-f_0 = 0,\quad f_1 = 1,\quad f_n = f_{n-1}+f_{n-2}\ \mbox{for <span class="math notranslate nohighlight">\(n\ge 2\)</span>},
-\end{equation}
-This means that we begin with the numbers <span class="math notranslate nohighlight">\(0\)</span> and <span class="math notranslate nohighlight">\(1\)</span> and then each successive number is the sum of the previous two.
-Thus we have
-\begin{equation}
+<p>The famous Fibonacci Numbers are given by the sequence</p>
+<div class="math notranslate nohighlight">
+\[
+f_0 = 0,\quad f_1 = 1,\quad f_n = f_{n-1}+f_{n-2}\ \mbox{for $n\ge 2$},
+\]</div>
+<p>This means that we begin with the numbers <span class="math notranslate nohighlight">\(0\)</span> and <span class="math notranslate nohighlight">\(1\)</span> and then each successive number is the sum of the previous two.
+Thus we have</p>
+<div class="math notranslate nohighlight">
+\[
 0, 1, 1, 2, 3, 5, 8, 13,21,34, \ldots
-\end{equation}
-It is possible to find a <b>closed form</b> solution for any given Fibonacci number (e.g. if I want to get the 234th number, I don’t have to count up all 233 preceding it). This is given by:
-\begin{equation}
+\]</div>
+<p>It is possible to find a <b>closed form</b> solution for any given Fibonacci number (e.g. if I want to get the 234th number, I don’t have to count up all 233 preceding it). This is given by:</p>
+<div class="math notranslate nohighlight">
+\[
 f_n = \frac{a^n - b^n}{a-b},
-\end{equation}</p>
+\]</div>
 <p>Here n represents the nth Fibonacci number and</p>
-<p>\begin{equation}
+<div class="math notranslate nohighlight">
+\[
 a = \frac{1+\sqrt{5}}{2},
 \quad\mbox{and}\quad
 b = \frac{1-\sqrt{5}}{2}.
-\end{equation}</p>
-<ul>
-    <li>How would you write down expressions for $a$ and $b$ in Python? Do it in a cell below.</li>
-    <li>In the another cell, do `type(a)` and `type(b)`. Are you happy with the results?</li>
-<li>How would you put those expressions together to make one large expression to calculate $f_4$ (we would call this the fourth number, but as we count from 0, this is actually the fifth number, which is 3)? Set the variable $n=4$ in one cell. Then in another cell write your $f_4$ by using the variables that you have already defined. </li>
-Check that you obtain the correct answer.
-</ul><p>HINTS:</p>
-<ul>
-<li> First ensure that you are able to calculate the expressions for $a$ and $b$, by typing their right-hand sides into the cell and checking the result (approximate values are $a\simeq 1.618$ and $b\simeq -0.618$). </li>
-<li> Using pen and paper, \textbf{substitute the algebraic expressions} for $a$ and $b$ into $f_n$ with $n=4$. Carefully introduce pairs of brackets around any sub-expressions that need to be bracketed in order to override the usual BODMAS/BIDMAS operator precedence.</li>
-<li> Check that your brackets balance properly! Check that the corresponding pairs of brackets really do surround the correct sub-expressions. Try to use brackets only where needed.</li>
-<li> Once you have planned how to type in the complicated expression for $f_4$, try it out in the interpreter window and check that you get the correct result (compare with the Fibonacci sequence above, which gives $f_0, f_1,f_2,\ldots$).</li>
-    <li> Was the result <b>exactly</b> correct? If not, subtract your answer from the correct answer, to see how large the error was (it should be rather small).</li>
-</ul></section>
+\]</div>
+<ul class="simple">
+<li><p>How would you write down expressions for <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> in Python? Do it in a cell below.</p></li>
+<li><p>In the another cell, do <code class="docutils literal notranslate"><span class="pre">type(a)</span></code> and <code class="docutils literal notranslate"><span class="pre">type(b)</span></code>. Are you happy with the results?</p></li>
+<li><p>How would you put those expressions together to make one large expression to calculate <span class="math notranslate nohighlight">\(f_4\)</span> (we would call this the fourth number, but as we count from 0, this is actually the fifth number, which is 3)? Set the variable <span class="math notranslate nohighlight">\(n=4\)</span> in one cell. Then in another cell write your <span class="math notranslate nohighlight">\(f_4\)</span> by using the variables that you have already defined.</p></li>
+<li><p>Check that you obtain the correct answer.</p></li>
+</ul>
+<p>HINTS:</p>
+<ul class="simple">
+<li><p>First ensure that you are able to calculate the expressions for <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span>, by typing their right-hand sides into the cell and checking the result (approximate values are <span class="math notranslate nohighlight">\(a\simeq 1.618\)</span> and <span class="math notranslate nohighlight">\(b\simeq -0.618\)</span>).</p></li>
+<li><p>Using pen and paper, <strong>substitute the algebraic expressions</strong> for <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> into <span class="math notranslate nohighlight">\(f_n\)</span> with <span class="math notranslate nohighlight">\(n=4\)</span>. Carefully introduce pairs of brackets around any sub-expressions that need to be bracketed in order to override the usual BODMAS/BIDMAS operator precedence.</p></li>
+<li><p>Check that your brackets balance properly! Check that the corresponding pairs of brackets really do surround the correct sub-expressions. Try to use brackets only where needed.</p></li>
+<li><p>Once you have planned how to type in the complicated expression for <span class="math notranslate nohighlight">\(f_4\)</span>, try it out in the interpreter window and check that you get the correct result (compare with the Fibonacci sequence above, which gives <span class="math notranslate nohighlight">\(f_0, f_1,f_2,\ldots\)</span>).</p></li>
+<li><p>Was the result <strong>exactly</strong> correct? If not, subtract your answer from the correct answer, to see how large the error was (it should be rather small).</p></li>
+</ul>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
