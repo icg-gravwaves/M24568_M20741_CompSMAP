@@ -50,14 +50,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Writing functions with multiple inputs and outputs - SOLVED" href="5_Writing_functions_exercises_2_SOLVED.html" />
-    <link rel="prev" title="Writing Functions - Exercises - SOLVED" href="4_Writing_Functions_Exercises_SOLVED.html" />
+    <link rel="next" title="Importing a function" href="6_Importing_functions.html" />
+    <link rel="prev" title="Writing Functions - Exercises" href="4_Writing_Functions_Exercises.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -251,11 +249,6 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="2_Using_functions_SOLVED.html">
-     Using (or “calling”) a function - Interactive - SOLVED
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="3_Writing_Functions.html">
      How to write your own function
     </a>
@@ -265,19 +258,9 @@ const thebe_selector_output = ".output, .cell_output"
      Writing Functions - Exercises
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="4_Writing_Functions_Exercises_SOLVED.html">
-     Writing Functions - Exercises - SOLVED
-    </a>
-   </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      Writing functions with multiple inputs and outputs
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="5_Writing_functions_exercises_2_SOLVED.html">
-     Writing functions with multiple inputs and outputs - SOLVED
     </a>
    </li>
    <li class="toctree-l2">
@@ -301,11 +284,6 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="8_Logical_Exercises_SOLVED.html">
-     Logical Operators - Exercises - SOLVED
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="9_Conditionals.html">
      Conditional statements
     </a>
@@ -313,11 +291,6 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="10_Conditional_Exercises.html">
      Conditionals - Exercises
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="10_Conditional_Exercises_SOLVED.html">
-     Conditionals - Exercises - SOLVED
     </a>
    </li>
    <li class="toctree-l2">
@@ -330,521 +303,42 @@ const thebe_selector_output = ".output, .cell_output"
      End of class exercises
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="12_Summary_Exercises_SOLVED.html">
-     End of class exercises - SOLVED
-    </a>
-   </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="../lecture_3/overview.html">
    Lecture 3: Loops and lists
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_3/Part_1_loops_intro.html">
-     Loops and lists: an overview
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_3/Part_2_Writing_a_for_loop_interactive.html">
-     Using a for loop: interactive
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_3/Part_2_Writing%20a%20for%20loop_Interactive_SOLUTION.html">
-     Using a for loop: interactive - SOLVED
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_3/Part_3_for_loop_exercises.html">
-     For loops: exercises
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_3/Part_3_for_loop_exercises_SOLUTION.html">
-     For loops: exercises - SOLVED
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_3/Part_4_while_loops.html">
-     The while loop: interactive
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_3/Part_4_while_loops_SOLUTION.html">
-     The while loop: interactive - SOLVED
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_3/Part_5_sums.html">
-     Writing sums as functions: INTERACTIVE
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_3/Part_5_sums_SOLUTION.html">
-     Writing sums as functions: INTERACTIVE - SOLVED
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_3/Part_6_lists.html">
-     Lists (interactive)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_3/Part_6_lists_SOLUTION.html">
-     Lists (interactive) - SOLVED
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_3/Part_7_list_exercises.html">
-     Lists: exercises
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_3/Part_7_list_exercises_SOLUTION.html">
-     Lists: exercises - SOLVED
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_3/Part_8_indices.html">
-     Indices and ordering: INTERACTIVE
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_3/Part_8_indices_SOLUTION.html">
-     Indices and ordering: INTERACTIVE - SOLVED
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_3/Part_9_removing_from_list.html">
-     Lists: some other list operations
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_3/Part_9_removing_from_list_SOLUTION.html">
-     Lists: some other list operations - SOLVED
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_3/Part_10_summary_exercises.html">
-     Summary exercises
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_3/Part_10_summary_exercises_SOLUTION.html">
-     Summary exercises - SOLVED
-    </a>
-   </li>
-  </ul>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="../lecture_4/overview.html">
    Lecture 4: Data types
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_4/Part1_DataTypes_Introduction.html">
-     The File object: A brief introduction
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_4/Part1_DataTypes_Introduction_SOLVED.html">
-     The File object: A brief introduction - SOLVED
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_4/Part2_DataTypes_tuple_set_dictionary.html">
-     Introducing tuples, sets and dictionaries
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_4/Part2_DataTypes_tuple_set_dictionary_SOLVED.html">
-     Introducing tuples, sets and dictionaries - SOLVED
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_4/Part3_DataTypes_further_exercises.html">
-     Further exercises on sets, tuples and dictionaries
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_4/Part3_DataTypes_further_exercises_SOLVED.html">
-     Further exercises on sets, tuples and dictionaries - SOLVED
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_4/Part4_DataTypes_challenge_exercises.html">
-     Challenge exercises
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_4/Part4_DataTypes_challenge_exercises_SOLVED.html">
-     Challenge exercises - SOLVED
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_4/Part5_DataTypes_13_14.html">
-     Additional resources
-    </a>
-   </li>
-  </ul>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="../lecture_5/overview.html">
    Lecture 5: Numpy
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_5/Part01_numpy_introduction.html">
-     Introduction
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_5/Part01_numpy_introduction_solution.html">
-     Introduction - SOLVED
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_5/Part02_numpy_basic_arrays.html">
-     How to create basic arrays
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_5/Part02_numpy_basic_arrays_solutions.html">
-     How to create basic arrays - SOLVED
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_5/Part03_numpy_array_operations.html">
-     Basic array operations
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_5/Part03_numpy_array_operations_solutions.html">
-     Basic array operations - SOLVED
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_5/Part04_numpy_indexing_slicing.html">
-     Indexing and Slicing
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_5/Part04_numpy_indexing_slicing_solution.html">
-     Indexing and Slicing - SOLVED
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_5/Part05_numpy_iterating.html">
-     Iterating over an numpy array
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_5/Part05_numpy_iterating_solutions.html">
-     Iterating over an numpy array - SOLVED
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_5/Part06_numpy_sorting_arrays.html">
-     Sorting, adding and removing elements from an array
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_5/Part06_numpy_sorting_arrays_solutions.html">
-     Sorting, adding and removing elements from an array - SOLVED
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_5/Part07_numpy_broadcasting.html">
-     Broadcasting
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_5/Part07_numpy_broadcasting_solutions.html">
-     Broadcasting - SOLVED
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_5/Part08_numpy_array_axes.html">
-     Using a particular axis of an array
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_5/Part08_numpy_array_axes_solutions.html">
-     Using particular axis of an array - SOLVED
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_5/Part09_numpy_summary_exercises.html">
-     Summary Exercises
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_5/Part09_numpy_summary_exercises_solution.html">
-     Summary Exercises - SOLVED
-    </a>
-   </li>
-  </ul>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="../lecture_6/overview.html">
    Lecture 6: Visualisation
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_6/Part01_Introduction_to_Plotting.html">
-     Introduction to plotting in matplotlib
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_6/Part01_Introduction_to_Plotting_SOLVED.html">
-     Introduction to plotting in matplotlib - SOLVED
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_6/Part02_Interactive_plots.html">
-     Adding Interactive Elements: Sliders
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_6/Part02_Interactive_plots_SOLVED.html">
-     Adding Interactive Elements: Sliders - SOLVED
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_6/Part03_Challenge_exercises.html">
-     Challenge exercises
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_6/Part03_Challenge_exercises_SOLVED.html">
-     Challenge exercises - SOLVED
-    </a>
-   </li>
-  </ul>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="../lecture_7/overview.html">
    Lecture 7: Understanding and fixing problems in python code
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_7/Part_1_Introduction.html">
-     Introduction
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_7/Part_2_Introducing_PDB.html">
-     Using PDB to debug code
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_7/Part_3_Syntax_Errors.html">
-     Exercise 1: Syntax errors
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_7/Part_4_Short_Failing_Examples.html">
-     Exercise 2 - Short failing examples
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_7/Part_5_Variable_Scope.html">
-     Exercise 3 - Variable Scope
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_7/Part_6_Exercises_4_to_6.html">
-     Exercises 4 - 6
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_7/Part_7_Exercises_7_to_9.html">
-     Exercises 7 to 9
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_7/Part_8_Acknowledgements.html">
-     Acknowledgements
-    </a>
-   </li>
-  </ul>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="../lecture_8/overview.html">
    Lecture 8: Data manipulation (with pandas)
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_8/Part00_Week_8_into.html">
-     Introduction
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_8/Part00_Week_8_into_solved.html">
-     Introduction - SOLVED
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_8/Part01_week8_data_frames.html">
-     Part 1: data frames (extra powerful dictionaries)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_8/Part01_week8_data_frames_solutions.html">
-     Part 1: data frames (extra powerful dictionaries) - SOLVED
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_8/Part02_week8_viewing_data.html">
-     Part 2: viewing data
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_8/Part02_week8_viewing_data_solved.html">
-     Part 2: viewing data - SOLVED
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_8/Part03_week8_selecting_elements.html">
-     Part 3: selecting elements from a data frame
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_8/Part03_week8_selecting_elements_solutions.html">
-     Part 3: selecting elements from a data frame - SOLVED
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_8/Part04_week8_more_operations.html">
-     Part 4: More operations on DataFrames
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_8/Part04_week8_more_operations_solutions.html">
-     Part 4: More operations on DataFrames - SOLVED
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_8/Part05_week8_grouping.html">
-     Parts 5 and 6: grouping and visualising data
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_8/Part05_week8_grouping_solutions.html">
-     Parts 5 and 6: grouping and visualising data - SOLVED
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_8/Part06_week8_importing_files.html">
-     Part 7: Importing and exporting files / spreadsheets
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_8/Part06_week8_importing_files_solutions.html">
-     Part 7: Importing and exporting files / spreadsheets - SOLVED
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_8/Part07_week8_summary_exercises.html">
-     Part 8: Summary exercises
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_8/Part07_week8_summary_exercises_solutions.html">
-     Part 8: Summary exercises - SOLVED
-    </a>
-   </li>
-  </ul>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="../lecture_9/overview.html">
    Lecture 9: Root finding
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-  <label for="toctree-checkbox-9">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_9/Part_1_Introduction.html">
-     What is root finding and why do it on a computer?
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_9/Part_2_Continuous_Functions.html">
-     Continuous functions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_9/Part_2_Continuous_Functions-SOLVED.html">
-     Continuous functions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_9/Part_3_Bolzanos_Theorem.html">
-     Bolzano’s Theorem
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_9/Part_3_Bolzanos_Theorem-SOLVED.html">
-     Bolzano’s Theorem
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_9/Part_4_Bisection_Method.html">
-     Writing a root finding algorithm using the bisection method
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_9/Part_4_Bisection_Method-SOLVED.html">
-     Writing a root finding algorithm using the bisection method
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_9/Part_5_Newtons_Method.html">
-     Newton’s Method
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_9/Part_5_Newtons_Method-SOLVED.html">
-     Newton’s Method
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../lecture_10/overview.html">
@@ -1408,17 +902,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="4_Writing_Functions_Exercises_SOLVED.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="4_Writing_Functions_Exercises.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Writing Functions - Exercises - SOLVED</p>
+            <p class="prev-next-title">Writing Functions - Exercises</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="5_Writing_functions_exercises_2_SOLVED.html" title="next page">
+    <a class='right-next' id="next-link" href="6_Importing_functions.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Writing functions with multiple inputs and outputs - SOLVED</p>
+        <p class="prev-next-title">Importing a function</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
