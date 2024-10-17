@@ -51,23 +51,23 @@ chapters:
   sections:
     - file: lecture_3/Part_1_loops_intro.ipynb
     - file: lecture_3/Part_2_Writing_a_for_loop_interactive.ipynb
-    #    - file: lecture_3/Part_2_Writing a for loop_Interactive_SOLUTION.ipynb
+    - file: lecture_3/Part_2_Writing a for loop_Interactive_SOLUTION.ipynb
     - file: lecture_3/Part_3_for_loop_exercises.ipynb
-    #    - file: lecture_3/Part_3_for_loop_exercises_SOLUTION.ipynb
+    - file: lecture_3/Part_3_for_loop_exercises_SOLUTION.ipynb
     - file: lecture_3/Part_4_while_loops.ipynb
-    #    - file: lecture_3/Part_4_while_loops_SOLUTION.ipynb
+    - file: lecture_3/Part_4_while_loops_SOLUTION.ipynb
     - file: lecture_3/Part_5_sums.ipynb
-    #    - file: lecture_3/Part_5_sums_SOLUTION.ipynb
+    - file: lecture_3/Part_5_sums_SOLUTION.ipynb
     - file: lecture_3/Part_6_lists.ipynb
-    #    - file: lecture_3/Part_6_lists_SOLUTION.ipynb
+    - file: lecture_3/Part_6_lists_SOLUTION.ipynb
     - file: lecture_3/Part_7_list_exercises.ipynb
-    #    - file: lecture_3/Part_7_list_exercises_SOLUTION.ipynb
+    - file: lecture_3/Part_7_list_exercises_SOLUTION.ipynb
     - file: lecture_3/Part_8_indices.ipynb
-    #    - file: lecture_3/Part_8_indices_SOLUTION.ipynb
+    - file: lecture_3/Part_8_indices_SOLUTION.ipynb
     - file: lecture_3/Part_9_removing_from_list.ipynb
-    #    - file: lecture_3/Part_9_removing_from_list_SOLUTION.ipynb
+    - file: lecture_3/Part_9_removing_from_list_SOLUTION.ipynb
     - file: lecture_3/Part_10_summary_exercises.ipynb
-    #    - file: lecture_3/Part_10_summary_exercises_SOLUTION.ipynb
+    - file: lecture_3/Part_10_summary_exercises_SOLUTION.ipynb
 - file: lecture_4/overview
 #  sections:
 #    - file: lecture_4/Part1_DataTypes_Introduction.ipynb
