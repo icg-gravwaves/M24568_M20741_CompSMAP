@@ -71,13 +71,13 @@ chapters:
 - file: lecture_4/overview
   sections:
     - file: lecture_4/Part1_DataTypes_Introduction.ipynb
-    #    - file: lecture_4/Part1_DataTypes_Introduction_SOLVED.ipynb
+    - file: lecture_4/Part1_DataTypes_Introduction_SOLVED.ipynb
     - file: lecture_4/Part2_DataTypes_tuple_set_dictionary.ipynb
-    #    - file: lecture_4/Part2_DataTypes_tuple_set_dictionary_SOLVED.ipynb
+    - file: lecture_4/Part2_DataTypes_tuple_set_dictionary_SOLVED.ipynb
     - file: lecture_4/Part3_DataTypes_further_exercises.ipynb
-    #    - file: lecture_4/Part3_DataTypes_further_exercises_SOLVED.ipynb
+    - file: lecture_4/Part3_DataTypes_further_exercises_SOLVED.ipynb
     - file: lecture_4/Part4_DataTypes_challenge_exercises.ipynb
-    #    - file: lecture_4/Part4_DataTypes_challenge_exercises_SOLVED.ipynb
+    - file: lecture_4/Part4_DataTypes_challenge_exercises_SOLVED.ipynb
     - file: lecture_4/Part5_DataTypes_13_14.ipynb
 - file: lecture_5/overview
 #  sections:
