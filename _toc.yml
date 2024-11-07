@@ -100,12 +100,12 @@ chapters:
     - file: lecture_5/Part09_numpy_summary_exercises.ipynb
     - file: lecture_5/Part09_numpy_summary_exercises_solution.ipynb
 - file: lecture_6/overview
-#  sections:
-#    - file: lecture_6/Part01_Introduction_to_Plotting.ipynb
+  sections:
+    - file: lecture_6/Part01_Introduction_to_Plotting.ipynb
     #    - file: lecture_6/Part01_Introduction_to_Plotting_SOLVED.ipynb
-    #    - file: lecture_6/Part02_Interactive_plots.ipynb
+    - file: lecture_6/Part02_Interactive_plots.ipynb
     #    - file: lecture_6/Part02_Interactive_plots_SOLVED.ipynb
-    #    - file: lecture_6/Part03_Challenge_exercises.ipynb
+    - file: lecture_6/Part03_Challenge_exercises.ipynb
     #    - file: lecture_6/Part03_Challenge_exercises_SOLVED.ipynb
 - file: lecture_7/overview
 #  sections:
