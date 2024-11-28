@@ -147,15 +147,15 @@ chapters:
     - file: lecture_8/Part07_week8_summary_exercises.ipynb
     - file: lecture_8/Part07_week8_summary_exercises_solutions.ipynb
 - file: lecture_9/overview
-#  sections:
-    #- file: lecture_9/Part_1_Introduction.ipynb
-    #- file: lecture_9/Part_2_Continuous_Functions.ipynb
+  sections:
+    - file: lecture_9/Part_1_Introduction.ipynb
+    - file: lecture_9/Part_2_Continuous_Functions.ipynb
     #    - file: lecture_9/Part_2_Continuous_Functions-SOLVED.ipynb
-    #- file: lecture_9/Part_3_Bolzanos_Theorem.ipynb
+    - file: lecture_9/Part_3_Bolzanos_Theorem.ipynb
     #    - file: lecture_9/Part_3_Bolzanos_Theorem-SOLVED.ipynb
-    #- file: lecture_9/Part_4_Bisection_Method.ipynb
+    - file: lecture_9/Part_4_Bisection_Method.ipynb
     #    - file: lecture_9/Part_4_Bisection_Method-SOLVED.ipynb
-    #- file: lecture_9/Part_5_Newtons_Method.ipynb
+    - file: lecture_9/Part_5_Newtons_Method.ipynb
     #    - file: lecture_9/Part_5_Newtons_Method-SOLVED.ipynb
 - file: lecture_10/overview
 #  sections:
