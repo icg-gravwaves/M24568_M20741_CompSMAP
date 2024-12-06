@@ -833,7 +833,17 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_9/Part_2_Continuous_Functions-SOLVED.html">
+     Continuous functions
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../lecture_9/Part_3_Bolzanos_Theorem.html">
+     Bolzano’s Theorem
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_9/Part_3_Bolzanos_Theorem-SOLVED.html">
      Bolzano’s Theorem
     </a>
    </li>
@@ -843,16 +853,58 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_9/Part_4_Bisection_Method-SOLVED.html">
+     Writing a root finding algorithm using the bisection method
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../lecture_9/Part_5_Newtons_Method.html">
+     Newton’s Method
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_9/Part_5_Newtons_Method-SOLVED.html">
      Newton’s Method
     </a>
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../lecture_10/overview.html">
    Lecture 10: Numerical Integration
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_10/Part_1_Introduction.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_10/Part_2_Numerical_Integration_rectangle_rule.html">
+     The rectangle rule
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_10/Part_3_Numerical_Integration_trapezium_rule.html">
+     The Trapezium rule
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_10/Part_4_Numerical_Integration_Simpson%27s_rule.html">
+     Simpson’s rule
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_10/Appendix_code_for_graphs.html">
+     APPENDIX
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -1196,20 +1248,20 @@ the row is [1.5 3.2 6.7]
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>######################
-the square root of the row [12.93820191  6.04377091 63.63051468 44.02134008 88.70433945 81.56977405
- 55.29542818 23.18607656 19.88221158 25.20355336] is 27.673981586079396.
+the square root of the row [ 5.22861806 47.35329122 82.30272175 82.24792437 19.77655964 67.47204725
+ 57.54343456 62.60280707 76.89198989 98.89996527] is 27.635715012194325.
 ######################
-the square root of the row [35.7200471  45.77804561 36.57881748 96.62631445 32.76868217 15.51179927
- 95.727267   86.03682881 70.47602478 52.50834661] is 27.237232309095607.
+the square root of the row [61.56442899 10.92424712 86.90691459 40.88586963 82.51236808  5.05194042
+ 79.65321012 83.89768788 43.52547798  9.84391005] is 31.40660108622703.
 ######################
-the square root of the row [71.06336129 38.49941395 46.97376716 73.44783486 11.69044833  7.58800274
- 92.19039751 84.49106568 41.53576885 35.08086516] is 27.684866240044112.
+the square root of the row [52.03727971 63.49817127 82.29990518 33.51149015  2.38250283 83.97390059
+ 63.39251885  3.05990731 22.78983709  3.06891437] is 30.723068244694606.
 ######################
-the square root of the row [22.23765435 13.99781899 74.92152932 83.01830205 40.55967072 28.58408836
- 40.75849411 65.57227621 33.00256546 17.42590729] is 23.162673995757125.
+the square root of the row [65.9719698  68.49045858 71.56678774 75.58407447 79.79889902 51.81246715
+ 18.87873876 36.97337952 17.37558388 31.66711905] is 22.613652386251935.
 ######################
-the square root of the row [75.18268925 89.23241966 23.27117401 32.35367226  9.35767689 54.57494755
- 63.58961435 53.18878847 83.57268282 23.09158197] is 26.291514940009993.
+the square root of the row [78.72721318 94.38502244  8.76693935 58.63837273 55.62834755 25.22945731
+ 10.95573894 67.15642471  7.1264513  67.92483835] is 30.213802883280454.
 </pre></div>
 </div>
 </div>
@@ -1279,30 +1331,30 @@ the element is 6.7
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[[4.54972295 0.5891447 ]
-  [5.08651087 8.02659136]
-  [5.05774612 8.0829616 ]
-  [5.69720426 5.55936304]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[[3.19797652 8.68950445]
+  [2.31105022 4.98141344]
+  [5.04711748 3.81326481]
+  [3.16610303 7.42642402]]
 
- [[5.662183   8.80258863]
-  [8.53619694 7.0347368 ]
-  [5.13535797 9.26217638]
-  [6.05221944 1.86042024]]
+ [[0.77575524 9.60409986]
+  [5.51812769 3.83485616]
+  [0.44824377 6.98493584]
+  [4.48385592 3.66626526]]
 
- [[6.12339802 5.03170846]
-  [5.75366022 4.09332444]
-  [6.71140717 9.00431535]
-  [3.9203692  7.73551746]]
+ [[5.23975621 0.24116223]
+  [7.89678166 7.60805173]
+  [4.7523295  0.08922699]
+  [5.54050196 5.15748694]]
 
- [[0.21329795 6.54094418]
-  [3.36083608 7.2344951 ]
-  [1.47485272 6.53843915]
-  [7.65909127 7.74678506]]
+ [[1.46771118 7.42760703]
+  [4.52369508 6.29064824]
+  [7.20906995 0.23117057]
+  [0.71258912 5.55521019]]
 
- [[0.03955753 1.34557774]
-  [2.0245825  5.9551932 ]
-  [8.92545365 2.7233729 ]
-  [0.83070494 7.84987572]]]
+ [[3.20834277 6.284144  ]
+  [5.69396944 9.66020573]
+  [3.40145636 7.35502229]
+  [9.86293973 9.69017563]]]
 </pre></div>
 </div>
 </div>
@@ -1318,46 +1370,46 @@ the element is 6.7
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.549722947364128
-0.5891447008768835
-5.086510867519839
-8.026591357981331
-5.0577461227878695
-8.082961603617592
-5.697204259595332
-5.559363041519701
-5.662183001998393
-8.802588631172393
-8.536196939243682
-7.034736795335626
-5.135357974534638
-9.262176375055006
-6.052219437234046
-1.8604202384023105
-6.123398019171434
-5.031708461350801
-5.753660215843271
-4.09332443869468
-6.711407165763462
-9.004315345259432
-3.9203692035256177
-7.735517459097804
-0.2132979497091192
-6.540944175202405
-3.360836084859724
-7.234495103734002
-1.4748527181514648
-6.53843915482507
-7.659091269469295
-7.746785059371107
-0.039557527156631744
-1.3455777410424707
-2.0245825034556333
-5.955193202026385
-8.925453647180426
-2.7233728971795665
-0.8307049391251609
-7.849875717023017
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.1979765188309495
+8.689504454376355
+2.3110502189746485
+4.981413440314464
+5.047117482926547
+3.8132648109701783
+3.1661030273560664
+7.426424022612748
+0.7757552447836213
+9.604099861098378
+5.51812768864902
+3.834856159128152
+0.448243771743867
+6.984935837181285
+4.483855915766193
+3.6662652625681735
+5.239756205557046
+0.24116222757206818
+7.896781658241503
+7.608051728279496
+4.752329502952869
+0.08922699346762819
+5.540501964419206
+5.157486943371186
+1.4677111751065552
+7.4276070298141805
+4.523695081651972
+6.290648241872757
+7.209069948253878
+0.23117056807818503
+0.7125891238024196
+5.555210193200141
+3.2083427691092545
+6.2841439976242555
+5.693969440679361
+9.660205733499085
+3.4014563577735757
+7.355022292809709
+9.862939730279976
+9.690175626040054
 </pre></div>
 </div>
 </div>

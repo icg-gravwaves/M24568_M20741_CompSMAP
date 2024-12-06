@@ -833,7 +833,17 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_9/Part_2_Continuous_Functions-SOLVED.html">
+     Continuous functions
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../lecture_9/Part_3_Bolzanos_Theorem.html">
+     Bolzano’s Theorem
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_9/Part_3_Bolzanos_Theorem-SOLVED.html">
      Bolzano’s Theorem
     </a>
    </li>
@@ -843,16 +853,58 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_9/Part_4_Bisection_Method-SOLVED.html">
+     Writing a root finding algorithm using the bisection method
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../lecture_9/Part_5_Newtons_Method.html">
+     Newton’s Method
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_9/Part_5_Newtons_Method-SOLVED.html">
      Newton’s Method
     </a>
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../lecture_10/overview.html">
    Lecture 10: Numerical Integration
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_10/Part_1_Introduction.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_10/Part_2_Numerical_Integration_rectangle_rule.html">
+     The rectangle rule
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_10/Part_3_Numerical_Integration_trapezium_rule.html">
+     The Trapezium rule
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_10/Part_4_Numerical_Integration_Simpson%27s_rule.html">
+     Simpson’s rule
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_10/Appendix_code_for_graphs.html">
+     APPENDIX
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -1384,26 +1436,26 @@ hello
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([51.37490553, 51.37652806, 51.42409219, 51.42910194, 51.43764418,
-       51.44276706, 51.44588577, 51.43048686, 51.43714152, 51.45676734,
-       51.4512006 , 51.52312347, 51.48782793, 51.52617325, 51.4905616 ,
-       51.54647337, 51.5399155 , 51.56221596, 51.53442899, 51.58113971,
-       51.4959286 , 51.58323428, 51.5550012 , 51.56678316, 51.59727178,
-       51.60579883, 51.65092679, 51.53582095, 51.58739521, 51.63113724,
-       51.62511707, 51.61894019, 51.66415812, 51.70634028, 51.70802843,
-       51.70994946, 51.60146594, 51.74306041, 51.60119314, 51.66326379,
-       51.725584  , 51.76099606, 51.76929404, 51.77890041, 51.75176141,
-       51.62307537, 51.75518392, 51.74180185, 51.84452027, 51.70752956,
-       51.82073707, 51.69061317, 51.64718337, 51.71450965, 51.77507023,
-       51.87418249, 51.88846969, 51.86792031, 51.9551437 , 51.98041157,
-       51.97602087, 52.00377362, 51.98023289, 51.83757235, 51.99133762,
-       51.99359885, 52.03999075, 51.8361079 , 51.96407195, 52.06358398,
-       52.04161353, 51.97401228, 51.86821475, 52.10918711, 51.93119074,
-       52.13954421, 51.88442021, 51.92782175, 52.13786341, 52.08636218,
-       52.13832491, 52.18240011, 51.89993873, 52.0351073 , 51.85993546,
-       52.01604304, 52.14516365, 52.26250035, 51.8915125 , 52.13309008,
-       51.92621093, 52.26106436, 52.10436781, 52.21550187, 52.25179857,
-       52.28652628, 52.0054321 , 52.03980367, 51.98409542, 52.356491  ])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([50.84975261, 50.85521524, 50.85705479, 50.86768299, 50.86664476,
+       50.88481826, 50.90499344, 50.91107515, 50.90278479, 50.92087973,
+       50.95936799, 50.94971589, 50.94113414, 50.97137725, 51.00362872,
+       50.96932919, 50.98345193, 50.94483984, 50.99010891, 51.03558241,
+       51.02829698, 51.03766545, 51.01687898, 51.02977227, 51.10055526,
+       51.0169112 , 51.11746203, 51.07532803, 51.1006443 , 51.02541714,
+       51.14509733, 51.08693535, 51.18533248, 51.10048876, 51.17588116,
+       51.16722227, 51.17359709, 51.12571152, 51.22027501, 51.13277379,
+       51.16968989, 51.23854865, 51.24547705, 51.27752917, 51.25750157,
+       51.19456243, 51.24555762, 51.20913934, 51.3294629 , 51.40858283,
+       51.3712294 , 51.32167028, 51.40199493, 51.30065238, 51.4354338 ,
+       51.17623419, 51.22064611, 51.45084143, 51.45069088, 51.45686771,
+       51.4782723 , 51.34087431, 51.50618129, 51.50365911, 51.21972577,
+       51.47697539, 51.43017535, 51.24909539, 51.4094939 , 51.50526394,
+       51.3779081 , 51.42662419, 51.39711011, 51.25814048, 51.54481927,
+       51.41057261, 51.39276939, 51.5369933 , 51.43386052, 51.38429722,
+       51.5675531 , 51.58037556, 51.57754068, 51.3019901 , 51.45429824,
+       51.65339891, 51.34794189, 51.46679686, 51.69295345, 51.6918769 ,
+       51.73794261, 51.55443809, 51.71276814, 51.35421724, 51.57459592,
+       51.72191768, 51.54033563, 51.60022488, 51.81795832, 51.7654494 ])
 </pre></div>
 </div>
 </div>
