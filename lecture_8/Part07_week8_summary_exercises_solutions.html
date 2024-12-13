@@ -51,7 +51,7 @@ const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Lecture 9: Root finding" href="../lecture_9/overview.html" />
@@ -890,8 +890,18 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_10/Part_2_Numerical_integration_rectangle_rule_SOLUTIONS.html">
+     The rectangle rule - SOLVED
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../lecture_10/Part_3_Numerical_Integration_trapezium_rule.html">
      The Trapezium rule
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_10/Part_3_Numerical_integration_trapezium_rule_SOLUTIONS.html">
+     Trapezium rule and Simpson’s rule - Solutions
     </a>
    </li>
    <li class="toctree-l2">
@@ -1269,10 +1279,6 @@ You should investigate whether the title that somebody used affected if they wer
 Name: Name, Length: 891, dtype: object
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/67/1t4_rwdj441c8g3j147_fwrh0000gs/T/ipykernel_65145/2855172510.py:1: FutureWarning: The default value of regex will change from True to False in a future version. In addition, single character regular expressions will *not* be treated as literal strings when regex=True.
-  titanic_name = df_titanic.Name.str.replace(&quot;.&quot;, &quot;|&quot;)
-</pre></div>
-</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -1336,62 +1342,62 @@ Name: Name, Length: 891, dtype: object
   <tbody>
     <tr>
       <th>0</th>
-      <td>1.0</td>
+      <td>1</td>
       <td>Braund, Mr. Owen Harris</td>
       <td>male</td>
       <td>22.0</td>
       <td>A/5 21171</td>
       <td>7.2500</td>
       <td>NaN</td>
-      <td>0.0</td>
+      <td>0</td>
       <td>Mr</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>2.0</td>
+      <td>2</td>
       <td>Cumings, Mrs. John Bradley (Florence Briggs Th...</td>
       <td>female</td>
       <td>38.0</td>
       <td>PC 17599</td>
       <td>71.2833</td>
       <td>C85</td>
-      <td>1.0</td>
+      <td>1</td>
       <td>Mrs</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>3.0</td>
+      <td>3</td>
       <td>Heikkinen, Miss. Laina</td>
       <td>female</td>
       <td>26.0</td>
       <td>STON/O2. 3101282</td>
       <td>7.9250</td>
       <td>NaN</td>
-      <td>1.0</td>
+      <td>1</td>
       <td>Miss</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>4.0</td>
+      <td>4</td>
       <td>Futrelle, Mrs. Jacques Heath (Lily May Peel)</td>
       <td>female</td>
       <td>35.0</td>
-      <td>113803.0</td>
+      <td>113803</td>
       <td>53.1000</td>
       <td>C123</td>
-      <td>1.0</td>
+      <td>1</td>
       <td>Mrs</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>5.0</td>
+      <td>5</td>
       <td>Allen, Mr. William Henry</td>
       <td>male</td>
       <td>35.0</td>
-      <td>373450.0</td>
+      <td>373450</td>
       <td>8.0500</td>
       <td>NaN</td>
-      <td>0.0</td>
+      <td>0</td>
       <td>Mr</td>
     </tr>
   </tbody>
@@ -1480,16 +1486,75 @@ this will put the integers values to represent each category. If there are two c
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Input</span> <span class="n">In</span> <span class="p">[</span><span class="mi">9</span><span class="p">],</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">df_titanic</span><span class="p">[</span><span class="s2">&quot;NumericalSex&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">num_sex</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">df_titanic</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span><span class="n">numeric_only</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<span class="ne">TypeError</span>: corr() got an unexpected keyword argument &#39;numeric_only&#39;
-</pre></div>
-</div>
-</div>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>PassengerId</th>
+      <th>Age</th>
+      <th>Fare</th>
+      <th>Survived</th>
+      <th>NumericalSex</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>PassengerId</th>
+      <td>1.000000</td>
+      <td>0.036847</td>
+      <td>0.012658</td>
+      <td>-0.005007</td>
+      <td>-0.042939</td>
+    </tr>
+    <tr>
+      <th>Age</th>
+      <td>0.036847</td>
+      <td>1.000000</td>
+      <td>0.096067</td>
+      <td>-0.077221</td>
+      <td>-0.093254</td>
+    </tr>
+    <tr>
+      <th>Fare</th>
+      <td>0.012658</td>
+      <td>0.096067</td>
+      <td>1.000000</td>
+      <td>0.257307</td>
+      <td>0.182333</td>
+    </tr>
+    <tr>
+      <th>Survived</th>
+      <td>-0.005007</td>
+      <td>-0.077221</td>
+      <td>0.257307</td>
+      <td>1.000000</td>
+      <td>0.543351</td>
+    </tr>
+    <tr>
+      <th>NumericalSex</th>
+      <td>-0.042939</td>
+      <td>-0.093254</td>
+      <td>0.182333</td>
+      <td>0.543351</td>
+      <td>1.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <p>NumericalSex column is highly correlated with Survived column, the correlation
 is 0.54.</p>
@@ -1528,9 +1593,9 @@ You are asked to make some suggestions. You thought that it may be best to open 
       <th>Date</th>
       <th>AveragePrice</th>
       <th>Total Volume</th>
-      <th>4046.0</th>
-      <th>4225.0</th>
-      <th>4770.0</th>
+      <th>4046</th>
+      <th>4225</th>
+      <th>4770</th>
       <th>Total Bags</th>
       <th>Small Bags</th>
       <th>Large Bags</th>
@@ -1554,7 +1619,7 @@ You are asked to make some suggestions. You thought that it may be best to open 
       <td>93.25</td>
       <td>0.0</td>
       <td>conventional</td>
-      <td>2015.0</td>
+      <td>2015</td>
       <td>Albany</td>
     </tr>
     <tr>
@@ -1570,7 +1635,7 @@ You are asked to make some suggestions. You thought that it may be best to open 
       <td>97.49</td>
       <td>0.0</td>
       <td>conventional</td>
-      <td>2015.0</td>
+      <td>2015</td>
       <td>Albany</td>
     </tr>
     <tr>
@@ -1586,7 +1651,7 @@ You are asked to make some suggestions. You thought that it may be best to open 
       <td>103.14</td>
       <td>0.0</td>
       <td>conventional</td>
-      <td>2015.0</td>
+      <td>2015</td>
       <td>Albany</td>
     </tr>
     <tr>
@@ -1602,7 +1667,7 @@ You are asked to make some suggestions. You thought that it may be best to open 
       <td>133.76</td>
       <td>0.0</td>
       <td>conventional</td>
-      <td>2015.0</td>
+      <td>2015</td>
       <td>Albany</td>
     </tr>
     <tr>
@@ -1618,7 +1683,7 @@ You are asked to make some suggestions. You thought that it may be best to open 
       <td>197.69</td>
       <td>0.0</td>
       <td>conventional</td>
-      <td>2015.0</td>
+      <td>2015</td>
       <td>Albany</td>
     </tr>
   </tbody>
@@ -1653,9 +1718,9 @@ You are asked to make some suggestions. You thought that it may be best to open 
       <th></th>
       <th>AveragePrice</th>
       <th>Total Volume</th>
-      <th>4046.0</th>
-      <th>4225.0</th>
-      <th>4770.0</th>
+      <th>4046</th>
+      <th>4225</th>
+      <th>4770</th>
       <th>Total Bags</th>
       <th>Small Bags</th>
       <th>Large Bags</th>
@@ -1774,9 +1839,9 @@ You are asked to make some suggestions. You thought that it may be best to open 
       <th></th>
       <th>AveragePrice</th>
       <th>Total Volume</th>
-      <th>4046.0</th>
-      <th>4225.0</th>
-      <th>4770.0</th>
+      <th>4046</th>
+      <th>4225</th>
+      <th>4770</th>
       <th>Total Bags</th>
       <th>Small Bags</th>
       <th>Large Bags</th>

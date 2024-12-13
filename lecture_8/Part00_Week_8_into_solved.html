@@ -51,7 +51,7 @@ const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -892,8 +892,18 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_10/Part_2_Numerical_integration_rectangle_rule_SOLUTIONS.html">
+     The rectangle rule - SOLVED
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../lecture_10/Part_3_Numerical_Integration_trapezium_rule.html">
      The Trapezium rule
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_10/Part_3_Numerical_integration_trapezium_rule_SOLUTIONS.html">
+     Trapezium rule and Simpson’s rule - Solutions
     </a>
    </li>
    <li class="toctree-l2">
@@ -1324,58 +1334,58 @@ We have attached this spreadsheet to this notebook; it is contained in the <code
   <tbody>
     <tr>
       <th>0</th>
-      <td>1.0</td>
+      <td>1</td>
       <td>Braund, Mr. Owen Harris</td>
       <td>male</td>
       <td>22.0</td>
       <td>A/5 21171</td>
       <td>7.2500</td>
       <td>NaN</td>
-      <td>0.0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>2.0</td>
+      <td>2</td>
       <td>Cumings, Mrs. John Bradley (Florence Briggs Th...</td>
       <td>female</td>
       <td>38.0</td>
       <td>PC 17599</td>
       <td>71.2833</td>
       <td>C85</td>
-      <td>1.0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>3.0</td>
+      <td>3</td>
       <td>Heikkinen, Miss. Laina</td>
       <td>female</td>
       <td>26.0</td>
       <td>STON/O2. 3101282</td>
       <td>7.9250</td>
       <td>NaN</td>
-      <td>1.0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>4.0</td>
+      <td>4</td>
       <td>Futrelle, Mrs. Jacques Heath (Lily May Peel)</td>
       <td>female</td>
       <td>35.0</td>
-      <td>113803.0</td>
+      <td>113803</td>
       <td>53.1000</td>
       <td>C123</td>
-      <td>1.0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>5.0</td>
+      <td>5</td>
       <td>Allen, Mr. William Henry</td>
       <td>male</td>
       <td>35.0</td>
-      <td>373450.0</td>
+      <td>373450</td>
       <td>8.0500</td>
       <td>NaN</td>
-      <td>0.0</td>
+      <td>0</td>
     </tr>
   </tbody>
 </table>
@@ -1420,58 +1430,58 @@ We have attached this spreadsheet to this notebook; it is contained in the <code
   <tbody>
     <tr>
       <th>886</th>
-      <td>887.0</td>
+      <td>887</td>
       <td>Montvila, Rev. Juozas</td>
       <td>male</td>
       <td>27.0</td>
-      <td>211536.0</td>
+      <td>211536</td>
       <td>13.00</td>
       <td>NaN</td>
-      <td>0.0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>887</th>
-      <td>888.0</td>
+      <td>888</td>
       <td>Graham, Miss. Margaret Edith</td>
       <td>female</td>
       <td>19.0</td>
-      <td>112053.0</td>
+      <td>112053</td>
       <td>30.00</td>
       <td>B42</td>
-      <td>1.0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>888</th>
-      <td>889.0</td>
+      <td>889</td>
       <td>Johnston, Miss. Catherine Helen "Carrie"</td>
       <td>female</td>
       <td>NaN</td>
       <td>W./C. 6607</td>
       <td>23.45</td>
       <td>NaN</td>
-      <td>0.0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>889</th>
-      <td>890.0</td>
+      <td>890</td>
       <td>Behr, Mr. Karl Howell</td>
       <td>male</td>
       <td>26.0</td>
-      <td>111369.0</td>
+      <td>111369</td>
       <td>30.00</td>
       <td>C148</td>
-      <td>1.0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>890</th>
-      <td>891.0</td>
+      <td>891</td>
       <td>Dooley, Mr. Patrick</td>
       <td>male</td>
       <td>32.0</td>
-      <td>370376.0</td>
+      <td>370376</td>
       <td>7.75</td>
       <td>NaN</td>
-      <td>0.0</td>
+      <td>0</td>
     </tr>
   </tbody>
 </table>
@@ -1517,91 +1527,91 @@ We have attached this spreadsheet to this notebook; it is contained in the <code
   <tbody>
     <tr>
       <th>0</th>
-      <td>1.0</td>
+      <td>1</td>
       <td>Braund, Mr. Owen Harris</td>
       <td>male</td>
       <td>22.0</td>
       <td>A/5 21171</td>
       <td>7.2500</td>
       <td>NaN</td>
-      <td>0.0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>2.0</td>
+      <td>2</td>
       <td>Cumings, Mrs. John Bradley (Florence Briggs Th...</td>
       <td>female</td>
       <td>38.0</td>
       <td>PC 17599</td>
       <td>71.2833</td>
       <td>C85</td>
-      <td>1.0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>3.0</td>
+      <td>3</td>
       <td>Heikkinen, Miss. Laina</td>
       <td>female</td>
       <td>26.0</td>
       <td>STON/O2. 3101282</td>
       <td>7.9250</td>
       <td>NaN</td>
-      <td>1.0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>4.0</td>
+      <td>4</td>
       <td>Futrelle, Mrs. Jacques Heath (Lily May Peel)</td>
       <td>female</td>
       <td>35.0</td>
-      <td>113803.0</td>
+      <td>113803</td>
       <td>53.1000</td>
       <td>C123</td>
-      <td>1.0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>5.0</td>
+      <td>5</td>
       <td>Allen, Mr. William Henry</td>
       <td>male</td>
       <td>35.0</td>
-      <td>373450.0</td>
+      <td>373450</td>
       <td>8.0500</td>
       <td>NaN</td>
-      <td>0.0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>6.0</td>
+      <td>6</td>
       <td>Moran, Mr. James</td>
       <td>male</td>
       <td>NaN</td>
-      <td>330877.0</td>
+      <td>330877</td>
       <td>8.4583</td>
       <td>NaN</td>
-      <td>0.0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>7.0</td>
+      <td>7</td>
       <td>McCarthy, Mr. Timothy J</td>
       <td>male</td>
       <td>54.0</td>
-      <td>17463.0</td>
+      <td>17463</td>
       <td>51.8625</td>
       <td>E46</td>
-      <td>0.0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>8.0</td>
+      <td>8</td>
       <td>Palsson, Master. Gosta Leonard</td>
       <td>male</td>
       <td>2.0</td>
-      <td>349909.0</td>
+      <td>349909</td>
       <td>21.0750</td>
       <td>NaN</td>
-      <td>0.0</td>
+      <td>0</td>
     </tr>
   </tbody>
 </table>
@@ -1645,91 +1655,91 @@ We have attached this spreadsheet to this notebook; it is contained in the <code
   <tbody>
     <tr>
       <th>883</th>
-      <td>884.0</td>
+      <td>884</td>
       <td>Banfield, Mr. Frederick James</td>
       <td>male</td>
       <td>28.0</td>
       <td>C.A./SOTON 34068</td>
       <td>10.500</td>
       <td>NaN</td>
-      <td>0.0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>884</th>
-      <td>885.0</td>
+      <td>885</td>
       <td>Sutehall, Mr. Henry Jr</td>
       <td>male</td>
       <td>25.0</td>
       <td>SOTON/OQ 392076</td>
       <td>7.050</td>
       <td>NaN</td>
-      <td>0.0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>885</th>
-      <td>886.0</td>
+      <td>886</td>
       <td>Rice, Mrs. William (Margaret Norton)</td>
       <td>female</td>
       <td>39.0</td>
-      <td>382652.0</td>
+      <td>382652</td>
       <td>29.125</td>
       <td>NaN</td>
-      <td>0.0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>886</th>
-      <td>887.0</td>
+      <td>887</td>
       <td>Montvila, Rev. Juozas</td>
       <td>male</td>
       <td>27.0</td>
-      <td>211536.0</td>
+      <td>211536</td>
       <td>13.000</td>
       <td>NaN</td>
-      <td>0.0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>887</th>
-      <td>888.0</td>
+      <td>888</td>
       <td>Graham, Miss. Margaret Edith</td>
       <td>female</td>
       <td>19.0</td>
-      <td>112053.0</td>
+      <td>112053</td>
       <td>30.000</td>
       <td>B42</td>
-      <td>1.0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>888</th>
-      <td>889.0</td>
+      <td>889</td>
       <td>Johnston, Miss. Catherine Helen "Carrie"</td>
       <td>female</td>
       <td>NaN</td>
       <td>W./C. 6607</td>
       <td>23.450</td>
       <td>NaN</td>
-      <td>0.0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>889</th>
-      <td>890.0</td>
+      <td>890</td>
       <td>Behr, Mr. Karl Howell</td>
       <td>male</td>
       <td>26.0</td>
-      <td>111369.0</td>
+      <td>111369</td>
       <td>30.000</td>
       <td>C148</td>
-      <td>1.0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>890</th>
-      <td>891.0</td>
+      <td>891</td>
       <td>Dooley, Mr. Patrick</td>
       <td>male</td>
       <td>32.0</td>
-      <td>370376.0</td>
+      <td>370376</td>
       <td>7.750</td>
       <td>NaN</td>
-      <td>0.0</td>
+      <td>0</td>
     </tr>
   </tbody>
 </table>
@@ -1776,9 +1786,9 @@ We have attached this spreadsheet to this notebook; it is contained in the <code
       <th>Date</th>
       <th>AveragePrice</th>
       <th>Total Volume</th>
-      <th>4046.0</th>
-      <th>4225.0</th>
-      <th>4770.0</th>
+      <th>4046</th>
+      <th>4225</th>
+      <th>4770</th>
       <th>Total Bags</th>
       <th>Small Bags</th>
       <th>Large Bags</th>
@@ -1802,7 +1812,7 @@ We have attached this spreadsheet to this notebook; it is contained in the <code
       <td>93.25</td>
       <td>0.0</td>
       <td>conventional</td>
-      <td>2015.0</td>
+      <td>2015</td>
       <td>Albany</td>
     </tr>
     <tr>
@@ -1818,7 +1828,7 @@ We have attached this spreadsheet to this notebook; it is contained in the <code
       <td>97.49</td>
       <td>0.0</td>
       <td>conventional</td>
-      <td>2015.0</td>
+      <td>2015</td>
       <td>Albany</td>
     </tr>
     <tr>
@@ -1834,7 +1844,7 @@ We have attached this spreadsheet to this notebook; it is contained in the <code
       <td>103.14</td>
       <td>0.0</td>
       <td>conventional</td>
-      <td>2015.0</td>
+      <td>2015</td>
       <td>Albany</td>
     </tr>
     <tr>
@@ -1850,7 +1860,7 @@ We have attached this spreadsheet to this notebook; it is contained in the <code
       <td>133.76</td>
       <td>0.0</td>
       <td>conventional</td>
-      <td>2015.0</td>
+      <td>2015</td>
       <td>Albany</td>
     </tr>
     <tr>
@@ -1866,7 +1876,7 @@ We have attached this spreadsheet to this notebook; it is contained in the <code
       <td>197.69</td>
       <td>0.0</td>
       <td>conventional</td>
-      <td>2015.0</td>
+      <td>2015</td>
       <td>Albany</td>
     </tr>
   </tbody>
@@ -1901,9 +1911,9 @@ We have attached this spreadsheet to this notebook; it is contained in the <code
       <th>Date</th>
       <th>AveragePrice</th>
       <th>Total Volume</th>
-      <th>4046.0</th>
-      <th>4225.0</th>
-      <th>4770.0</th>
+      <th>4046</th>
+      <th>4225</th>
+      <th>4770</th>
       <th>Total Bags</th>
       <th>Small Bags</th>
       <th>Large Bags</th>
@@ -1927,7 +1937,7 @@ We have attached this spreadsheet to this notebook; it is contained in the <code
       <td>431.85</td>
       <td>0.0</td>
       <td>organic</td>
-      <td>2018.0</td>
+      <td>2018</td>
       <td>WestTexNewMexico</td>
     </tr>
     <tr>
@@ -1943,7 +1953,7 @@ We have attached this spreadsheet to this notebook; it is contained in the <code
       <td>324.80</td>
       <td>0.0</td>
       <td>organic</td>
-      <td>2018.0</td>
+      <td>2018</td>
       <td>WestTexNewMexico</td>
     </tr>
     <tr>
@@ -1959,7 +1969,7 @@ We have attached this spreadsheet to this notebook; it is contained in the <code
       <td>42.31</td>
       <td>0.0</td>
       <td>organic</td>
-      <td>2018.0</td>
+      <td>2018</td>
       <td>WestTexNewMexico</td>
     </tr>
     <tr>
@@ -1975,7 +1985,7 @@ We have attached this spreadsheet to this notebook; it is contained in the <code
       <td>50.00</td>
       <td>0.0</td>
       <td>organic</td>
-      <td>2018.0</td>
+      <td>2018</td>
       <td>WestTexNewMexico</td>
     </tr>
     <tr>
@@ -1991,7 +2001,7 @@ We have attached this spreadsheet to this notebook; it is contained in the <code
       <td>26.01</td>
       <td>0.0</td>
       <td>organic</td>
-      <td>2018.0</td>
+      <td>2018</td>
       <td>WestTexNewMexico</td>
     </tr>
   </tbody>
@@ -2028,9 +2038,9 @@ We have attached this spreadsheet to this notebook; it is contained in the <code
       <th>Date</th>
       <th>AveragePrice</th>
       <th>Total Volume</th>
-      <th>4046.0</th>
-      <th>4225.0</th>
-      <th>4770.0</th>
+      <th>4046</th>
+      <th>4225</th>
+      <th>4770</th>
       <th>Total Bags</th>
       <th>Small Bags</th>
       <th>Large Bags</th>
@@ -2054,7 +2064,7 @@ We have attached this spreadsheet to this notebook; it is contained in the <code
       <td>93.25</td>
       <td>0.0</td>
       <td>conventional</td>
-      <td>2015.0</td>
+      <td>2015</td>
       <td>Albany</td>
     </tr>
     <tr>
@@ -2070,7 +2080,7 @@ We have attached this spreadsheet to this notebook; it is contained in the <code
       <td>97.49</td>
       <td>0.0</td>
       <td>conventional</td>
-      <td>2015.0</td>
+      <td>2015</td>
       <td>Albany</td>
     </tr>
     <tr>
@@ -2086,7 +2096,7 @@ We have attached this spreadsheet to this notebook; it is contained in the <code
       <td>103.14</td>
       <td>0.0</td>
       <td>conventional</td>
-      <td>2015.0</td>
+      <td>2015</td>
       <td>Albany</td>
     </tr>
     <tr>
@@ -2102,7 +2112,7 @@ We have attached this spreadsheet to this notebook; it is contained in the <code
       <td>133.76</td>
       <td>0.0</td>
       <td>conventional</td>
-      <td>2015.0</td>
+      <td>2015</td>
       <td>Albany</td>
     </tr>
     <tr>
@@ -2118,7 +2128,7 @@ We have attached this spreadsheet to this notebook; it is contained in the <code
       <td>197.69</td>
       <td>0.0</td>
       <td>conventional</td>
-      <td>2015.0</td>
+      <td>2015</td>
       <td>Albany</td>
     </tr>
     <tr>
@@ -2134,7 +2144,7 @@ We have attached this spreadsheet to this notebook; it is contained in the <code
       <td>127.44</td>
       <td>0.0</td>
       <td>conventional</td>
-      <td>2015.0</td>
+      <td>2015</td>
       <td>Albany</td>
     </tr>
     <tr>
@@ -2150,7 +2160,7 @@ We have attached this spreadsheet to this notebook; it is contained in the <code
       <td>122.05</td>
       <td>0.0</td>
       <td>conventional</td>
-      <td>2015.0</td>
+      <td>2015</td>
       <td>Albany</td>
     </tr>
     <tr>
@@ -2166,7 +2176,7 @@ We have attached this spreadsheet to this notebook; it is contained in the <code
       <td>562.37</td>
       <td>0.0</td>
       <td>conventional</td>
-      <td>2015.0</td>
+      <td>2015</td>
       <td>Albany</td>
     </tr>
     <tr>
@@ -2182,7 +2192,7 @@ We have attached this spreadsheet to this notebook; it is contained in the <code
       <td>283.83</td>
       <td>0.0</td>
       <td>conventional</td>
-      <td>2015.0</td>
+      <td>2015</td>
       <td>Albany</td>
     </tr>
     <tr>
@@ -2198,7 +2208,7 @@ We have attached this spreadsheet to this notebook; it is contained in the <code
       <td>564.45</td>
       <td>0.0</td>
       <td>conventional</td>
-      <td>2015.0</td>
+      <td>2015</td>
       <td>Albany</td>
     </tr>
     <tr>
@@ -2214,7 +2224,7 @@ We have attached this spreadsheet to this notebook; it is contained in the <code
       <td>327.80</td>
       <td>0.0</td>
       <td>conventional</td>
-      <td>2015.0</td>
+      <td>2015</td>
       <td>Albany</td>
     </tr>
     <tr>
@@ -2230,7 +2240,7 @@ We have attached this spreadsheet to this notebook; it is contained in the <code
       <td>257.63</td>
       <td>0.0</td>
       <td>conventional</td>
-      <td>2015.0</td>
+      <td>2015</td>
       <td>Albany</td>
     </tr>
     <tr>
@@ -2246,7 +2256,7 @@ We have attached this spreadsheet to this notebook; it is contained in the <code
       <td>376.77</td>
       <td>0.0</td>
       <td>conventional</td>
-      <td>2015.0</td>
+      <td>2015</td>
       <td>Albany</td>
     </tr>
     <tr>
@@ -2262,7 +2272,7 @@ We have attached this spreadsheet to this notebook; it is contained in the <code
       <td>145.59</td>
       <td>0.0</td>
       <td>conventional</td>
-      <td>2015.0</td>
+      <td>2015</td>
       <td>Albany</td>
     </tr>
     <tr>
@@ -2278,7 +2288,7 @@ We have attached this spreadsheet to this notebook; it is contained in the <code
       <td>778.26</td>
       <td>0.0</td>
       <td>conventional</td>
-      <td>2015.0</td>
+      <td>2015</td>
       <td>Albany</td>
     </tr>
     <tr>
@@ -2294,7 +2304,7 @@ We have attached this spreadsheet to this notebook; it is contained in the <code
       <td>621.49</td>
       <td>0.0</td>
       <td>conventional</td>
-      <td>2015.0</td>
+      <td>2015</td>
       <td>Albany</td>
     </tr>
     <tr>
@@ -2310,7 +2320,7 @@ We have attached this spreadsheet to this notebook; it is contained in the <code
       <td>227.23</td>
       <td>0.0</td>
       <td>conventional</td>
-      <td>2015.0</td>
+      <td>2015</td>
       <td>Albany</td>
     </tr>
     <tr>
@@ -2326,7 +2336,7 @@ We have attached this spreadsheet to this notebook; it is contained in the <code
       <td>87.80</td>
       <td>0.0</td>
       <td>conventional</td>
-      <td>2015.0</td>
+      <td>2015</td>
       <td>Albany</td>
     </tr>
     <tr>
@@ -2342,7 +2352,7 @@ We have attached this spreadsheet to this notebook; it is contained in the <code
       <td>134.57</td>
       <td>0.0</td>
       <td>conventional</td>
-      <td>2015.0</td>
+      <td>2015</td>
       <td>Albany</td>
     </tr>
     <tr>
@@ -2358,7 +2368,7 @@ We have attached this spreadsheet to this notebook; it is contained in the <code
       <td>145.54</td>
       <td>0.0</td>
       <td>conventional</td>
-      <td>2015.0</td>
+      <td>2015</td>
       <td>Albany</td>
     </tr>
   </tbody>

@@ -51,7 +51,7 @@ const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -892,8 +892,18 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_10/Part_2_Numerical_integration_rectangle_rule_SOLUTIONS.html">
+     The rectangle rule - SOLVED
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../lecture_10/Part_3_Numerical_Integration_trapezium_rule.html">
      The Trapezium rule
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_10/Part_3_Numerical_integration_trapezium_rule_SOLUTIONS.html">
+     Trapezium rule and Simpson’s rule - Solutions
     </a>
    </li>
    <li class="toctree-l2">
@@ -1330,58 +1340,58 @@ title="Print to PDF"
   <tbody>
     <tr>
       <th>0</th>
-      <td>1.0</td>
+      <td>1</td>
       <td>Braund, Mr. Owen Harris</td>
       <td>male</td>
       <td>22.0</td>
       <td>A/5 21171</td>
       <td>7.2500</td>
       <td>NaN</td>
-      <td>0.0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>2.0</td>
+      <td>2</td>
       <td>Cumings, Mrs. John Bradley (Florence Briggs Th...</td>
       <td>female</td>
       <td>38.0</td>
       <td>PC 17599</td>
       <td>71.2833</td>
       <td>C85</td>
-      <td>1.0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>3.0</td>
+      <td>3</td>
       <td>Heikkinen, Miss. Laina</td>
       <td>female</td>
       <td>26.0</td>
       <td>STON/O2. 3101282</td>
       <td>7.9250</td>
       <td>NaN</td>
-      <td>1.0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>4.0</td>
+      <td>4</td>
       <td>Futrelle, Mrs. Jacques Heath (Lily May Peel)</td>
       <td>female</td>
       <td>35.0</td>
-      <td>113803.0</td>
+      <td>113803</td>
       <td>53.1000</td>
       <td>C123</td>
-      <td>1.0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>5.0</td>
+      <td>5</td>
       <td>Allen, Mr. William Henry</td>
       <td>male</td>
       <td>35.0</td>
-      <td>373450.0</td>
+      <td>373450</td>
       <td>8.0500</td>
       <td>NaN</td>
-      <td>0.0</td>
+      <td>0</td>
     </tr>
   </tbody>
 </table>
@@ -1451,58 +1461,58 @@ This is very similar to boolean indexing in numpy:</p>
   <tbody>
     <tr>
       <th>6</th>
-      <td>7.0</td>
+      <td>7</td>
       <td>McCarthy, Mr. Timothy J</td>
       <td>male</td>
       <td>54.0</td>
-      <td>17463.0</td>
+      <td>17463</td>
       <td>51.8625</td>
       <td>E46</td>
-      <td>0.0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>11</th>
-      <td>12.0</td>
+      <td>12</td>
       <td>Bonnell, Miss. Elizabeth</td>
       <td>female</td>
       <td>58.0</td>
-      <td>113783.0</td>
+      <td>113783</td>
       <td>26.5500</td>
       <td>C103</td>
-      <td>1.0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>15</th>
-      <td>16.0</td>
+      <td>16</td>
       <td>Hewlett, Mrs. (Mary D Kingcome)</td>
       <td>female</td>
       <td>55.0</td>
-      <td>248706.0</td>
+      <td>248706</td>
       <td>16.0000</td>
       <td>NaN</td>
-      <td>1.0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>33</th>
-      <td>34.0</td>
+      <td>34</td>
       <td>Wheadon, Mr. Edward H</td>
       <td>male</td>
       <td>66.0</td>
       <td>C.A. 24579</td>
       <td>10.5000</td>
       <td>NaN</td>
-      <td>0.0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>35</th>
-      <td>36.0</td>
+      <td>36</td>
       <td>Holverson, Mr. Alexander Oskar</td>
       <td>male</td>
       <td>42.0</td>
-      <td>113789.0</td>
+      <td>113789</td>
       <td>52.0000</td>
       <td>NaN</td>
-      <td>0.0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>...</th>
@@ -1517,58 +1527,58 @@ This is very similar to boolean indexing in numpy:</p>
     </tr>
     <tr>
       <th>862</th>
-      <td>863.0</td>
+      <td>863</td>
       <td>Swift, Mrs. Frederick Joel (Margaret Welles Ba...</td>
       <td>female</td>
       <td>48.0</td>
-      <td>17466.0</td>
+      <td>17466</td>
       <td>25.9292</td>
       <td>D17</td>
-      <td>1.0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>865</th>
-      <td>866.0</td>
+      <td>866</td>
       <td>Bystrom, Mrs. (Karolina)</td>
       <td>female</td>
       <td>42.0</td>
-      <td>236852.0</td>
+      <td>236852</td>
       <td>13.0000</td>
       <td>NaN</td>
-      <td>1.0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>871</th>
-      <td>872.0</td>
+      <td>872</td>
       <td>Beckwith, Mrs. Richard Leonard (Sallie Monypeny)</td>
       <td>female</td>
       <td>47.0</td>
-      <td>11751.0</td>
+      <td>11751</td>
       <td>52.5542</td>
       <td>D35</td>
-      <td>1.0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>873</th>
-      <td>874.0</td>
+      <td>874</td>
       <td>Vander Cruyssen, Mr. Victor</td>
       <td>male</td>
       <td>47.0</td>
-      <td>345765.0</td>
+      <td>345765</td>
       <td>9.0000</td>
       <td>NaN</td>
-      <td>0.0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>879</th>
-      <td>880.0</td>
+      <td>880</td>
       <td>Potter, Mrs. Thomas Jr (Lily Alexenia Wilson)</td>
       <td>female</td>
       <td>56.0</td>
-      <td>11767.0</td>
+      <td>11767</td>
       <td>83.1583</td>
       <td>C50</td>
-      <td>1.0</td>
+      <td>1</td>
     </tr>
   </tbody>
 </table>
@@ -1616,58 +1626,58 @@ This is very similar to boolean indexing in numpy:</p>
   <tbody>
     <tr>
       <th>6</th>
-      <td>7.0</td>
+      <td>7</td>
       <td>McCarthy, Mr. Timothy J</td>
       <td>male</td>
       <td>54.0</td>
-      <td>17463.0</td>
+      <td>17463</td>
       <td>51.8625</td>
       <td>E46</td>
-      <td>0.0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>11</th>
-      <td>12.0</td>
+      <td>12</td>
       <td>Bonnell, Miss. Elizabeth</td>
       <td>female</td>
       <td>58.0</td>
-      <td>113783.0</td>
+      <td>113783</td>
       <td>26.5500</td>
       <td>C103</td>
-      <td>1.0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>15</th>
-      <td>16.0</td>
+      <td>16</td>
       <td>Hewlett, Mrs. (Mary D Kingcome)</td>
       <td>female</td>
       <td>55.0</td>
-      <td>248706.0</td>
+      <td>248706</td>
       <td>16.0000</td>
       <td>NaN</td>
-      <td>1.0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>33</th>
-      <td>34.0</td>
+      <td>34</td>
       <td>Wheadon, Mr. Edward H</td>
       <td>male</td>
       <td>66.0</td>
       <td>C.A. 24579</td>
       <td>10.5000</td>
       <td>NaN</td>
-      <td>0.0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>35</th>
-      <td>36.0</td>
+      <td>36</td>
       <td>Holverson, Mr. Alexander Oskar</td>
       <td>male</td>
       <td>42.0</td>
-      <td>113789.0</td>
+      <td>113789</td>
       <td>52.0000</td>
       <td>NaN</td>
-      <td>0.0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>...</th>
@@ -1682,58 +1692,58 @@ This is very similar to boolean indexing in numpy:</p>
     </tr>
     <tr>
       <th>862</th>
-      <td>863.0</td>
+      <td>863</td>
       <td>Swift, Mrs. Frederick Joel (Margaret Welles Ba...</td>
       <td>female</td>
       <td>48.0</td>
-      <td>17466.0</td>
+      <td>17466</td>
       <td>25.9292</td>
       <td>D17</td>
-      <td>1.0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>865</th>
-      <td>866.0</td>
+      <td>866</td>
       <td>Bystrom, Mrs. (Karolina)</td>
       <td>female</td>
       <td>42.0</td>
-      <td>236852.0</td>
+      <td>236852</td>
       <td>13.0000</td>
       <td>NaN</td>
-      <td>1.0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>871</th>
-      <td>872.0</td>
+      <td>872</td>
       <td>Beckwith, Mrs. Richard Leonard (Sallie Monypeny)</td>
       <td>female</td>
       <td>47.0</td>
-      <td>11751.0</td>
+      <td>11751</td>
       <td>52.5542</td>
       <td>D35</td>
-      <td>1.0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>873</th>
-      <td>874.0</td>
+      <td>874</td>
       <td>Vander Cruyssen, Mr. Victor</td>
       <td>male</td>
       <td>47.0</td>
-      <td>345765.0</td>
+      <td>345765</td>
       <td>9.0000</td>
       <td>NaN</td>
-      <td>0.0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>879</th>
-      <td>880.0</td>
+      <td>880</td>
       <td>Potter, Mrs. Thomas Jr (Lily Alexenia Wilson)</td>
       <td>female</td>
       <td>56.0</td>
-      <td>11767.0</td>
+      <td>11767</td>
       <td>83.1583</td>
       <td>C50</td>
-      <td>1.0</td>
+      <td>1</td>
     </tr>
   </tbody>
 </table>
@@ -1781,62 +1791,62 @@ This is very similar to boolean indexing in numpy:</p>
     <tr>
       <th>0</th>
       <td>6</td>
-      <td>7.0</td>
+      <td>7</td>
       <td>McCarthy, Mr. Timothy J</td>
       <td>male</td>
       <td>54.0</td>
-      <td>17463.0</td>
+      <td>17463</td>
       <td>51.8625</td>
       <td>E46</td>
-      <td>0.0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>1</th>
       <td>11</td>
-      <td>12.0</td>
+      <td>12</td>
       <td>Bonnell, Miss. Elizabeth</td>
       <td>female</td>
       <td>58.0</td>
-      <td>113783.0</td>
+      <td>113783</td>
       <td>26.5500</td>
       <td>C103</td>
-      <td>1.0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>2</th>
       <td>15</td>
-      <td>16.0</td>
+      <td>16</td>
       <td>Hewlett, Mrs. (Mary D Kingcome)</td>
       <td>female</td>
       <td>55.0</td>
-      <td>248706.0</td>
+      <td>248706</td>
       <td>16.0000</td>
       <td>NaN</td>
-      <td>1.0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>3</th>
       <td>33</td>
-      <td>34.0</td>
+      <td>34</td>
       <td>Wheadon, Mr. Edward H</td>
       <td>male</td>
       <td>66.0</td>
       <td>C.A. 24579</td>
       <td>10.5000</td>
       <td>NaN</td>
-      <td>0.0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>4</th>
       <td>35</td>
-      <td>36.0</td>
+      <td>36</td>
       <td>Holverson, Mr. Alexander Oskar</td>
       <td>male</td>
       <td>42.0</td>
-      <td>113789.0</td>
+      <td>113789</td>
       <td>52.0000</td>
       <td>NaN</td>
-      <td>0.0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>...</th>
@@ -1853,62 +1863,62 @@ This is very similar to boolean indexing in numpy:</p>
     <tr>
       <th>145</th>
       <td>862</td>
-      <td>863.0</td>
+      <td>863</td>
       <td>Swift, Mrs. Frederick Joel (Margaret Welles Ba...</td>
       <td>female</td>
       <td>48.0</td>
-      <td>17466.0</td>
+      <td>17466</td>
       <td>25.9292</td>
       <td>D17</td>
-      <td>1.0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>146</th>
       <td>865</td>
-      <td>866.0</td>
+      <td>866</td>
       <td>Bystrom, Mrs. (Karolina)</td>
       <td>female</td>
       <td>42.0</td>
-      <td>236852.0</td>
+      <td>236852</td>
       <td>13.0000</td>
       <td>NaN</td>
-      <td>1.0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>147</th>
       <td>871</td>
-      <td>872.0</td>
+      <td>872</td>
       <td>Beckwith, Mrs. Richard Leonard (Sallie Monypeny)</td>
       <td>female</td>
       <td>47.0</td>
-      <td>11751.0</td>
+      <td>11751</td>
       <td>52.5542</td>
       <td>D35</td>
-      <td>1.0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>148</th>
       <td>873</td>
-      <td>874.0</td>
+      <td>874</td>
       <td>Vander Cruyssen, Mr. Victor</td>
       <td>male</td>
       <td>47.0</td>
-      <td>345765.0</td>
+      <td>345765</td>
       <td>9.0000</td>
       <td>NaN</td>
-      <td>0.0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>149</th>
       <td>879</td>
-      <td>880.0</td>
+      <td>880</td>
       <td>Potter, Mrs. Thomas Jr (Lily Alexenia Wilson)</td>
       <td>female</td>
       <td>56.0</td>
-      <td>11767.0</td>
+      <td>11767</td>
       <td>83.1583</td>
       <td>C50</td>
-      <td>1.0</td>
+      <td>1</td>
     </tr>
   </tbody>
 </table>
@@ -1954,58 +1964,58 @@ This is very similar to boolean indexing in numpy:</p>
   <tbody>
     <tr>
       <th>0</th>
-      <td>7.0</td>
+      <td>7</td>
       <td>McCarthy, Mr. Timothy J</td>
       <td>male</td>
       <td>54.0</td>
-      <td>17463.0</td>
+      <td>17463</td>
       <td>51.8625</td>
       <td>E46</td>
-      <td>0.0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>12.0</td>
+      <td>12</td>
       <td>Bonnell, Miss. Elizabeth</td>
       <td>female</td>
       <td>58.0</td>
-      <td>113783.0</td>
+      <td>113783</td>
       <td>26.5500</td>
       <td>C103</td>
-      <td>1.0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>16.0</td>
+      <td>16</td>
       <td>Hewlett, Mrs. (Mary D Kingcome)</td>
       <td>female</td>
       <td>55.0</td>
-      <td>248706.0</td>
+      <td>248706</td>
       <td>16.0000</td>
       <td>NaN</td>
-      <td>1.0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>34.0</td>
+      <td>34</td>
       <td>Wheadon, Mr. Edward H</td>
       <td>male</td>
       <td>66.0</td>
       <td>C.A. 24579</td>
       <td>10.5000</td>
       <td>NaN</td>
-      <td>0.0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>36.0</td>
+      <td>36</td>
       <td>Holverson, Mr. Alexander Oskar</td>
       <td>male</td>
       <td>42.0</td>
-      <td>113789.0</td>
+      <td>113789</td>
       <td>52.0000</td>
       <td>NaN</td>
-      <td>0.0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>...</th>
@@ -2020,58 +2030,58 @@ This is very similar to boolean indexing in numpy:</p>
     </tr>
     <tr>
       <th>145</th>
-      <td>863.0</td>
+      <td>863</td>
       <td>Swift, Mrs. Frederick Joel (Margaret Welles Ba...</td>
       <td>female</td>
       <td>48.0</td>
-      <td>17466.0</td>
+      <td>17466</td>
       <td>25.9292</td>
       <td>D17</td>
-      <td>1.0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>146</th>
-      <td>866.0</td>
+      <td>866</td>
       <td>Bystrom, Mrs. (Karolina)</td>
       <td>female</td>
       <td>42.0</td>
-      <td>236852.0</td>
+      <td>236852</td>
       <td>13.0000</td>
       <td>NaN</td>
-      <td>1.0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>147</th>
-      <td>872.0</td>
+      <td>872</td>
       <td>Beckwith, Mrs. Richard Leonard (Sallie Monypeny)</td>
       <td>female</td>
       <td>47.0</td>
-      <td>11751.0</td>
+      <td>11751</td>
       <td>52.5542</td>
       <td>D35</td>
-      <td>1.0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>148</th>
-      <td>874.0</td>
+      <td>874</td>
       <td>Vander Cruyssen, Mr. Victor</td>
       <td>male</td>
       <td>47.0</td>
-      <td>345765.0</td>
+      <td>345765</td>
       <td>9.0000</td>
       <td>NaN</td>
-      <td>0.0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>149</th>
-      <td>880.0</td>
+      <td>880</td>
       <td>Potter, Mrs. Thomas Jr (Lily Alexenia Wilson)</td>
       <td>female</td>
       <td>56.0</td>
-      <td>11767.0</td>
+      <td>11767</td>
       <td>83.1583</td>
       <td>C50</td>
-      <td>1.0</td>
+      <td>1</td>
     </tr>
   </tbody>
 </table>
@@ -2119,31 +2129,31 @@ This is very similar to boolean indexing in numpy:</p>
   <tbody>
     <tr>
       <th>0</th>
-      <td>1.0</td>
+      <td>1</td>
       <td>Braund, Mr. Owen Harris</td>
       <td>male</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>2.0</td>
+      <td>2</td>
       <td>Cumings, Mrs. John Bradley (Florence Briggs Th...</td>
       <td>female</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>3.0</td>
+      <td>3</td>
       <td>Heikkinen, Miss. Laina</td>
       <td>female</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>4.0</td>
+      <td>4</td>
       <td>Futrelle, Mrs. Jacques Heath (Lily May Peel)</td>
       <td>female</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>5.0</td>
+      <td>5</td>
       <td>Allen, Mr. William Henry</td>
       <td>male</td>
     </tr>
@@ -2155,31 +2165,31 @@ This is very similar to boolean indexing in numpy:</p>
     </tr>
     <tr>
       <th>886</th>
-      <td>887.0</td>
+      <td>887</td>
       <td>Montvila, Rev. Juozas</td>
       <td>male</td>
     </tr>
     <tr>
       <th>887</th>
-      <td>888.0</td>
+      <td>888</td>
       <td>Graham, Miss. Margaret Edith</td>
       <td>female</td>
     </tr>
     <tr>
       <th>888</th>
-      <td>889.0</td>
+      <td>889</td>
       <td>Johnston, Miss. Catherine Helen "Carrie"</td>
       <td>female</td>
     </tr>
     <tr>
       <th>889</th>
-      <td>890.0</td>
+      <td>890</td>
       <td>Behr, Mr. Karl Howell</td>
       <td>male</td>
     </tr>
     <tr>
       <th>890</th>
-      <td>891.0</td>
+      <td>891</td>
       <td>Dooley, Mr. Patrick</td>
       <td>male</td>
     </tr>
@@ -2222,37 +2232,37 @@ This is very similar to boolean indexing in numpy:</p>
   <tbody>
     <tr>
       <th>5</th>
-      <td>6.0</td>
+      <td>6</td>
       <td>Moran, Mr. James</td>
       <td>male</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>7.0</td>
+      <td>7</td>
       <td>McCarthy, Mr. Timothy J</td>
       <td>male</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>8.0</td>
+      <td>8</td>
       <td>Palsson, Master. Gosta Leonard</td>
       <td>male</td>
     </tr>
     <tr>
       <th>8</th>
-      <td>9.0</td>
+      <td>9</td>
       <td>Johnson, Mrs. Oscar W (Elisabeth Vilhelmina Berg)</td>
       <td>female</td>
     </tr>
     <tr>
       <th>9</th>
-      <td>10.0</td>
+      <td>10</td>
       <td>Nasser, Mrs. Nicholas (Adele Achem)</td>
       <td>female</td>
     </tr>
     <tr>
       <th>10</th>
-      <td>11.0</td>
+      <td>11</td>
       <td>Sandstrom, Miss. Marguerite Rut</td>
       <td>female</td>
     </tr>
@@ -2382,7 +2392,7 @@ This is very similar to boolean indexing in numpy:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.0
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
 </pre></div>
 </div>
 </div>
@@ -2395,7 +2405,7 @@ This is very similar to boolean indexing in numpy:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.0
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
 </pre></div>
 </div>
 </div>

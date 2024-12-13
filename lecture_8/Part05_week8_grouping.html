@@ -51,7 +51,7 @@ const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -892,8 +892,18 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_10/Part_2_Numerical_integration_rectangle_rule_SOLUTIONS.html">
+     The rectangle rule - SOLVED
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../lecture_10/Part_3_Numerical_Integration_trapezium_rule.html">
      The Trapezium rule
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_10/Part_3_Numerical_integration_trapezium_rule_SOLUTIONS.html">
+     Trapezium rule and Simpson’s rule - Solutions
     </a>
    </li>
    <li class="toctree-l2">
@@ -1352,17 +1362,17 @@ title="Print to PDF"
   <tbody>
     <tr>
       <th>female</th>
-      <td>135343.0</td>
+      <td>135343</td>
       <td>7286.00</td>
       <td>13966.6628</td>
-      <td>233.0</td>
+      <td>233</td>
     </tr>
     <tr>
       <th>male</th>
-      <td>262043.0</td>
+      <td>262043</td>
       <td>13919.17</td>
       <td>14727.2865</td>
-      <td>109.0</td>
+      <td>109</td>
     </tr>
   </tbody>
 </table>
@@ -1386,14 +1396,10 @@ This is very informative, in particular, in finding up how many people survived 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/homebrew/Caskroom/miniconda/base/envs/pycbc_test/lib/python3.9/site-packages/pandas/plotting/_matplotlib/core.py:1070: UserWarning: No data for colormapping provided via &#39;c&#39;. Parameters &#39;cmap&#39; will be ignored
-  scatter = ax.scatter(
-</pre></div>
-</div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: xlabel=&#39;Age&#39;, ylabel=&#39;Fare&#39;&gt;
 </pre></div>
 </div>
-<img alt="../_images/Part05_week8_grouping_12_2.png" src="../_images/Part05_week8_grouping_12_2.png" />
+<img alt="../_images/Part05_week8_grouping_12_1.png" src="../_images/Part05_week8_grouping_12_1.png" />
 </div>
 </div>
 <p>Note that it works ever though we have not imported matplotlib (pandas will itself import matplotlib).
@@ -1554,11 +1560,7 @@ However, let us demonstrate how to eliminate the <code class="docutils literal n
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/homebrew/Caskroom/miniconda/base/envs/pycbc_test/lib/python3.9/site-packages/pandas/plotting/_matplotlib/core.py:1070: UserWarning: No data for colormapping provided via &#39;c&#39;. Parameters &#39;cmap&#39; will be ignored
-  scatter = ax.scatter(
-</pre></div>
-</div>
-<img alt="../_images/Part05_week8_grouping_24_1.png" src="../_images/Part05_week8_grouping_24_1.png" />
+<img alt="../_images/Part05_week8_grouping_24_0.png" src="../_images/Part05_week8_grouping_24_0.png" />
 </div>
 </div>
 </section>

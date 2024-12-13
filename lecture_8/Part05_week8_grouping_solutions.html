@@ -51,7 +51,7 @@ const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -892,8 +892,18 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_10/Part_2_Numerical_integration_rectangle_rule_SOLUTIONS.html">
+     The rectangle rule - SOLVED
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../lecture_10/Part_3_Numerical_Integration_trapezium_rule.html">
      The Trapezium rule
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_10/Part_3_Numerical_integration_trapezium_rule_SOLUTIONS.html">
+     Trapezium rule and Simpson’s rule - Solutions
     </a>
    </li>
    <li class="toctree-l2">
@@ -1352,17 +1362,17 @@ title="Print to PDF"
   <tbody>
     <tr>
       <th>female</th>
-      <td>135343.0</td>
+      <td>135343</td>
       <td>7286.00</td>
       <td>13966.6628</td>
-      <td>233.0</td>
+      <td>233</td>
     </tr>
     <tr>
       <th>male</th>
-      <td>262043.0</td>
+      <td>262043</td>
       <td>13919.17</td>
       <td>14727.2865</td>
-      <td>109.0</td>
+      <td>109</td>
     </tr>
   </tbody>
 </table>
@@ -1462,12 +1472,12 @@ This is very informative, in particular, in finding up how many people survived 
   </thead>
   <tbody>
     <tr>
-      <th>0.0</th>
+      <th>0</th>
       <td>30.626179</td>
       <td>22.117887</td>
     </tr>
     <tr>
-      <th>1.0</th>
+      <th>1</th>
       <td>28.343690</td>
       <td>48.395408</td>
     </tr>
@@ -1484,14 +1494,10 @@ This is very informative, in particular, in finding up how many people survived 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/homebrew/Caskroom/miniconda/base/envs/pycbc_test/lib/python3.9/site-packages/pandas/plotting/_matplotlib/core.py:1070: UserWarning: No data for colormapping provided via &#39;c&#39;. Parameters &#39;cmap&#39; will be ignored
-  scatter = ax.scatter(
-</pre></div>
-</div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: xlabel=&#39;Age&#39;, ylabel=&#39;Fare&#39;&gt;
 </pre></div>
 </div>
-<img alt="../_images/Part05_week8_grouping_solutions_11_2.png" src="../_images/Part05_week8_grouping_solutions_11_2.png" />
+<img alt="../_images/Part05_week8_grouping_solutions_11_1.png" src="../_images/Part05_week8_grouping_solutions_11_1.png" />
 </div>
 </div>
 <p>Note that it works ever though we have not imported matplotlib (pandas will itself import matplotlib).
@@ -1652,11 +1658,7 @@ However, let us demonstrate how to eliminate the <code class="docutils literal n
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/homebrew/Caskroom/miniconda/base/envs/pycbc_test/lib/python3.9/site-packages/pandas/plotting/_matplotlib/core.py:1070: UserWarning: No data for colormapping provided via &#39;c&#39;. Parameters &#39;cmap&#39; will be ignored
-  scatter = ax.scatter(
-</pre></div>
-</div>
-<img alt="../_images/Part05_week8_grouping_solutions_23_1.png" src="../_images/Part05_week8_grouping_solutions_23_1.png" />
+<img alt="../_images/Part05_week8_grouping_solutions_23_0.png" src="../_images/Part05_week8_grouping_solutions_23_0.png" />
 </div>
 </div>
 </section>
@@ -1880,27 +1882,27 @@ Display the header of this spreadsheet.</p>
     <tr>
       <th>0</th>
       <td>2021-11-29</td>
-      <td>192.0</td>
+      <td>192</td>
     </tr>
     <tr>
       <th>1</th>
       <td>2021-11-28</td>
-      <td>147.0</td>
+      <td>147</td>
     </tr>
     <tr>
       <th>2</th>
       <td>2021-11-27</td>
-      <td>170.0</td>
+      <td>170</td>
     </tr>
     <tr>
       <th>3</th>
       <td>2021-11-26</td>
-      <td>268.0</td>
+      <td>268</td>
     </tr>
     <tr>
       <th>4</th>
       <td>2021-11-25</td>
-      <td>126.0</td>
+      <td>126</td>
     </tr>
   </tbody>
 </table>
@@ -1942,27 +1944,27 @@ Display the header of this spreadsheet.</p>
     <tr>
       <th>591</th>
       <td>2020-04-17</td>
-      <td>17.0</td>
+      <td>17</td>
     </tr>
     <tr>
       <th>590</th>
       <td>2020-04-18</td>
-      <td>5.0</td>
+      <td>5</td>
     </tr>
     <tr>
       <th>589</th>
       <td>2020-04-19</td>
-      <td>10.0</td>
+      <td>10</td>
     </tr>
     <tr>
       <th>588</th>
       <td>2020-04-20</td>
-      <td>4.0</td>
+      <td>4</td>
     </tr>
     <tr>
       <th>587</th>
       <td>2020-04-21</td>
-      <td>1.0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>...</th>
@@ -1972,27 +1974,27 @@ Display the header of this spreadsheet.</p>
     <tr>
       <th>4</th>
       <td>2021-11-25</td>
-      <td>126.0</td>
+      <td>126</td>
     </tr>
     <tr>
       <th>3</th>
       <td>2021-11-26</td>
-      <td>268.0</td>
+      <td>268</td>
     </tr>
     <tr>
       <th>2</th>
       <td>2021-11-27</td>
-      <td>170.0</td>
+      <td>170</td>
     </tr>
     <tr>
       <th>1</th>
       <td>2021-11-28</td>
-      <td>147.0</td>
+      <td>147</td>
     </tr>
     <tr>
       <th>0</th>
       <td>2021-11-29</td>
-      <td>192.0</td>
+      <td>192</td>
     </tr>
   </tbody>
 </table>

@@ -51,7 +51,7 @@ const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -892,8 +892,18 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_10/Part_2_Numerical_integration_rectangle_rule_SOLUTIONS.html">
+     The rectangle rule - SOLVED
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../lecture_10/Part_3_Numerical_Integration_trapezium_rule.html">
      The Trapezium rule
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_10/Part_3_Numerical_integration_trapezium_rule_SOLUTIONS.html">
+     Trapezium rule and Simpson’s rule - Solutions
     </a>
    </li>
    <li class="toctree-l2">
@@ -1445,7 +1455,7 @@ dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>342.0
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>342
 </pre></div>
 </div>
 </div>
@@ -1482,15 +1492,62 @@ dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Input</span> <span class="n">In</span> <span class="p">[</span><span class="mi">13</span><span class="p">],</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">df_titanic</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span><span class="n">numeric_only</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<span class="ne">TypeError</span>: corr() got an unexpected keyword argument &#39;numeric_only&#39;
-</pre></div>
-</div>
-</div>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>PassengerId</th>
+      <th>Age</th>
+      <th>Fare</th>
+      <th>Survived</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>PassengerId</th>
+      <td>1.000000</td>
+      <td>0.036847</td>
+      <td>0.012658</td>
+      <td>-0.005007</td>
+    </tr>
+    <tr>
+      <th>Age</th>
+      <td>0.036847</td>
+      <td>1.000000</td>
+      <td>0.096067</td>
+      <td>-0.077221</td>
+    </tr>
+    <tr>
+      <th>Fare</th>
+      <td>0.012658</td>
+      <td>0.096067</td>
+      <td>1.000000</td>
+      <td>0.257307</td>
+    </tr>
+    <tr>
+      <th>Survived</th>
+      <td>-0.005007</td>
+      <td>-0.077221</td>
+      <td>0.257307</td>
+      <td>1.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <section id="exercise-4-2">
 <h3>Exercise 4.2<a class="headerlink" href="#exercise-4-2" title="Permalink to this headline">#</a></h3>
@@ -1580,10 +1637,6 @@ Length: 891, dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/67/1t4_rwdj441c8g3j147_fwrh0000gs/T/ipykernel_65102/1631070539.py:1: FutureWarning: The default value of regex will change from True to False in a future version. In addition, single character regular expressions will *not* be treated as literal strings when regex=True.
-  df_titanic.Name.str.replace(&quot;.&quot;, &quot;||&quot;)
-</pre></div>
-</div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0                               Braund, Mr|| Owen Harris
 1      Cumings, Mrs|| John Bradley (Florence Briggs T...
 2                                Heikkinen, Miss|| Laina
@@ -1614,10 +1667,6 @@ Then display your result</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/67/1t4_rwdj441c8g3j147_fwrh0000gs/T/ipykernel_65102/1623192223.py:1: FutureWarning: The default value of regex will change from True to False in a future version. In addition, single character regular expressions will *not* be treated as literal strings when regex=True.
-  name_col = df_titanic.Name.str.replace(&quot;.&quot;, &quot;|&quot;)
-</pre></div>
-</div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0                                Braund| Mr| Owen Harris
 1      Cumings| Mrs| John Bradley (Florence Briggs Th...
 2                                 Heikkinen| Miss| Laina
@@ -1673,58 +1722,58 @@ Name: Name, Length: 891, dtype: object
   <tbody>
     <tr>
       <th>1</th>
-      <td>2.0</td>
+      <td>2</td>
       <td>Cumings, Mrs. John Bradley (Florence Briggs Th...</td>
       <td>female</td>
       <td>38.0</td>
       <td>PC 17599</td>
       <td>71.2833</td>
       <td>C85</td>
-      <td>1.0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>4.0</td>
+      <td>4</td>
       <td>Futrelle, Mrs. Jacques Heath (Lily May Peel)</td>
       <td>female</td>
       <td>35.0</td>
-      <td>113803.0</td>
+      <td>113803</td>
       <td>53.1000</td>
       <td>C123</td>
-      <td>1.0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>8</th>
-      <td>9.0</td>
+      <td>9</td>
       <td>Johnson, Mrs. Oscar W (Elisabeth Vilhelmina Berg)</td>
       <td>female</td>
       <td>27.0</td>
-      <td>347742.0</td>
+      <td>347742</td>
       <td>11.1333</td>
       <td>NaN</td>
-      <td>1.0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>9</th>
-      <td>10.0</td>
+      <td>10</td>
       <td>Nasser, Mrs. Nicholas (Adele Achem)</td>
       <td>female</td>
       <td>14.0</td>
-      <td>237736.0</td>
+      <td>237736</td>
       <td>30.0708</td>
       <td>NaN</td>
-      <td>1.0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>15</th>
-      <td>16.0</td>
+      <td>16</td>
       <td>Hewlett, Mrs. (Mary D Kingcome)</td>
       <td>female</td>
       <td>55.0</td>
-      <td>248706.0</td>
+      <td>248706</td>
       <td>16.0000</td>
       <td>NaN</td>
-      <td>1.0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>...</th>
@@ -1739,58 +1788,58 @@ Name: Name, Length: 891, dtype: object
     </tr>
     <tr>
       <th>871</th>
-      <td>872.0</td>
+      <td>872</td>
       <td>Beckwith, Mrs. Richard Leonard (Sallie Monypeny)</td>
       <td>female</td>
       <td>47.0</td>
-      <td>11751.0</td>
+      <td>11751</td>
       <td>52.5542</td>
       <td>D35</td>
-      <td>1.0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>874</th>
-      <td>875.0</td>
+      <td>875</td>
       <td>Abelson, Mrs. Samuel (Hannah Wizosky)</td>
       <td>female</td>
       <td>28.0</td>
       <td>P/PP 3381</td>
       <td>24.0000</td>
       <td>NaN</td>
-      <td>1.0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>879</th>
-      <td>880.0</td>
+      <td>880</td>
       <td>Potter, Mrs. Thomas Jr (Lily Alexenia Wilson)</td>
       <td>female</td>
       <td>56.0</td>
-      <td>11767.0</td>
+      <td>11767</td>
       <td>83.1583</td>
       <td>C50</td>
-      <td>1.0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>880</th>
-      <td>881.0</td>
+      <td>881</td>
       <td>Shelley, Mrs. William (Imanita Parrish Hall)</td>
       <td>female</td>
       <td>25.0</td>
-      <td>230433.0</td>
+      <td>230433</td>
       <td>26.0000</td>
       <td>NaN</td>
-      <td>1.0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>885</th>
-      <td>886.0</td>
+      <td>886</td>
       <td>Rice, Mrs. William (Margaret Norton)</td>
       <td>female</td>
       <td>39.0</td>
-      <td>382652.0</td>
+      <td>382652</td>
       <td>29.1250</td>
       <td>NaN</td>
-      <td>0.0</td>
+      <td>0</td>
     </tr>
   </tbody>
 </table>
