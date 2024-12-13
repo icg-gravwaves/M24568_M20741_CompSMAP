@@ -155,6 +155,8 @@ chapters:
   sections:
     - file: lecture_10/Part_1_Introduction.ipynb
     - file: lecture_10/Part_2_Numerical_Integration_rectangle_rule.ipynb
+    - file: lecture_10/Part_2_Numerical_integration_rectangle_rule_SOLUTIONS.ipynb
     - file: lecture_10/Part_3_Numerical_Integration_trapezium_rule.ipynb
+    - file: lecture_10/Part_3_Numerical_integration_trapezium_rule_SOLUTIONS.ipynb
     - file: lecture_10/Part_4_Numerical_Integration_Simpson's_rule.ipynb
     - file: lecture_10/Appendix_code_for_graphs.ipynb
