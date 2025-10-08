@@ -1,0 +1,1069 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Lists: some other list operations &#8212; M24568 and M20741 Intro to CompSMAP</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Summary exercises" href="Part_10_summary_exercises.html" />
+    <link rel="prev" title="Indices and ordering: INTERACTIVE" href="Part_8_indices.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">M24568 and M20741 Intro to CompSMAP</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../README.html">
+                    Welcome to Computational Mathematics and Introduction to Computational Physics!
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../lecture_1/overview.html">
+   Lecture 1: Introduction
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_1/Introduction.html">
+     A quick look at the Colab/Jupyter interface
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_1/Python_types.html">
+     Getting started - Python objects, basic types, and variables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_1/Python_types_interactive.html">
+     INTERACTIVE: Checking object types in Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_1/Python_types_interactive_SOLVED.html">
+     INTERACTIVE: Checking object types in Python - SOLVED
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_1/Operators_summary.html">
+     Python Main Operators
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_1/Arithmetic_exercises.html">
+     Arithmetic Operators - Interactive exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_1/Arithmetic_exercises_SOLVED.html">
+     Arithmetic Operators - Interactive exercises - SOLVED
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_1/Operations_mixing_types.html">
+     Operations with different types
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_1/Variables.html">
+     Variables - an interactive introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_1/Variables_SOLVED.html">
+     Variables - an interactive introduction - SOLVED
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_1/Variable_swap.html">
+     Swapping Variables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_1/Comparison_operators.html">
+     Comparison operators - interactively introduced
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_1/String_type.html">
+     The string type - interactive
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_1/String_type_SOLVED.html">
+     The string type - interactive - SOLVED
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_1/Type_conversion.html">
+     Type Conversion - A quick interactive intro
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_1/Type_conversion_SOLVED.html">
+     Type Conversion - A quick interactive intro - SOLVED
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_1/Errors.html">
+     Errors
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_1/Summary.html">
+     Summary
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_1/Summary_exercises.html">
+     Summary exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_1/Summary_exercises_SOLVED.html">
+     Summary exercises - SOLVED
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../lecture_2/overview.html">
+   Lecture 2: Functions, Logic and Conditionals
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_2/1_Functions_overview.html">
+     Functions - An overview
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_2/2_Using_functions.html">
+     Using (or “calling”) a function - Interactive
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_2/2_Using_functions_SOLVED.html">
+     Using (or “calling”) a function - Interactive - SOLVED
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_2/3_Writing_Functions.html">
+     How to write your own function
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_2/4_Writing_Functions_Exercises.html">
+     Writing Functions - Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_2/4_Writing_Functions_Exercises_SOLVED.html">
+     Writing Functions - Exercises - SOLVED
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_2/5_Writing_functions_exercises_2.html">
+     Writing functions with multiple inputs and outputs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_2/5_Writing_functions_exercises_2_SOLVED.html">
+     Writing functions with multiple inputs and outputs - SOLVED
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_2/6_Importing_functions.html">
+     Importing a function
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_2/6a_Function_Failures.html">
+     The most common reasons people use functions wrong and don’t pass coursework questions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_2/7_Logical_operators.html">
+     Logical operators
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_2/8_Logical_Exercises.html">
+     Logical Operators - Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_2/8_Logical_Exercises_SOLVED.html">
+     Logical Operators - Exercises - SOLVED
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_2/9_Conditionals.html">
+     Conditional statements
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_2/10_Conditional_Exercises.html">
+     Conditionals - Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_2/10_Conditional_Exercises_SOLVED.html">
+     Conditionals - Exercises - SOLVED
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_2/11_Summary.html">
+     Summary
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_2/12_Summary_Exercises.html">
+     End of class exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_2/12_Summary_Exercises_SOLVED.html">
+     End of class exercises - SOLVED
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="overview.html">
+   Lecture 3: Loops and lists
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="Part_1_loops_intro.html">
+     Loops and lists: an overview
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Part_2_Writing_a_for_loop_interactive.html">
+     Using a for loop: interactive
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Part_3_for_loop_exercises.html">
+     For loops: exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Part_4_while_loops.html">
+     The while loop: interactive
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Part_5_sums.html">
+     Writing sums as functions: INTERACTIVE
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Part_6_lists.html">
+     Lists (interactive)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Part_7_list_exercises.html">
+     Lists: exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Part_8_indices.html">
+     Indices and ordering: INTERACTIVE
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Lists: some other list operations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Part_10_summary_exercises.html">
+     Summary exercises
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lecture_4/overview.html">
+   Lecture 4: Data types
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lecture_5/overview.html">
+   Lecture 5: Numpy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lecture_6/overview.html">
+   Lecture 6: Visualisation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lecture_7/overview.html">
+   Lecture 7: Understanding and fixing problems in python code
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lecture_8/overview.html">
+   Lecture 8: Data manipulation (with pandas)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lecture_9/overview.html">
+   Lecture 9: Root finding
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lecture_10/overview.html">
+   Lecture 10: Numerical Integration
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/icg-gravwaves/M24568_M20741_CompSMAP/main?urlpath=lab/tree/lecture_3/Part_9_removing_from_list.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://colab.research.google.com/github/icg-gravwaves/M24568_M20741_CompSMAP/blob/main/lecture_3/Part_9_removing_from_list.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Colab"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_colab.png">
+  </span>
+<span class="headerbtn__text-container">Colab</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="initThebeSBT()"
+  class="headerbtn headerbtn-launch-thebe"
+  data-toggle="tooltip"
+data-placement="left"
+title="Launch Thebe"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="headerbtn__text-container">Live Code</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/icg-gravwaves/M24568_M20741_CompSMAP"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/icg-gravwaves/M24568_M20741_CompSMAP/issues/new?title=Issue%20on%20page%20%2Flecture_3/Part_9_removing_from_list.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/lecture_3/Part_9_removing_from_list.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#removing-items-from-lists">
+   Removing items from lists
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise">
+   EXERCISE
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summing-over-a-list">
+   Summing over a list
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#adding-two-lists-together">
+     Adding two lists together.
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quick-exercise">
+   Quick exercise
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Lists: some other list operations</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#removing-items-from-lists">
+   Removing items from lists
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise">
+   EXERCISE
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summing-over-a-list">
+   Summing over a list
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#adding-two-lists-together">
+     Adding two lists together.
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quick-exercise">
+   Quick exercise
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="lists-some-other-list-operations">
+<h1>Lists: some other list operations<a class="headerlink" href="#lists-some-other-list-operations" title="Permalink to this headline">#</a></h1>
+<section id="removing-items-from-lists">
+<h2>Removing items from lists<a class="headerlink" href="#removing-items-from-lists" title="Permalink to this headline">#</a></h2>
+<p>You can also remove values from a list. Let’s say that we want to remove the 4th entry (x=4) from our list of powers of 4 above. So that the list would contain (<span class="math notranslate nohighlight">\(4^1\)</span>, <span class="math notranslate nohighlight">\(4^2\)</span>, <span class="math notranslate nohighlight">\(4^3\)</span>, <span class="math notranslate nohighlight">\(4^5\)</span>, <span class="math notranslate nohighlight">\(4^6\)</span>, <span class="math notranslate nohighlight">\(4^7\)</span>.) There’s a few ways to do this. Let’s illustrate:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pow_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="mi">1024</span><span class="p">,</span> <span class="mi">4096</span><span class="p">,</span> <span class="mi">16384</span><span class="p">]</span>
+
+<span class="n">pow_list_copy</span> <span class="o">=</span> <span class="n">pow_list</span>
+
+<span class="c1"># There&#39;s a couple of ways to remove items from the list &quot;in place&quot;.</span>
+<span class="c1"># This means that the original list is destroyed and only the new list remains</span>
+
+<span class="c1"># This way removes the element at position 3 (the fourth element remember, as we count from zero!) The number</span>
+<span class="c1"># removed can be saved to a variable</span>
+<span class="n">removed_value</span> <span class="o">=</span> <span class="n">pow_list</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Using .pop method&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">removed_value</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pow_list</span><span class="p">)</span>
+<span class="c1"># Note that the copied list is also changed</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Copied list&quot;</span><span class="p">,</span> <span class="n">pow_list_copy</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Using .pop method
+256
+[4, 16, 64, 1024, 4096, 16384]
+Copied list [4, 16, 64, 1024, 4096, 16384]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This is basically the same idea, but here we remove the first number equal to 256.</span>
+<span class="n">pow_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="mi">1024</span><span class="p">,</span> <span class="mi">4096</span><span class="p">,</span> <span class="mi">16384</span><span class="p">]</span>
+<span class="n">pow_list_copy</span> <span class="o">=</span> <span class="n">pow_list</span>
+<span class="c1"># The .remove method does *not* return the removed number</span>
+<span class="n">pow_list</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">256</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Using .remove method&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pow_list</span><span class="p">)</span>
+<span class="c1"># Note that the copied list is also changed</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Copied list&quot;</span><span class="p">,</span> <span class="n">pow_list_copy</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Using .remove method
+[4, 16, 64, 1024, 4096, 16384]
+Copied list [4, 16, 64, 1024, 4096, 16384]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># We could also construct a new list, which doesn&#39;t contain this value</span>
+<span class="n">pow_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="mi">1024</span><span class="p">,</span> <span class="mi">4096</span><span class="p">,</span> <span class="mi">16384</span><span class="p">]</span>
+<span class="n">pow_list_copy</span> <span class="o">=</span> <span class="n">pow_list</span>
+
+<span class="n">pow_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">pow_list</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">pow_list</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">pow_list</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">pow_list</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">pow_list</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">pow_list</span><span class="p">[</span><span class="mi">6</span><span class="p">]]</span>
+<span class="c1"># NOTE: This above line is a bit tricksy. We are redefining a variable using values from the original variable.</span>
+<span class="c1"># This is okay but pow_list changes once this is evaluated.</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Redefining the list&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pow_list</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Copied list, look this hasn&#39;t changed!&quot;</span><span class="p">,</span> <span class="n">pow_list_copy</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Redefining the list
+[4, 16, 64, 1024, 4096, 16384]
+Copied list, look this hasn&#39;t changed! [4, 16, 64, 256, 1024, 4096, 16384]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># A shorthand way of doing what was written above is the following:</span>
+
+<span class="n">pow_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="mi">1024</span><span class="p">,</span> <span class="mi">4096</span><span class="p">,</span> <span class="mi">16384</span><span class="p">]</span>
+<span class="n">pow_list_copy</span> <span class="o">=</span> <span class="n">pow_list</span>
+
+<span class="n">pow_list</span> <span class="o">=</span> <span class="n">pow_list</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="n">pow_list</span><span class="p">[</span><span class="mi">4</span><span class="p">:</span><span class="mi">7</span><span class="p">]</span>
+<span class="c1"># This introduces the &quot;slicing&quot; syntax. You will need to be familiar with this for later classes, don&#39;t worry, we&#39;ll</span>
+<span class="c1"># give lots of practice in future classes!</span>
+
+<span class="c1"># Here pow_list[0:3] means all elements of pow_list between 0 and 2. The first element *is* included, the last</span>
+<span class="c1"># element is *not* included. That&#39;s a bit weird, again, more practice will come!</span>
+
+<span class="c1"># Finally as pow_list[0:3] and pow_list[4:7] are both lists, we join them together with the &quot;+&quot; operator</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Redefining the list&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pow_list</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Copied list, look this hasn&#39;t changed!&quot;</span><span class="p">,</span> <span class="n">pow_list_copy</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Redefining the list
+[4, 16, 64, 1024, 4096, 16384]
+Copied list, look this hasn&#39;t changed! [4, 16, 64, 256, 1024, 4096, 16384]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="exercise">
+<h2>EXERCISE<a class="headerlink" href="#exercise" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><ol class="simple">
+<li><p>Create a list of <span class="math notranslate nohighlight">\(x^{1./4.}\)</span> for x between and including x=20 and x=120.</p></li>
+</ol>
+</li>
+<li><ol class="simple">
+<li><p>Change the 20th, 40th, 60th and 80th elements to be 1.</p></li>
+</ol>
+</li>
+<li><ol class="simple">
+<li><p>Remove the 10th, 30th, 50th, 70th and 90th elements.</p></li>
+</ol>
+</li>
+<li><ol class="simple">
+<li><p>For the new list (should now be 96 elements long). Change the 15th and 25th elements to 0.</p></li>
+</ol>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">your_list</span> <span class="o">=</span> <span class="p">[</span><span class="mf">2.114742526881128</span><span class="p">,</span> <span class="mf">2.1406951429280725</span><span class="p">,</span> <span class="mf">2.1657367706679937</span><span class="p">,</span> <span class="mf">2.189938703094842</span><span class="p">,</span> <span class="mf">2.213363839400643</span><span class="p">,</span> <span class="mf">2.23606797749979</span><span class="p">,</span> <span class="mf">2.2581008643532257</span><span class="p">,</span> <span class="mf">2.2795070569547775</span><span class="p">,</span> <span class="mf">2.300326633791206</span><span class="p">,</span> <span class="mf">2.340347319320716</span><span class="p">,</span> <span class="mf">2.359611061770567</span><span class="p">,</span> <span class="mf">2.378414230005442</span><span class="p">,</span> <span class="mf">2.39678172692843</span><span class="p">,</span> <span class="mf">2.414736402766418</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">2.449489742783178</span><span class="p">,</span> <span class="mf">2.4663257145596607</span><span class="p">,</span> <span class="mf">2.4828237961983883</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">2.514866859365871</span><span class="p">,</span> <span class="mf">2.530439534435243</span><span class="p">,</span> <span class="mf">2.5457298950218306</span><span class="p">,</span> <span class="mf">2.5607496020310148</span><span class="p">,</span> <span class="mf">2.5755095769013945</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">2.604290687140218</span><span class="p">,</span> <span class="mf">2.6183304986958853</span><span class="p">,</span> <span class="mf">2.6321480259049848</span><span class="p">,</span> <span class="mf">2.6591479484724942</span><span class="p">,</span> <span class="mf">2.6723451177837885</span><span class="p">,</span> <span class="mf">2.68534961428265</span><span class="p">,</span> <span class="mf">2.6981678764080854</span><span class="p">,</span> <span class="mf">2.7108060108295344</span><span class="p">,</span> <span class="mf">2.7232698153315003</span><span class="p">,</span> <span class="mf">2.7355647997347607</span><span class="p">,</span> <span class="mf">2.7476962050544724</span><span class="p">,</span> <span class="mf">2.7596690210718946</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">2.7831576837137404</span><span class="p">,</span> <span class="mf">2.794682392671241</span><span class="p">,</span> <span class="mf">2.806066263296683</span><span class="p">,</span> <span class="mf">2.8173132472612576</span><span class="p">,</span> <span class="mf">2.8284271247461903</span><span class="p">,</span> <span class="mf">2.8394115144336776</span><span class="p">,</span> <span class="mf">2.8502698827717983</span><span class="p">,</span> <span class="mf">2.861005552576305</span><span class="p">,</span> <span class="mf">2.8716217110259006</span><span class="p">,</span> <span class="mf">2.892507608519078</span><span class="p">,</span> <span class="mf">2.9027831081870996</span><span class="p">,</span> <span class="mf">2.9129506302439405</span><span class="p">,</span> <span class="mf">2.923012785691765</span><span class="p">,</span> <span class="mf">2.932972087668518</span><span class="p">,</span> <span class="mf">2.942830956382712</span><span class="p">,</span> <span class="mf">2.9525917237371893</span><span class="p">,</span> <span class="mf">2.962256637665299</span><span class="p">,</span> <span class="mf">2.9718278662008415</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">2.990697562442441</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mf">3.009216698434564</span><span class="p">,</span> <span class="mf">3.018349479292333</span><span class="p">,</span> <span class="mf">3.027400104035091</span><span class="p">,</span> <span class="mf">3.036370276710811</span><span class="p">,</span> <span class="mf">3.0452616464756694</span><span class="p">,</span> <span class="mf">3.0540758099773515</span><span class="p">,</span> <span class="mf">3.062814313608786</span><span class="p">,</span> <span class="mf">3.080070288241023</span><span class="p">,</span> <span class="mf">3.088590619387661</span><span class="p">,</span> <span class="mf">3.0970410146824725</span><span class="p">,</span> <span class="mf">3.1054227990714813</span><span class="p">,</span> <span class="mf">3.11373725847777</span><span class="p">,</span> <span class="mf">3.121985641352145</span><span class="p">,</span> <span class="mf">3.1301691601465746</span><span class="p">,</span> <span class="mf">3.138288992714996</span><span class="p">,</span> <span class="mf">3.1463462836457885</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">3.1622776601683795</span><span class="p">,</span> <span class="mf">3.1701538797227005</span><span class="p">,</span> <span class="mf">3.1779718278112656</span><span class="p">,</span> <span class="mf">3.1857325005549697</span><span class="p">,</span> <span class="mf">3.19343686757474</span><span class="p">,</span> <span class="mf">3.2010858729436795</span><span class="p">,</span> <span class="mf">3.208680436096278</span><span class="p">,</span> <span class="mf">3.216221452697031</span><span class="p">,</span> <span class="mf">3.2237097954706257</span><span class="p">,</span> <span class="mf">3.238531840464366</span><span class="p">,</span> <span class="mf">3.245867180408456</span><span class="p">,</span> <span class="mf">3.2531531233955713</span><span class="p">,</span> <span class="mf">3.260390438695134</span><span class="p">,</span> <span class="mf">3.2675798769167543</span><span class="p">,</span> <span class="mf">3.2747221706220526</span><span class="p">,</span> <span class="mf">3.281818034911291</span><span class="p">,</span> <span class="mf">3.288868167986058</span><span class="p">,</span> <span class="mf">3.295873251689181</span><span class="p">,</span> <span class="mf">3.3028339520229766</span><span class="p">,</span> <span class="mf">3.309750919646873</span><span class="p">]</span>
+
+<span class="c1"># Make sure your list from above is called your_list!!!</span>
+
+<span class="n">max_difference</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">your_list</span><span class="p">)):</span>
+    <span class="n">current_diff</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">expected_answer</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">your_list</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="k">if</span> <span class="n">current_diff</span> <span class="o">&gt;</span> <span class="n">max_difference</span><span class="p">:</span>
+        <span class="n">max_difference</span> <span class="o">=</span> <span class="n">current_diff</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Maximum difference. This should be 0 (but might be almost 0 due to rounding error):&quot;</span><span class="p">,</span> <span class="n">max_difference</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Input</span> <span class="n">In</span> <span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">max_difference</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">your_list</span><span class="p">)):</span>
+<span class="ne">----&gt; </span><span class="mi">7</span>     <span class="n">current_diff</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">expected_answer</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">your_list</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span>     <span class="k">if</span> <span class="n">current_diff</span> <span class="o">&gt;</span> <span class="n">max_difference</span><span class="p">:</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span>         <span class="n">max_difference</span> <span class="o">=</span> <span class="n">current_diff</span>
+
+<span class="ne">NameError</span>: name &#39;expected_answer&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="summing-over-a-list">
+<h2>Summing over a list<a class="headerlink" href="#summing-over-a-list" title="Permalink to this headline">#</a></h2>
+<p>We’ve already shown above how we can use for loops to sum over lists. However, this can also be done using the builtin <code class="docutils literal notranslate"><span class="pre">sum</span></code> function in python. Here’s how this works</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">med_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">38</span><span class="p">,</span> <span class="mi">16</span><span class="p">]</span>
+
+<span class="c1"># Summation using a for loop</span>
+
+<span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">med_list</span><span class="p">:</span>
+    <span class="n">total</span> <span class="o">=</span> <span class="n">total</span> <span class="o">+</span> <span class="n">item</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">total</span><span class="p">)</span>
+
+<span class="c1"># Direct summation using `sum`</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">med_list</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>107
+107
+</pre></div>
+</div>
+</div>
+</div>
+<section id="adding-two-lists-together">
+<h3>Adding two lists together.<a class="headerlink" href="#adding-two-lists-together" title="Permalink to this headline">#</a></h3>
+<p>To combine (concatenate) two lists together we can use the addition operator.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">]</span>
+<span class="n">L2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="n">L3</span> <span class="o">=</span> <span class="n">L1</span> <span class="o">+</span> <span class="n">L2</span>
+
+<span class="nb">print</span> <span class="p">(</span><span class="n">L1</span><span class="p">,</span> <span class="n">L2</span><span class="p">,</span> <span class="n">L3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[4, 7, 8] [7, 3, 1] [4, 7, 8, 7, 3, 1]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">]</span>
+<span class="n">L2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="c1"># To combine these together without creating a new variable we could do</span>
+<span class="n">L1</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">L2</span><span class="p">)</span>
+<span class="c1"># But now we no longer have the original list L1</span>
+
+<span class="nb">print</span> <span class="p">(</span><span class="n">L1</span><span class="p">,</span> <span class="n">L2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[4, 7, 8, 7, 3, 1] [7, 3, 1]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="quick-exercise">
+<h2>Quick exercise<a class="headerlink" href="#quick-exercise" title="Permalink to this headline">#</a></h2>
+<p>Create two lists</p>
+<ul class="simple">
+<li><p>list1, to have elements  2,4,6,8,10,</p></li>
+<li><p>list2, to have elements, 1,3,5,7,9
+Now concatenate them together that you obtain a list that has elements <span class="math notranslate nohighlight">\(1, 2, 3, 4, 5, 6, 7, 8, 9, 10\)</span>.</p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "icg-gravwaves/M24568_M20741_CompSMAP",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./lecture_3"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="Part_8_indices.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Indices and ordering: INTERACTIVE</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="Part_10_summary_exercises.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Summary exercises</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Ian Harry, Samantha Penny and Judi Thurlby<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
