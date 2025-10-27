@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Introducing tuples, sets and dictionaries &#8212; M24568 and M20741 Intro to CompSMAP</title>
+    <title>Further exercises on sets, tuples and dictionaries - SOLVED &#8212; M24568 and M20741 Intro to CompSMAP</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -50,12 +50,10 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Introducing tuples, sets and dictionaries - SOLVED" href="Part2_DataTypes_tuple_set_dictionary_SOLVED.html" />
-    <link rel="prev" title="The File object: A brief introduction - SOLVED" href="Part1_DataTypes_Introduction_SOLVED.html" />
+    <link rel="next" title="Challenge exercises" href="Part4_DataTypes_challenge_exercises.html" />
+    <link rel="prev" title="Further exercises on sets, tuples and dictionaries" href="Part3_DataTypes_further_exercises.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -462,8 +460,8 @@ const thebe_selector_output = ".output, .cell_output"
      The File object: A brief introduction - SOLVED
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="Part2_DataTypes_tuple_set_dictionary.html">
      Introducing tuples, sets and dictionaries
     </a>
    </li>
@@ -477,8 +475,8 @@ const thebe_selector_output = ".output, .cell_output"
      Further exercises on sets, tuples and dictionaries
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Part3_DataTypes_further_exercises_SOLVED.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Further exercises on sets, tuples and dictionaries - SOLVED
     </a>
    </li>
@@ -588,7 +586,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/icg-gravwaves/M24568_M20741_CompSMAP/main?urlpath=lab/tree/lecture_4/Part2_DataTypes_tuple_set_dictionary.ipynb"
+        <a href="https://mybinder.org/v2/gh/icg-gravwaves/M24568_M20741_CompSMAP/main?urlpath=lab/tree/lecture_4/Part3_DataTypes_further_exercises_SOLVED.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -606,7 +604,7 @@ title="Launch on Binder"
       </li>
       
       <li>
-        <a href="https://colab.research.google.com/github/icg-gravwaves/M24568_M20741_CompSMAP/blob/main/lecture_4/Part2_DataTypes_tuple_set_dictionary.ipynb"
+        <a href="https://colab.research.google.com/github/icg-gravwaves/M24568_M20741_CompSMAP/blob/main/lecture_4/Part3_DataTypes_further_exercises_SOLVED.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -684,7 +682,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/icg-gravwaves/M24568_M20741_CompSMAP/issues/new?title=Issue%20on%20page%20%2Flecture_4/Part2_DataTypes_tuple_set_dictionary.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/icg-gravwaves/M24568_M20741_CompSMAP/issues/new?title=Issue%20on%20page%20%2Flecture_4/Part3_DataTypes_further_exercises_SOLVED.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -712,7 +710,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/lecture_4/Part2_DataTypes_tuple_set_dictionary.ipynb"
+        <a href="../_sources/lecture_4/Part3_DataTypes_further_exercises_SOLVED.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -772,18 +770,53 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-tuple-an-immutable-list-of-values">
-   The tuple: An “immutable” list of values
+  <a class="reference internal nav-link" href="#exercise-1">
+   Exercise 1
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-set-a-collection-of-unique-objects">
-   The set: A collection of unique objects
+  <a class="reference internal nav-link" href="#exercise-2">
+   Exercise 2
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#dictionaries-storing-data-with-no-obvious-order">
-   Dictionaries: Storing data with no obvious order.
+  <a class="reference internal nav-link" href="#exercise-3">
+   Exercise 3
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-4">
+   Exercise 4
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-5">
+   Exercise 5
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-6">
+   Exercise 6
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-7">
+   Exercise 7
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-8">
+   Exercise 8
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-9">
+   Exercise 9
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-10">
+   Exercise 10
   </a>
  </li>
 </ul>
@@ -795,7 +828,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Introducing tuples, sets and dictionaries</h1>
+                <h1>Further exercises on sets, tuples and dictionaries - SOLVED</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -806,18 +839,53 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-tuple-an-immutable-list-of-values">
-   The tuple: An “immutable” list of values
+  <a class="reference internal nav-link" href="#exercise-1">
+   Exercise 1
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-set-a-collection-of-unique-objects">
-   The set: A collection of unique objects
+  <a class="reference internal nav-link" href="#exercise-2">
+   Exercise 2
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#dictionaries-storing-data-with-no-obvious-order">
-   Dictionaries: Storing data with no obvious order.
+  <a class="reference internal nav-link" href="#exercise-3">
+   Exercise 3
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-4">
+   Exercise 4
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-5">
+   Exercise 5
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-6">
+   Exercise 6
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-7">
+   Exercise 7
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-8">
+   Exercise 8
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-9">
+   Exercise 9
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-10">
+   Exercise 10
   </a>
  </li>
 </ul>
@@ -830,293 +898,347 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="introducing-tuples-sets-and-dictionaries">
-<h1>Introducing tuples, sets and dictionaries<a class="headerlink" href="#introducing-tuples-sets-and-dictionaries" title="Permalink to this headline">#</a></h1>
-<section id="the-tuple-an-immutable-list-of-values">
-<h2>The tuple: An “immutable” list of values<a class="headerlink" href="#the-tuple-an-immutable-list-of-values" title="Permalink to this headline">#</a></h2>
-<p>Let’s introduce now a second type, the tuple. This might appear to be very similar to the list. It is created using curved brackets instead of square brackets</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="further-exercises-on-sets-tuples-and-dictionaries-solved">
+<h1>Further exercises on sets, tuples and dictionaries - SOLVED<a class="headerlink" href="#further-exercises-on-sets-tuples-and-dictionaries-solved" title="Permalink to this headline">#</a></h1>
+<section id="exercise-1">
+<h2>Exercise 1<a class="headerlink" href="#exercise-1" title="Permalink to this headline">#</a></h2>
+<p>Write a function <code class="docutils literal notranslate"><span class="pre">disjoint_sets</span></code> that will take as input two sets and determine if they are “disjoint”. If they are disjoint it should return <code class="docutils literal notranslate"><span class="pre">True</span></code> otherwise it returns <code class="docutils literal notranslate"><span class="pre">False</span></code>.  Two sets are disjoint if no element is found in both sets. Construct some example scenarios to test that your function does what it should.</p>
+<p>For example:</p>
+<p><code class="docutils literal notranslate"><span class="pre">disjoint_sets(set([0,1,2]),</span> <span class="pre">set([3,4,5]))</span></code> should return <code class="docutils literal notranslate"><span class="pre">True</span></code>, there are no common elements.</p>
+<p><code class="docutils literal notranslate"><span class="pre">disjoint_sets(set([0,1,2,3]),</span> <span class="pre">set([3,4,5]))</span></code> should return <code class="docutils literal notranslate"><span class="pre">False</span></code>, there are common elements.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
-<span class="n">a_tuple</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">disjoint_sets</span><span class="p">(</span><span class="n">set1</span><span class="p">,</span> <span class="n">set2</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">set1</span> <span class="o">&amp;</span> <span class="n">set2</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">return</span> <span class="kc">False</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p><strong>EXERCISE</strong>: Print the first, third and fifth elements of both the list and the tuple. This should be identical in both cases.</p>
-<p>So what’s different? <strong>EXERCISE</strong>: Try the following. In both cases change the 2nd element of the list, or the tuple, to be 10</p>
-<p>The tuple should have raised an error. Unlike a list, a tuple cannot be changed, it is “immutable”. This has a few advantages, for example if you have defined a tuple somewhere, and then sent it to some functions, you know that your tuple cannot have changed. The same is not true if it were a list. If you want to change a tuple, you need to make a new tuple. So to complete our exercise above we can do:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a_new_tuple</span> <span class="o">=</span> <span class="p">(</span><span class="n">a_tuple</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">10</span><span class="p">,</span> <span class="n">a_tuple</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">a_tuple</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">a_tuple</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a_new_tuple</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">disjoint_sets</span><span class="p">(</span><span class="nb">set</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]),</span> <span class="nb">set</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1, 10, 3, 4, 5)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
 </pre></div>
 </div>
 </div>
 </div>
-<p>Trying to do this with tuples can sometimes be fiddly, so it’s often simpler to convert to a list, make changes, and then convert back to a tuple. … But then if you want to be able to change values, you probably shouldn’t be using tuples, use a list instead!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a_tuple</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
-<span class="n">a_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">a_tuple</span><span class="p">)</span>
-<span class="n">a_list</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">a_new_tuple</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">a_list</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a_new_tuple</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">disjoint_sets</span><span class="p">(</span><span class="nb">set</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]),</span> <span class="nb">set</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1, 10, 3, 4, 5)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
 </pre></div>
 </div>
 </div>
 </div>
-<p>If you want a bit more of the technical side of a tuple vs list, there’s lots of resources on Google. For example see: <a class="reference external" href="https://www.afternerd.com/blog/difference-between-list-tuple/">https://www.afternerd.com/blog/difference-between-list-tuple/</a></p>
 </section>
-<section id="the-set-a-collection-of-unique-objects">
-<h2>The set: A collection of unique objects<a class="headerlink" href="#the-set-a-collection-of-unique-objects" title="Permalink to this headline">#</a></h2>
-<p>This brings us to a third python type for storing collections of things: The set. The basic idea is that a set contains a set of <em>unique</em> objects. So if we were to do</p>
+<section id="exercise-2">
+<h2>Exercise 2<a class="headerlink" href="#exercise-2" title="Permalink to this headline">#</a></h2>
+<p>In the code cell below you have a set and a list. Add all the things in the list <code class="docutils literal notranslate"><span class="pre">sample_list</span></code> to the set. You should end up with</p>
+<p><code class="docutils literal notranslate"><span class="pre">sample_set=</span> <span class="pre">{'Green',</span> <span class="pre">'Yellow',</span> <span class="pre">'Black',</span> <span class="pre">'Orange',</span> <span class="pre">'Red',</span> <span class="pre">'Blue'}</span></code></p>
+<p>(Thanks to <a class="reference external" href="http://pynative.com">pynative.com</a> for the example exercise!)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">100</span><span class="p">]</span>
-<span class="n">b</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sample_set</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Yellow&quot;</span><span class="p">,</span> <span class="s2">&quot;Orange&quot;</span><span class="p">,</span> <span class="s2">&quot;Black&quot;</span><span class="p">}</span>
+<span class="n">sample_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Blue&quot;</span><span class="p">,</span> <span class="s2">&quot;Green&quot;</span><span class="p">,</span> <span class="s2">&quot;Red&quot;</span><span class="p">]</span>
+
+<span class="n">sample_set</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{1, 2, 3, 100, 5, 7, 8}
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Black&#39;, &#39;Orange&#39;, &#39;Yellow&#39;}
 </pre></div>
 </div>
 </div>
 </div>
-<p>You can see that we have only the 7 unique elements. The order of the objects is not relevant in the <code class="docutils literal notranslate"><span class="pre">set</span></code> type, and you should not assume anything about that. For example you cannot do</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sample_set</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">sample_list</span><span class="p">)</span> <span class="o">|</span> <span class="n">sample_set</span>
+<span class="n">sample_set</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Black&#39;, &#39;Blue&#39;, &#39;Green&#39;, &#39;Orange&#39;, &#39;Red&#39;, &#39;Yellow&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="exercise-3">
+<h2>Exercise 3<a class="headerlink" href="#exercise-3" title="Permalink to this headline">#</a></h2>
+<p>Write a function <code class="docutils literal notranslate"><span class="pre">remove_items_from_set</span></code> that will take as input two sets and return a set containing that exist only in the first set and not in the second set. I Construct some example scenarios to test that your function does what it should.</p>
+<p>For example:</p>
+<p><code class="docutils literal notranslate"><span class="pre">remove_items_from_set(set([0,1,2]),</span> <span class="pre">set([3,4,5]))</span></code> should return <code class="docutils literal notranslate"><span class="pre">set([0,1,2])</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">remove_items_from_set(set([0,2,3]),</span> <span class="pre">set([3,4,5]))</span></code> should return <code class="docutils literal notranslate"><span class="pre">set([0,2])</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">remove_items_from_set</span><span class="p">(</span><span class="n">set1</span><span class="p">,</span> <span class="n">set2</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">set1</span> <span class="o">-</span> <span class="n">set2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">remove_items_from_set</span><span class="p">(</span><span class="nb">set</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]),</span> <span class="nb">set</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{0, 1, 2}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">remove_items_from_set</span><span class="p">(</span><span class="nb">set</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]),</span> <span class="nb">set</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{0, 2}
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="exercise-4">
+<h2>Exercise 4<a class="headerlink" href="#exercise-4" title="Permalink to this headline">#</a></h2>
+<p>In your Google colab environment you can find some example data files. We’ll show how to parse some of these in later weeks, but for now print the contents of the <code class="docutils literal notranslate"><span class="pre">README</span></code> file to understand what this data is.</p>
+<p>HINT: The README file can be opened with:</p>
+<p><code class="docutils literal notranslate"><span class="pre">open('sample_data/README.md',</span> <span class="pre">'r')</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;sample_data/README.md&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file_pointer</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file_pointer</span><span class="p">:</span>
+        <span class="c1"># We need the strip method here to avoid the newline character being written twice!</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Input</span> <span class="n">In</span> <span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="n">Input</span> <span class="n">In</span> <span class="p">[</span><span class="mi">9</span><span class="p">],</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;sample_data/README.md&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file_pointer</span><span class="p">:</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span>     <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file_pointer</span><span class="p">:</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span>         <span class="c1"># We need the strip method here to avoid the newline character being written twice!</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span>         <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
 
-<span class="ne">TypeError</span>: &#39;set&#39; object is not subscriptable
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;sample_data/README.md&#39;
 </pre></div>
 </div>
 </div>
 </div>
-<p>You <em>can</em> do:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">c</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2 [1, 2, 3, 100, 5, 7, 8]
-</pre></div>
-</div>
-</div>
-</div>
-<p>But you should expect that these items not be in any particular order. Sets are mutable, you can add items into a set, or remove them, this is done with methods:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
-<span class="n">b</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">13</span><span class="p">)</span>
-<span class="n">b</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{1, 2, 3, 100, 7, 8, 12, 13}
-</pre></div>
-</div>
-</div>
-</div>
-<p>The set is changed in-place, so if you try that again, it will fail the second time as 5 will no longer be in the set. (Note that adding a number already in the set will do nothing, removing a number not in the set will cause a failure)</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
-<span class="n">b</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">13</span><span class="p">)</span>
-<span class="n">b</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
-<span class="n">Input</span> <span class="n">In</span> <span class="p">[</span><span class="mi">8</span><span class="p">],</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">b</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">b</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">13</span><span class="p">)</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">b</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
-
-<span class="ne">KeyError</span>: 5
-</pre></div>
-</div>
-</div>
-</div>
-<p>You can also take the “intersection” of sets (this means take two sets, and create a new set containing things that are in both of the original sets), or the “union” of sets (take two sets and create a new set containing things in <em>either</em> of the original sets) or remove one set from another. The syntax here is a bit odd as it uses “bitwise” operators. We won’t worry today about what those operators mean for other types, but for sets we can illustrate this.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a_set</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span>
-<span class="n">another_set</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">])</span>
-<span class="n">a_third_set</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
-
-<span class="c1"># The intersection</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Intersections&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a_set</span> <span class="o">&amp;</span> <span class="n">another_set</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a_third_set</span> <span class="o">&amp;</span> <span class="n">another_set</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a_set</span> <span class="o">&amp;</span> <span class="n">a_third_set</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">()</span>
-
-<span class="c1"># The union</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Unions&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a_set</span> <span class="o">|</span> <span class="n">another_set</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a_third_set</span> <span class="o">|</span> <span class="n">another_set</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a_set</span> <span class="o">|</span> <span class="n">a_third_set</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">()</span>
-
-<span class="c1"># Taking one set from another (will remove items from the second if they are in the first)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Removing one set from another&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a_set</span> <span class="o">-</span> <span class="n">another_set</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a_third_set</span> <span class="o">-</span> <span class="n">another_set</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a_set</span> <span class="o">-</span> <span class="n">a_third_set</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">()</span>
-
-<span class="c1"># Taking one set from another (will remove items from the second if they are in the first)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The exclusive or: Numbers in one set, but not both&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a_set</span> <span class="o">^</span> <span class="n">another_set</span><span class="p">)</span>
-<span class="c1"># This is equivalent to (a_set | another_set) - (a_set &amp; another_set)</span>
-<span class="nb">print</span><span class="p">((</span><span class="n">a_set</span> <span class="o">|</span> <span class="n">another_set</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="n">a_set</span> <span class="o">&amp;</span> <span class="n">another_set</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a_third_set</span> <span class="o">^</span> <span class="n">another_set</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a_set</span> <span class="o">^</span> <span class="n">a_third_set</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Intersections
-set()
-set()
-{1, 2, 3}
-
-Unions
-{1, 2, 3, 4, 5, 7, 8, 9, 10, 11}
-{1, 2, 3, 7, 8, 9, 10, 11}
-{1, 2, 3, 4, 5}
-
-Removing one set from another
-{1, 2, 3, 4, 5}
-{1, 2, 3}
-{4, 5}
-
-The exclusive or: Numbers in one set, but not both
-{1, 2, 3, 4, 5, 7, 8, 9, 10, 11}
-{1, 2, 3, 4, 5, 7, 8, 9, 10, 11}
-{1, 2, 3, 7, 8, 9, 10, 11}
-{4, 5}
-</pre></div>
-</div>
-</div>
-</div>
-<p>One key advantage to a set is the speed of access. For example if I define the following as a list, tuple or set:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">]</span>
-<span class="n">a_tuple</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">a_list</span><span class="p">)</span>
-<span class="n">a_set</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">a_list</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>I can check if a number is in any of these objects using the <code class="docutils literal notranslate"><span class="pre">in</span></code> keyword</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">5</span> <span class="ow">in</span> <span class="n">a_list</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="mi">11</span> <span class="ow">in</span> <span class="n">a_tuple</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="mi">6</span> <span class="ow">in</span> <span class="n">a_set</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="mi">21</span> <span class="ow">in</span> <span class="n">a_list</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="mi">21</span> <span class="ow">in</span> <span class="n">a_set</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
-False
-True
-False
-False
-</pre></div>
-</div>
-</div>
-</div>
-<p>However, the speed of doing this is <em>much</em> faster for a set than the other two types. So for very large collections of unique numbers the set can offer significant advantages. There is a type called a <code class="docutils literal notranslate"><span class="pre">frozenset</span></code> which is an immutable set. We will not illustrate that today, but it’s useful to know it exists!</p>
 </section>
-<section id="dictionaries-storing-data-with-no-obvious-order">
-<h2>Dictionaries: Storing data with no obvious order.<a class="headerlink" href="#dictionaries-storing-data-with-no-obvious-order" title="Permalink to this headline">#</a></h2>
-<p>Our final builtin python type for storing collections of data is the dictionary. The dictionary is used for storing  data with no obvious order, or for when it’s easier to access data based on something <em>other</em> than the order. For example: details of students in a first year computing class, where you’d often look to access data based on the student’s name, or UP number rather than “I want the fifth student if they are alphabetically sorted”. Here’s an example of creating a dictionary. I recommend doing this as illustrated below, by starting with an empty dictionary and adding items in:</p>
+<section id="exercise-5">
+<h2>Exercise 5<a class="headerlink" href="#exercise-5" title="Permalink to this headline">#</a></h2>
+<p>In the code cell below you can see two lists. Convert this into a dictionary. You should get:</p>
+<p><code class="docutils literal notranslate"><span class="pre">{'Ten':</span> <span class="pre">10,</span> <span class="pre">'Twenty':</span> <span class="pre">20,</span> <span class="pre">'Thirty':</span> <span class="pre">30}</span></code></p>
+<p>when printing the dictionary.</p>
+<p>(Thanks to <a class="reference external" href="http://pynative.com">pynative.com</a>)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This dictionary might be for example marks in some exam</span>
-<span class="n">a_dictionary</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="n">a_dictionary</span><span class="p">[</span><span class="s1">&#39;student_a&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">47</span>
-<span class="n">a_dictionary</span><span class="p">[</span><span class="s1">&#39;student_b&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">74</span>
-<span class="n">a_dictionary</span><span class="p">[</span><span class="s1">&#39;student_c&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">39</span>
-<span class="n">a_dictionary</span><span class="p">[</span><span class="s1">&#39;student_d&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">56</span>
-<span class="n">a_dictionary</span><span class="p">[</span><span class="s1">&#39;student_e&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">62</span>
-<span class="n">a_dictionary</span><span class="p">[</span><span class="s1">&#39;student_f&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">72</span>
-<span class="n">a_dictionary</span><span class="p">[</span><span class="s1">&#39;student_g&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">58</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">keys</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Ten&#39;</span><span class="p">,</span> <span class="s1">&#39;Twenty&#39;</span><span class="p">,</span> <span class="s1">&#39;Thirty&#39;</span><span class="p">]</span>
+<span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>You can then access information by keying the student’s name directly</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">a_dictionary</span><span class="p">[</span><span class="s1">&#39;student_d&#39;</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_dict</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">keys</span><span class="p">,</span> <span class="n">values</span><span class="p">):</span>
+    <span class="n">my_dict</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">val</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_dict</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>56
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Ten&#39;: 10, &#39;Twenty&#39;: 20, &#39;Thirty&#39;: 30}
 </pre></div>
 </div>
 </div>
 </div>
-<p>You can also access the list of student names, or associated grades, or both, in the following way. <strong>NOTE</strong> It’s important to cast these to list before printing … They are similar to the <code class="docutils literal notranslate"><span class="pre">range</span></code> object in this way.</p>
+</section>
+<section id="exercise-6">
+<h2>Exercise 6<a class="headerlink" href="#exercise-6" title="Permalink to this headline">#</a></h2>
+<p>In the cell below you can see two dictionaries. Combine these together into one dictionary. You should get:</p>
+<p><code class="docutils literal notranslate"><span class="pre">{'Ten':</span> <span class="pre">10,</span> <span class="pre">'Twenty':</span> <span class="pre">20,</span> <span class="pre">'Thirty':</span> <span class="pre">30,</span> <span class="pre">'Fourty':</span> <span class="pre">40,</span> <span class="pre">'Fifty':</span> <span class="pre">50}</span></code></p>
+<p>(credit to <a class="reference external" href="http://pynative.com">pynative.com</a>)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span> <span class="nb">list</span><span class="p">(</span> <span class="n">a_dictionary</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span> <span class="p">)</span> <span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span> <span class="nb">list</span><span class="p">(</span> <span class="n">a_dictionary</span><span class="o">.</span><span class="n">values</span><span class="p">()</span> <span class="p">)</span> <span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span> <span class="nb">list</span><span class="p">(</span> <span class="n">a_dictionary</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="p">)</span> <span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dict1</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Ten&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;Twenty&#39;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="s1">&#39;Thirty&#39;</span><span class="p">:</span> <span class="mi">30</span><span class="p">}</span>
+<span class="n">dict2</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Thirty&#39;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span> <span class="s1">&#39;Fourty&#39;</span><span class="p">:</span> <span class="mi">40</span><span class="p">,</span> <span class="s1">&#39;Fifty&#39;</span><span class="p">:</span> <span class="mi">50</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">output_dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">dict1</span><span class="p">,</span> <span class="o">**</span><span class="n">dict2</span><span class="p">)</span>
+<span class="n">output_dict</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;student_a&#39;, &#39;student_b&#39;, &#39;student_c&#39;, &#39;student_d&#39;, &#39;student_e&#39;, &#39;student_f&#39;, &#39;student_g&#39;]
-[47, 74, 39, 56, 62, 72, 58]
-[(&#39;student_a&#39;, 47), (&#39;student_b&#39;, 74), (&#39;student_c&#39;, 39), (&#39;student_d&#39;, 56), (&#39;student_e&#39;, 62), (&#39;student_f&#39;, 72), (&#39;student_g&#39;, 58)]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Ten&#39;: 10, &#39;Twenty&#39;: 20, &#39;Thirty&#39;: 30, &#39;Fourty&#39;: 40, &#39;Fifty&#39;: 50}
 </pre></div>
 </div>
 </div>
 </div>
-<p><strong>EXERCISE</strong> Compute the mean and standard deviation of these students’ grades by accessing the grades from the dictionary. There are functions available in python for this, which you can easily find by Googling. Do <em>not</em> use these, write your own function!</p>
-<div class="math notranslate nohighlight">
-\[ \mathrm{mean}:\, \overline{x} =\frac{1}{n}\sum_{i=1}^nx_i\]</div>
-<div class="math notranslate nohighlight">
-\[ \mathrm{standard\, deviation}:\,\, \sigma = \sqrt{\frac{\sum(x_i-\overline{x})^2}{n}}\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">dict2</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">dict1</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">val</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dict1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Ten&#39;: 10, &#39;Twenty&#39;: 20, &#39;Thirty&#39;: 30, &#39;Fourty&#39;: 40, &#39;Fifty&#39;: 50}
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="exercise-7">
+<h2>Exercise 7<a class="headerlink" href="#exercise-7" title="Permalink to this headline">#</a></h2>
+<p>In the cell below you can see quite a complicated dictionary. It contains dictionaries within dictionaries (and demonstrated how you could store a lot of data in a structured format). Print Mike’s mark for history and for physics (without printing everything else). The output should just read:</p>
+<p><code class="docutils literal notranslate"><span class="pre">70</span> <span class="pre">80</span></code></p>
+<p>(credit to <a class="reference external" href="http://pynative.com">pynative.com</a>)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sample_dict</span> <span class="o">=</span> <span class="p">{</span>
+   <span class="s2">&quot;class&quot;</span><span class="p">:{</span>
+      <span class="s2">&quot;student&quot;</span><span class="p">:{</span>
+         <span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Mike&quot;</span><span class="p">,</span>
+         <span class="s2">&quot;marks&quot;</span><span class="p">:{</span>
+            <span class="s2">&quot;physics&quot;</span><span class="p">:</span><span class="mi">70</span><span class="p">,</span>
+            <span class="s2">&quot;history&quot;</span><span class="p">:</span><span class="mi">80</span>
+         <span class="p">}</span>
+      <span class="p">}</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">sample_dict</span><span class="p">[</span><span class="s2">&quot;class&quot;</span><span class="p">][</span><span class="s2">&quot;student&quot;</span><span class="p">][</span><span class="s2">&quot;marks&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>70
+80
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="exercise-8">
+<h2>Exercise 8<a class="headerlink" href="#exercise-8" title="Permalink to this headline">#</a></h2>
+<p>In the code cell below a tuple is defined. Reverse it. You should get:</p>
+<p><code class="docutils literal notranslate"><span class="pre">(50,</span> <span class="pre">40,</span> <span class="pre">30,</span> <span class="pre">20,</span> <span class="pre">10)</span></code></p>
+<p>(credit to <a class="reference external" href="http://pynative.com">pynative.com</a>)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a_tuple</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a_tuple</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(50, 40, 30, 20, 10)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="exercise-9">
+<h2>Exercise 9<a class="headerlink" href="#exercise-9" title="Permalink to this headline">#</a></h2>
+<p>In the code cell below is a tuple containing a few different things. One of these things is a list, whose second item is <code class="docutils literal notranslate"><span class="pre">20</span></code>. Complete the line below to get the code to print <code class="docutils literal notranslate"><span class="pre">20</span></code></p>
+<p>(credit to <a class="reference external" href="http://pynative.com">pynative.com</a>)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a_tuple</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;Orange&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">],</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">25</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a_tuple</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span>   <span class="c1"># Complete this line so it prints `20`. Do not add another line.</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>20
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="exercise-10">
+<h2>Exercise 10<a class="headerlink" href="#exercise-10" title="Permalink to this headline">#</a></h2>
+<p>In the code cell below is a tuple. Write a code to count how many times <code class="docutils literal notranslate"><span class="pre">50</span></code> occurs within this tuple.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tuple1</span> <span class="o">=</span> <span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">tuple1</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">item</span> <span class="o">==</span> <span class="mi">50</span><span class="p">:</span>
+        <span class="n">counter</span><span class="o">+=</span><span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">counter</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+</pre></div>
+</div>
+</div>
+</div>
+<p>Alternative</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">tuple1</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="mi">50</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 </section>
 
@@ -1147,17 +1269,17 @@ False
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="Part1_DataTypes_Introduction_SOLVED.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="Part3_DataTypes_further_exercises.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">The File object: A brief introduction - SOLVED</p>
+            <p class="prev-next-title">Further exercises on sets, tuples and dictionaries</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="Part2_DataTypes_tuple_set_dictionary_SOLVED.html" title="next page">
+    <a class='right-next' id="next-link" href="Part4_DataTypes_challenge_exercises.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Introducing tuples, sets and dictionaries - SOLVED</p>
+        <p class="prev-next-title">Challenge exercises</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
