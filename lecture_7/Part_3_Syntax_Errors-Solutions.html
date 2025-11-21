@@ -750,10 +750,57 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../lecture_8/overview.html">
    Lecture 8: Data manipulation (with pandas)
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_8/Part00_Week_8_into.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_8/Part01_week8_data_frames.html">
+     Part 1: data frames (extra powerful dictionaries)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_8/Part02_week8_viewing_data.html">
+     Part 2: viewing data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_8/Part03_week8_selecting_elements.html">
+     Part 3: selecting elements from a data frame
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_8/Part04_week8_more_operations.html">
+     Part 4: More operations on DataFrames
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_8/Part05_week8_grouping.html">
+     Parts 5 and 6: grouping and visualising data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_8/Part06_week8_importing_files.html">
+     Part 7: Importing and exporting files / spreadsheets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_8/Part07_week8_summary_exercises.html">
+     Part 8: Summary exercises
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../lecture_9/overview.html">
@@ -1295,26 +1342,26 @@ hello
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([50.87071941, 50.88789723, 50.90020273, 50.90043216, 50.90084794,
-       50.91997849, 50.93108944, 50.92005222, 50.94351936, 50.94711993,
-       50.96077703, 50.95534124, 50.98128505, 51.00838946, 50.95722356,
-       50.99945091, 51.00190486, 51.03150026, 51.04645411, 51.06962026,
-       51.00740715, 51.03957105, 51.13672802, 51.14938614, 51.05847592,
-       51.06636945, 51.04294007, 51.15101171, 51.14792682, 51.1627407 ,
-       51.13973276, 51.16674204, 51.05731814, 51.15273332, 51.11100952,
-       51.17910745, 51.17529302, 51.17544509, 51.21028245, 51.27983409,
-       51.28755626, 51.27016156, 51.2080753 , 51.30238061, 51.25457659,
-       51.22510513, 51.29406107, 51.34885119, 51.35194546, 51.30624052,
-       51.34349514, 51.36831096, 51.20138765, 51.36928048, 51.22051474,
-       51.40839161, 51.33044892, 51.19551335, 51.43949376, 51.37093439,
-       51.35351455, 51.34043402, 51.36133613, 51.24355099, 51.33184617,
-       51.39558544, 51.45482255, 51.50311084, 51.47604783, 51.51903834,
-       51.49364376, 51.38968294, 51.5333263 , 51.47773689, 51.50121722,
-       51.5713603 , 51.56309365, 51.31586475, 51.47754985, 51.58283929,
-       51.68532274, 51.62665186, 51.67806828, 51.71137024, 51.34047312,
-       51.68635725, 51.57758294, 51.39556465, 51.42186108, 51.707868  ,
-       51.75191256, 51.6393928 , 51.57610142, 51.74049786, 51.37887523,
-       51.54606894, 51.44761373, 51.51112632, 51.81222993, 51.70401885])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([51.05977595, 51.05938176, 51.06886176, 51.09125405, 51.09755617,
+       51.11718344, 51.13955224, 51.12785642, 51.1632208 , 51.17216087,
+       51.18323377, 51.21300959, 51.21276902, 51.20671219, 51.23231985,
+       51.21450571, 51.25324143, 51.24473825, 51.25501977, 51.22806815,
+       51.28003732, 51.19983617, 51.1849601 , 51.30691608, 51.31387503,
+       51.25201562, 51.30920699, 51.28822431, 51.34914315, 51.36228546,
+       51.39407464, 51.32604873, 51.37377012, 51.43485153, 51.41713812,
+       51.36027493, 51.34700588, 51.47216741, 51.38164726, 51.45905239,
+       51.46460169, 51.43277618, 51.52950864, 51.50360764, 51.44688704,
+       51.45177244, 51.55259361, 51.43303541, 51.40111931, 51.55322675,
+       51.52074421, 51.440187  , 51.54372776, 51.59806227, 51.55321904,
+       51.42669333, 51.442826  , 51.46044268, 51.53583305, 51.4859846 ,
+       51.51768884, 51.44770747, 51.66351793, 51.41070696, 51.58395236,
+       51.62170694, 51.55157698, 51.56586519, 51.69770554, 51.64321845,
+       51.68735662, 51.45716843, 51.75196701, 51.54853416, 51.76347283,
+       51.66834804, 51.75616445, 51.66078192, 51.7380572 , 51.59955411,
+       51.76673343, 51.81247686, 51.82824905, 51.83772259, 51.69997832,
+       51.61335405, 51.71590676, 51.84206399, 51.87353875, 51.82340845,
+       51.77763969, 51.63991012, 51.89732624, 51.80973075, 51.95483192,
+       51.72671203, 51.97545623, 51.87531182, 51.68666798, 51.80155148])
 </pre></div>
 </div>
 </div>
