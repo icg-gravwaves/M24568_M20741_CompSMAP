@@ -863,8 +863,18 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_9/Part_2_Continuous_Functions-SOLVED.html">
+     Continuous functions - SOLUTIONS
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../lecture_9/Part_3_Bolzanos_Theorem.html">
      Bolzano’s Theorem
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_9/Part_3_Bolzanos_Theorem-SOLVED.html">
+     Bolzano’s Theorem - SOLUTIONS
     </a>
    </li>
    <li class="toctree-l2">
@@ -873,16 +883,58 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_9/Part_4_Bisection_Method-SOLVED.html">
+     Writing a root finding algorithm using the bisection method - SOLUTIONS
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../lecture_9/Part_5_Newtons_Method.html">
      Newton’s Method
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_9/Part_5_Newtons_Method-SOLVED.html">
+     Newton’s Method - SOLUTIONS
+    </a>
+   </li>
   </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../lecture_10/overview.html">
    Lecture 10: Numerical Integration
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_10/Part_1_Introduction.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_10/Part_2_Numerical_Integration_rectangle_rule.html">
+     The rectangle rule
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_10/Part_3_Numerical_Integration_trapezium_rule.html">
+     The Trapezium rule
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_10/Part_4_Numerical_Integration_Simpson%27s_rule.html">
+     Simpson’s rule
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_10/Appendix_code_for_graphs.html">
+     APPENDIX
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -1226,20 +1278,20 @@ the row is [1.5 3.2 6.7]
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>######################
-the square root of the row [20.90743889 77.33402359 53.45017283 88.99122749 85.8221301  71.81468755
- 45.6375615  34.49399095  9.55908931 54.6331747 ] is 25.728204442418008.
+the square root of the row [98.90937567  9.88368394 45.08984088 77.66988063 52.71793072 56.97518266
+ 33.14861236 24.69532729 37.35017963 55.33181456] is 24.399159344207987.
 ######################
-the square root of the row [23.14688896 61.37347548  0.513716   51.07825529 84.99099254 91.02935359
- 40.28419483  0.09261796 19.44336648 80.47295903] is 32.29458212818867.
+the square root of the row [80.1710659  63.71946107 37.33730695 95.94728747  3.52702008 17.5673799
+ 31.71246536 28.31577816 10.58603703 38.25828992] is 28.662405835422444.
 ######################
-the square root of the row [68.6230641   0.37305173 23.66894364 44.43875776 75.55701716 38.26151331
- 44.17185306 30.73639547 64.9071195  79.09909366] is 23.891230741785893.
+the square root of the row [52.68914576  7.80336246 77.2908092  44.47849743 89.32355873 64.431912
+ 36.25128498 79.10306238 16.85908194 46.22595004] is 25.38772366564777.
 ######################
-the square root of the row [77.96953845 27.22838412 76.53023866 48.67387928 23.19718589 46.19766803
- 95.67184972 56.17815574 13.13138937 57.80087471] is 24.965087621944118.
+the square root of the row [10.19985851 68.82372106 33.73326456  7.97434054 96.05045971 87.96019707
+ 65.78291803 33.59640229 28.87036215 25.24964839] is 29.88914171527705.
 ######################
-the square root of the row [40.76312323 87.43707081 85.70346779 47.89571597 35.87829057 63.10899332
-  2.57684646 22.36178714 90.32004988 62.90833898] is 27.9118382736228.
+the square root of the row [21.9950202  20.34509393 30.56662857 17.3320036  92.67888137 49.5947726
+  7.3259488  72.02433031  8.32234631  5.31498695] is 28.151546684762085.
 </pre></div>
 </div>
 </div>
@@ -1309,30 +1361,30 @@ the element is 6.7
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[[2.90677522 2.98060304]
-  [6.82267055 5.36257873]
-  [1.48648224 2.43628414]
-  [8.33700003 3.55847319]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[[0.61884027 2.96894409]
+  [8.2344005  2.15990513]
+  [4.8357066  0.72717364]
+  [3.62279856 9.74496238]]
 
- [[3.02580929 7.87805702]
-  [0.56111098 3.14858069]
-  [2.93684008 6.56762244]
-  [9.32245992 4.61903041]]
+ [[7.99235367 6.82890534]
+  [8.59924332 9.73716974]
+  [0.91486515 5.24105658]
+  [9.54794956 7.99294356]]
 
- [[8.95059488 4.86157201]
-  [5.91168944 3.84185792]
-  [1.87507192 5.13753531]
-  [8.35047043 4.6403769 ]]
+ [[1.4625841  6.25230158]
+  [8.40752142 7.47978129]
+  [9.21035245 2.88491903]
+  [4.70241753 0.63338344]]
 
- [[7.98272223 5.8635596 ]
-  [8.8480006  7.37656872]
-  [3.45943488 8.91589999]
-  [0.75450658 9.19030581]]
+ [[5.10173131 6.10301119]
+  [5.15812534 8.88493931]
+  [9.49299014 2.7184319 ]
+  [1.95705455 0.25293393]]
 
- [[1.48142676 5.81741188]
-  [4.37957709 3.073424  ]
-  [9.47044524 4.90571109]
-  [5.06425281 2.47938161]]]
+ [[1.42471605 9.81143177]
+  [7.74406933 9.69342306]
+  [5.12074677 1.32959363]
+  [6.03492169 5.22748375]]]
 </pre></div>
 </div>
 </div>
@@ -1348,46 +1400,46 @@ the element is 6.7
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.9067752178899617
-2.9806030445698593
-6.8226705525692815
-5.362578733034768
-1.4864822438461323
-2.4362841358779086
-8.337000028217306
-3.5584731929029925
-3.025809291775896
-7.878057015789999
-0.5611109819822568
-3.1485806943047114
-2.936840076969437
-6.567622438943401
-9.322459915473269
-4.619030414284726
-8.950594879838604
-4.861572012494494
-5.911689439676369
-3.841857916238507
-1.8750719196516419
-5.137535313763357
-8.350470431274793
-4.640376898173255
-7.98272223462337
-5.863559598984903
-8.84800059526951
-7.376568723500813
-3.459434877945071
-8.915899993940776
-0.7545065836500875
-9.19030581095505
-1.4814267645488477
-5.817411879373784
-4.379577094534027
-3.0734239968642605
-9.470445237941137
-4.905711085416272
-5.064252805505074
-2.4793816100360297
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.6188402706561535
+2.9689440938597347
+8.234400502517543
+2.1599051341374964
+4.835706599320703
+0.7271736388623706
+3.6227985609328437
+9.744962376424262
+7.992353665624703
+6.828905335625157
+8.599243324425535
+9.737169744337624
+0.914865148650289
+5.241056582573286
+9.547949560804199
+7.992943560129982
+1.4625841024296882
+6.252301576716932
+8.407521422880556
+7.479781291747575
+9.210352445482515
+2.8849190347489975
+4.702417529111303
+0.6333834365409219
+5.101731308380265
+6.103011194630911
+5.158125335909551
+8.884939314406871
+9.492990139858154
+2.7184319026836743
+1.9570545459045618
+0.25293393172560297
+1.4247160547619864
+9.811431774852487
+7.744069330219338
+9.693423056168376
+5.120746773252664
+1.3295936294925814
+6.034921691219942
+5.227483749615184
 </pre></div>
 </div>
 </div>
