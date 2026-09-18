@@ -9,9 +9,6 @@ Remember that this course is built around interaction, so most importantly:
 * Come to the timetabled sessions every week.
 * Engage with us and ask questions.
 * It is okay, and normal, to find this hard. Please engage with us though and use the drop-in sessions. We will do our best to help you understand this.
-* The Academic Tutors are also available to provide one-to-one help. Do engage with them!
-
-This is the "storyboard" for this module, showing where we are and where we're going. Please let me know if you want this in an alternative format for accessibility.
 
 Follow the links below, or the links on the side, to access individual lectures' material!
 
