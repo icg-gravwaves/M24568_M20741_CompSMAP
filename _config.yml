@@ -1,8 +1,8 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: M24568 and M20741 Intro to CompSMAP
-author: Ian Harry, Samantha Penny and Judi Thurlby
+title: Introduction to Computational Techniques for Maths and Physics
+author: University of Portsmouth
 logo: logo.png
 only_build_toc_files: True
 
