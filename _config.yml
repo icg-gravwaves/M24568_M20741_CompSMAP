@@ -41,9 +41,7 @@ launch_buttons:
   colab_url: "https://colab.research.google.com"
   thebe: true
 
-# Force the ".ipynb" download button to actually download rather than
-# navigate to the raw file (GitHub Pages sends no Content-Disposition header).
-sphinx:
-  config:
-    html_js_files:
-      - force_download.js
+# Note: _static/force_download.js forces the ".ipynb" download button to
+# actually download rather than navigate to the raw file (GitHub Pages sends
+# no Content-Disposition header). Jupyter Book auto-includes any .js file
+# found under _static/, so no extra config is needed here to load it.
