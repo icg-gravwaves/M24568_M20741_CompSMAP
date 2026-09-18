@@ -11,7 +11,10 @@ only_build_toc_files: True
 execute:
   execute_notebooks: force
   allow_errors: True
-  exclude_patterns: [lecture_3/Part_4_while_loops.ipynb]
+  exclude_patterns: [lecture_3/Part_4_while_loops.ipynb,
+                     lecture_2/4_Writing_Functions_Exercises.ipynb,
+                     lecture_2/5_Writing_functions_exercises_2.ipynb,
+                     lecture_2/12_Summary_Exercises.ipynb]
 
 # Define the name of the latex output file for PDF builds
 latex:
@@ -37,3 +40,10 @@ launch_buttons:
   notebook_interface: "jupyterlab"
   colab_url: "https://colab.research.google.com"
   thebe: true
+
+# Force the ".ipynb" download button to actually download rather than
+# navigate to the raw file (GitHub Pages sends no Content-Disposition header).
+sphinx:
+  config:
+    html_js_files:
+      - force_download.js
