@@ -45,3 +45,9 @@ launch_buttons:
 # actually download rather than navigate to the raw file (GitHub Pages sends
 # no Content-Disposition header). Jupyter Book auto-includes any .js file
 # found under _static/, so no extra config is needed here to load it.
+
+# .claude/ holds local, gitignored working notes and must never be built into
+# the site (it would otherwise get deployed to the live gh-pages site).
+sphinx:
+  config:
+    exclude_patterns: [".claude", ".claude/**"]
