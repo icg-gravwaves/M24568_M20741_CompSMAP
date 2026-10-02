@@ -14,7 +14,8 @@ execute:
   exclude_patterns: [lecture_3/Part_4_while_loops.ipynb,
                      lecture_2/4_Writing_Functions_Exercises.ipynb,
                      lecture_2/5_Writing_functions_exercises_2.ipynb,
-                     lecture_2/12_Summary_Exercises.ipynb]
+                     lecture_2/12_Summary_Exercises.ipynb,
+                     lecture_2/12_Summary_Exercises_SOLVED.ipynb]
 
 # Define the name of the latex output file for PDF builds
 latex:
