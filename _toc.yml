@@ -51,7 +51,7 @@ chapters:
   sections:
     - file: lecture_3/Part_1_loops_intro.ipynb
     - file: lecture_3/Part_2_Writing_a_for_loop_interactive.ipynb
-    - file: lecture_3/Part_2_Writing a for loop_Interactive_SOLUTION.ipynb
+    - file: lecture_3/Part_2_Writing_a_for_loop_Interactive_SOLUTION.ipynb
     - file: lecture_3/Part_3_for_loop_exercises.ipynb
     - file: lecture_3/Part_3_for_loop_exercises_SOLUTION.ipynb
     - file: lecture_3/Part_4_while_loops.ipynb
@@ -71,33 +71,33 @@ chapters:
 - file: lecture_4/overview
   sections:
     - file: lecture_4/Part1_DataTypes_Introduction.ipynb
-    #    - file: lecture_4/Part1_DataTypes_Introduction_SOLVED.ipynb
+    - file: lecture_4/Part1_DataTypes_Introduction_SOLVED.ipynb
     - file: lecture_4/Part2_DataTypes_tuple_set_dictionary.ipynb
-    #    - file: lecture_4/Part2_DataTypes_tuple_set_dictionary_SOLVED.ipynb
+    - file: lecture_4/Part2_DataTypes_tuple_set_dictionary_SOLVED.ipynb
     - file: lecture_4/Part3_DataTypes_further_exercises.ipynb
-    #    - file: lecture_4/Part3_DataTypes_further_exercises_SOLVED.ipynb
+    - file: lecture_4/Part3_DataTypes_further_exercises_SOLVED.ipynb
     - file: lecture_4/Part4_DataTypes_challenge_exercises.ipynb
-    #    - file: lecture_4/Part4_DataTypes_challenge_exercises_SOLVED.ipynb
+    - file: lecture_4/Part4_DataTypes_challenge_exercises_SOLVED.ipynb
     - file: lecture_4/Part5_DataTypes_13_14.ipynb
 - file: lecture_5/overview
-#  sections:
-#    - file: lecture_5/Part01_numpy_introduction.ipynb
+  sections:
+    - file: lecture_5/Part01_numpy_introduction.ipynb
     #    - file: lecture_5/Part01_numpy_introduction_solution.ipynb
-    #    - file: lecture_5/Part02_numpy_basic_arrays.ipynb
+    - file: lecture_5/Part02_numpy_basic_arrays.ipynb
     #    - file: lecture_5/Part02_numpy_basic_arrays_solutions.ipynb
-    #    - file: lecture_5/Part03_numpy_array_operations.ipynb
+    - file: lecture_5/Part03_numpy_array_operations.ipynb
     #    - file: lecture_5/Part03_numpy_array_operations_solutions.ipynb
-    #    - file: lecture_5/Part04_numpy_indexing_slicing.ipynb
+    - file: lecture_5/Part04_numpy_indexing_slicing.ipynb
     #    - file: lecture_5/Part04_numpy_indexing_slicing_solution.ipynb
-    #    - file: lecture_5/Part05_numpy_iterating.ipynb
+    - file: lecture_5/Part05_numpy_iterating.ipynb
     #    - file: lecture_5/Part05_numpy_iterating_solutions.ipynb
-    #    - file: lecture_5/Part06_numpy_sorting_arrays.ipynb
+    - file: lecture_5/Part06_numpy_sorting_arrays.ipynb
     #    - file: lecture_5/Part06_numpy_sorting_arrays_solutions.ipynb
-    #    - file: lecture_5/Part07_numpy_broadcasting.ipynb
+    - file: lecture_5/Part07_numpy_broadcasting.ipynb
     #    - file: lecture_5/Part07_numpy_broadcasting_solutions.ipynb
-    #    - file: lecture_5/Part08_numpy_array_axes.ipynb
+    - file: lecture_5/Part08_numpy_array_axes.ipynb
     #    - file: lecture_5/Part08_numpy_array_axes_solutions.ipynb
-    #    - file: lecture_5/Part09_numpy_summary_exercises.ipynb
+    - file: lecture_5/Part09_numpy_summary_exercises.ipynb
     #    - file: lecture_5/Part09_numpy_summary_exercises_solution.ipynb
 - file: lecture_6/overview
 #  sections:

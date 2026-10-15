@@ -16,7 +16,9 @@ execute:
                      lecture_2/5_Writing_functions_exercises_2.ipynb,
                      lecture_2/12_Summary_Exercises.ipynb,
                      lecture_2/12_Summary_Exercises_SOLVED.ipynb,
-                     lecture_4/Part3_DataTypes_further_exercises.ipynb]
+                     lecture_4/Part3_DataTypes_further_exercises.ipynb,
+                     lecture_4/Part3_DataTypes_further_exercises_SOLVED.ipynb,
+                     lecture_5/Part03_numpy_array_operations.ipynb]
 
 # Define the name of the latex output file for PDF builds
 latex:
