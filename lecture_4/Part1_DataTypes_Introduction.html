@@ -53,7 +53,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Introducing tuples, sets and dictionaries" href="Part2_DataTypes_tuple_set_dictionary.html" />
+    <link rel="next" title="The File object: A brief introduction - SOLVED" href="Part1_DataTypes_Introduction_SOLVED.html" />
     <link rel="prev" title="Lecture 4: Data types" href="overview.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -355,7 +355,7 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../lecture_3/Part_2_Writing%20a%20for%20loop_Interactive_SOLUTION.html">
+    <a class="reference internal" href="../lecture_3/Part_2_Writing_a_for_loop_Interactive_SOLUTION.html">
      Using a for loop: interactive - SOLVED
     </a>
    </li>
@@ -457,8 +457,18 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="Part1_DataTypes_Introduction_SOLVED.html">
+     The File object: A brief introduction - SOLVED
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="Part2_DataTypes_tuple_set_dictionary.html">
      Introducing tuples, sets and dictionaries
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Part2_DataTypes_tuple_set_dictionary_SOLVED.html">
+     Introducing tuples, sets and dictionaries - SOLVED
     </a>
    </li>
    <li class="toctree-l2">
@@ -467,8 +477,18 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="Part3_DataTypes_further_exercises_SOLVED.html">
+     Further exercises on sets, tuples and dictionaries - SOLVED
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="Part4_DataTypes_challenge_exercises.html">
      Challenge exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Part4_DataTypes_challenge_exercises_SOLVED.html">
+     Challenge exercises - SOLVED
     </a>
    </li>
    <li class="toctree-l2">
@@ -478,10 +498,62 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../lecture_5/overview.html">
    Lecture 5: Numpy
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_5/Part01_numpy_introduction.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_5/Part02_numpy_basic_arrays.html">
+     How to create basic arrays
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_5/Part03_numpy_array_operations.html">
+     Basic array operations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_5/Part04_numpy_indexing_slicing.html">
+     Indexing and Slicing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_5/Part05_numpy_iterating.html">
+     Iterating over an numpy array
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_5/Part06_numpy_sorting_arrays.html">
+     Sorting, adding and removing elements from an array
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_5/Part07_numpy_broadcasting.html">
+     Broadcasting
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_5/Part08_numpy_array_axes.html">
+     Using a particular axis of an array
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_5/Part09_numpy_summary_exercises.html">
+     Summary Exercises
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../lecture_6/overview.html">
@@ -775,8 +847,8 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<p>This then leads to the question of “where exactly is this file “example_file.data”, which we’ve just created? We will demonstrate this for you.</p>
-<p>Also note that used the <code class="docutils literal notranslate"><span class="pre">\n</span></code> character when we did <code class="docutils literal notranslate"><span class="pre">.write(&quot;Hello\n&quot;)</span></code> The <code class="docutils literal notranslate"><span class="pre">\n</span></code> character is special and it means “new line”. So if we do <code class="docutils literal notranslate"><span class="pre">file_pointer.write(&quot;\n&quot;)</span></code> it adds a new line to the file (same as having pressed the enter/return key). If we hadn’t included this, the file would read <code class="docutils literal notranslate"><span class="pre">HelloWorld</span></code>.</p>
+<p>This then leads to the question of “where exactly is this file ‘example_file.data’, which we’ve just created”? We will demonstrate this for you.</p>
+<p>Also note that we used the <code class="docutils literal notranslate"><span class="pre">\n</span></code> character when we did <code class="docutils literal notranslate"><span class="pre">.write(&quot;Hello\n&quot;)</span></code> The <code class="docutils literal notranslate"><span class="pre">\n</span></code> character is special and it means “new line”. So if we do <code class="docutils literal notranslate"><span class="pre">file_pointer.write(&quot;\n&quot;)</span></code> it adds a new line to the file (same as having pressed the enter/return key). If we hadn’t included this, the file would read <code class="docutils literal notranslate"><span class="pre">HelloWorld</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file_pointer</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;example_file.data&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
@@ -862,10 +934,10 @@ World
             <p class="prev-next-title">Lecture 4: Data types</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="Part2_DataTypes_tuple_set_dictionary.html" title="next page">
+    <a class='right-next' id="next-link" href="Part1_DataTypes_Introduction_SOLVED.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Introducing tuples, sets and dictionaries</p>
+        <p class="prev-next-title">The File object: A brief introduction - SOLVED</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
