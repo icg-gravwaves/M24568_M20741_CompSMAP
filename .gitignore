@@ -1,2 +1,6 @@
 .claude/
 *.data
+*.png
+.ipynb_checkpoints/
+_build/
+buildme.sh
