@@ -51,6 +51,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -516,8 +518,18 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_5/Part01_numpy_introduction_solution.html">
+     Introduction - SOLVED
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../lecture_5/Part02_numpy_basic_arrays.html">
      How to create basic arrays
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_5/Part02_numpy_basic_arrays_solutions.html">
+     How to create basic arrays - SOLVED
     </a>
    </li>
    <li class="toctree-l2">
@@ -526,8 +538,18 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_5/Part03_numpy_array_operations_solutions.html">
+     Basic array operations - SOLVED
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../lecture_5/Part04_numpy_indexing_slicing.html">
      Indexing and Slicing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_5/Part04_numpy_indexing_slicing_solution.html">
+     Indexing and Slicing - SOLVED
     </a>
    </li>
    <li class="toctree-l2">
@@ -536,8 +558,18 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_5/Part05_numpy_iterating_solutions.html">
+     Iterating over an numpy array - SOLVED
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../lecture_5/Part06_numpy_sorting_arrays.html">
      Sorting, adding and removing elements from an array
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_5/Part06_numpy_sorting_arrays_solutions.html">
+     Sorting, adding and removing elements from an array - SOLVED
     </a>
    </li>
    <li class="toctree-l2">
@@ -546,8 +578,18 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_5/Part07_numpy_broadcasting_solutions.html">
+     Broadcasting - SOLVED
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../lecture_5/Part08_numpy_array_axes.html">
      Using a particular axis of an array
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_5/Part08_numpy_array_axes_solutions.html">
+     Using a particular axis of an array - SOLVED
     </a>
    </li>
    <li class="toctree-l2">
@@ -555,12 +597,54 @@ const thebe_selector_output = ".output, .cell_output"
      Summary Exercises
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_5/Part09_numpy_summary_exercises_solution.html">
+     Summary Exercises - SOLVED
+    </a>
+   </li>
   </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../lecture_6/overview.html">
    Lecture 6: Visualisation
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_6/Part01_Introduction_to_Plotting.html">
+     Introduction to plotting in matplotlib
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_6/Part02_Line_Plots.html">
+     Part 2: Making a nice-looking, well-labelled plot
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_6/Part03_Scatter_Plots.html">
+     Scatter plots
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_6/Part04_Histograms.html">
+     Histograms
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_6/Part05_Interactive_plots.html">
+     Adding Interactive Elements: Sliders
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_6/Part06_Challenge_exercises.html">
+     Challenge exercises
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../lecture_7/overview.html">
@@ -1497,7 +1581,7 @@ with \)</span>a_1 = 5<span class="math notranslate nohighlight">\(, \)</span>d =
 </section>
 <section id="exercise-14">
 <h2>Exercise 14<a class="headerlink" href="#exercise-14" title="Permalink to this headline">#</a></h2>
-<p>Write a function which determines if an integer is prime (meaning it has no number other than one that divides it without a remainder). Remember the remainder operator is <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">%</span> <span class="pre">y</span></code>. This function will need a loop and a conditional.</p>
+<p>Write a function which determines if an integer is prime (meaning it has no number other than itself and one that divides it without a remainder). Remember the remainder operator is <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">%</span> <span class="pre">y</span></code>. This function will need a loop and a conditional.</p>
 <p>You can check if two things are not equal either with</p>
 <p><code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">x</span> <span class="pre">!=</span> <span class="pre">y:</span></code></p>
 <p>or</p>
