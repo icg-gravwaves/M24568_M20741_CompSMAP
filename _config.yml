@@ -19,7 +19,10 @@ execute:
                      lecture_4/Part3_DataTypes_further_exercises.ipynb,
                      lecture_4/Part3_DataTypes_further_exercises_SOLVED.ipynb,
                      lecture_5/Part03_numpy_array_operations.ipynb,
-                     lecture_3/Part_9_removing_from_list.ipynb]
+                     lecture_3/Part_9_removing_from_list.ipynb,
+                     lecture_7/Part_3_Syntax_Errors-Solutions.ipynb,
+                     lecture_8/Part04_week8_more_operations.ipynb,
+                     lecture_8/Part06_week8_importing_files.ipynb]
 
 # Define the name of the latex output file for PDF builds
 latex:
