@@ -1092,6 +1092,13 @@ title="Print to PDF"
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#an-example">
+       <strong>
+        An example
+       </strong>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#task">
        <strong>
         Task
@@ -1160,6 +1167,13 @@ title="Print to PDF"
      Exercise 8.3 (Difficult)
     </a>
     <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#an-example">
+       <strong>
+        An example
+       </strong>
+      </a>
+     </li>
      <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#task">
        <strong>
@@ -1270,11 +1284,13 @@ then the ouput padded array is
 <p>where <span class="math notranslate nohighlight">\(\delta x = \frac{b-a}{n}\)</span>.
 Note that <span class="math notranslate nohighlight">\(x_k = a + k \delta x\)</span>.</p>
 <p>Essentially, we can approximate the definite integral as a sum of lots of rectangles of width <span class="math notranslate nohighlight">\(\delta x\)</span> and height <span class="math notranslate nohighlight">\(f(x)\)</span>.</p>
-<p>### <strong>An example</strong></p>
+<section id="an-example">
+<h3><strong>An example</strong><a class="headerlink" href="#an-example" title="Permalink to this headline">#</a></h3>
 <p>To illustrate the interval split:  take an interval <span class="math notranslate nohighlight">\([0, 1]\)</span> (all real numbers between <span class="math notranslate nohighlight">\(0\)</span> and <span class="math notranslate nohighlight">\(1\)</span> including both ends, so <span class="math notranslate nohighlight">\(a=0\)</span>, <span class="math notranslate nohighlight">\(b=1\)</span>). Taking <span class="math notranslate nohighlight">\(n = 2\)</span>, we therefore calculate <span class="math notranslate nohighlight">\(\delta x = \frac{b-a}{n} = \frac{1}{2} = 0.5\)</span>. In mathematical notation, we can decompose <span class="math notranslate nohighlight">\([0, 1]\)</span> as the union of</p>
 <div class="math notranslate nohighlight">
 \[[0, 1] = \left[0, \frac{1}{2}\right] \cup \left[ \frac{1}{2}, 1\right].\]</div>
 <p>We get that <span class="math notranslate nohighlight">\(x_0 = 0\)</span>, <span class="math notranslate nohighlight">\(x_1 = \frac{1}{2}\)</span>, <span class="math notranslate nohighlight">\(x_2 = 1\)</span>. Of course, in general, we want large <span class="math notranslate nohighlight">\(n\)</span> but this was just to explain the above complicated notation.</p>
+</section>
 <section id="task">
 <h3><strong>Task</strong><a class="headerlink" href="#task" title="Permalink to this headline">#</a></h3>
 <p>Please complete the code of the function <code class="docutils literal notranslate"><span class="pre">approx_integral</span></code> below. This function should return the right-hand side of the formula identified with (<span class="math notranslate nohighlight">\(\star\)</span>) above.</p>
