@@ -22,7 +22,11 @@ execute:
                      lecture_3/Part_9_removing_from_list.ipynb,
                      lecture_7/Part_3_Syntax_Errors-Solutions.ipynb,
                      lecture_8/Part04_week8_more_operations.ipynb,
-                     lecture_8/Part06_week8_importing_files.ipynb]
+                     lecture_8/Part06_week8_importing_files.ipynb,
+                     lecture_8/Part06_week8_importing_files_solutions.ipynb,
+                     lecture_9/Part_2_Numerical_Integration_rectangle_rule.ipynb,
+                     lecture_9/Part_3_Numerical_Integration_trapezium_rule.ipynb,
+                     lecture_9/Part_4_Numerical_Integration_Simpsons_rule.ipynb]
 
 # Define the name of the latex output file for PDF builds
 latex:
