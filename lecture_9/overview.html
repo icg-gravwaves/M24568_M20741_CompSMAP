@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Lecture 9: Root finding &#8212; Introduction to Computational Techniques for Maths and Physics</title>
+    <title>Lecture 9: Numerical Integration &#8212; Introduction to Computational Techniques for Maths and Physics</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -53,12 +53,10 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Lecture 10: Numerical Integration" href="../lecture_10/overview.html" />
-    <link rel="prev" title="Part 8: Summary exercises" href="../lecture_8/Part07_week8_summary_exercises.html" />
+    <link rel="next" title="Introduction" href="Part_1_Introduction.html" />
+    <link rel="prev" title="Part 8: Summary exercises - SOLVED" href="../lecture_8/Part07_week8_summary_exercises_solutions.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -769,8 +767,18 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_8/Part00_Week_8_into_solved.html">
+     Introduction - SOLVED
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../lecture_8/Part01_week8_data_frames.html">
      Part 1: data frames (extra powerful dictionaries)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_8/Part01_week8_data_frames_solutions.html">
+     Part 1: data frames (extra powerful dictionaries) - SOLVED
     </a>
    </li>
    <li class="toctree-l2">
@@ -779,8 +787,18 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_8/Part02_week8_viewing_data_solved.html">
+     Part 2: viewing data - SOLVED
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../lecture_8/Part03_week8_selecting_elements.html">
      Part 3: selecting elements from a data frame
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_8/Part03_week8_selecting_elements_solutions.html">
+     Part 3: selecting elements from a data frame - SOLVED
     </a>
    </li>
    <li class="toctree-l2">
@@ -789,8 +807,18 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_8/Part04_week8_more_operations_solutions.html">
+     Part 4: More operations on DataFrames - SOLVED
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../lecture_8/Part05_week8_grouping.html">
      Parts 5 and 6: grouping and visualising data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_8/Part05_week8_grouping_solutions.html">
+     Parts 5 and 6: grouping and visualising data - SOLVED
     </a>
    </li>
    <li class="toctree-l2">
@@ -799,21 +827,53 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_8/Part06_week8_importing_files_solutions.html">
+     Part 7: Importing and exporting files / spreadsheets - SOLVED
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../lecture_8/Part07_week8_summary_exercises.html">
      Part 8: Summary exercises
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_8/Part07_week8_summary_exercises_solutions.html">
+     Part 8: Summary exercises - SOLVED
+    </a>
+   </li>
   </ul>
  </li>
- <li class="toctree-l1 current active">
+ <li class="toctree-l1 current active has-children">
   <a class="current reference internal" href="#">
-   Lecture 9: Root finding
+   Lecture 9: Numerical Integration
   </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../lecture_10/overview.html">
-   Lecture 10: Numerical Integration
-  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Part_1_Introduction.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Part_2_Numerical_Integration_rectangle_rule.html">
+     The rectangle rule
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Part_3_Numerical_Integration_trapezium_rule.html">
+     The Trapezium rule
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Part_4_Numerical_Integration_Simpsons_rule.html">
+     Simpson’s rule
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -1006,7 +1066,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Lecture 9: Root finding</h1>
+                <h1>Lecture 9: Numerical Integration</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -1031,16 +1091,23 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="lecture-9-root-finding">
-<h1>Lecture 9: Root finding<a class="headerlink" href="#lecture-9-root-finding" title="Permalink to this headline">#</a></h1>
-<p>Root finding means finding a solution to equations. For example you might be asked something like:</p>
-<ul class="simple">
-<li><p>Find values of <span class="math notranslate nohighlight">\(x\)</span> that satisfy <span class="math notranslate nohighlight">\(x^2 - 1 = 0\)</span>.</p></li>
-</ul>
-<p>This case can be solved analytically, it will be true if <span class="math notranslate nohighlight">\(x^2 = 1\)</span>, and there are two cases where <span class="math notranslate nohighlight">\(x^2 = 1\)</span>, either <span class="math notranslate nohighlight">\(x=1\)</span> or <span class="math notranslate nohighlight">\(x=-1\)</span>. <span class="math notranslate nohighlight">\(x=-1\)</span>, or <span class="math notranslate nohighlight">\(x=1\)</span> would then be the two <em>roots</em> (or solutions) of this equation.</p>
-<p>In this week we will explore why root finding is often solved using computational techniques, explore two common methods for root finding, and walk through how to implement them and apply them to example problems.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="lecture-9-numerical-integration">
+<h1>Lecture 9: Numerical Integration<a class="headerlink" href="#lecture-9-numerical-integration" title="Permalink to this headline">#</a></h1>
+<p>By this point you have seen in many places in your maths/physics degree how important integration and differentiation are in solving <strong>many</strong> problems.</p>
+<p>However, there is an important difference between integration and differentiation. Namely, differentiation is much easier than integration in the general case. The reason for this is that you have learned by now a set of rules (chain rule, product rule etc.) which can always be applied step by step to differentiate the vast majority of functions analytically. Sometimes this can take a long time, and it’s easy to make a mistake, but it can still be done (I note that there are mathematical computer “languages” like mathematica/maple that can greatly increase the speed of such <em>analytical</em> approaches, and reduce the chance of making errors).</p>
+<p>Integration in contrast is much harder. It generally relies on trying to find a function that differentiates to what you have and saying “that is the integral”. For some cases this is not so bad, but for other cases this can be very difficult.</p>
+<p>For this reason it is often easiest to solve an integration problem not by writing hundreds of lines of algebra, but by using a computer and doing it “numerically”. I note that differentials can also be evaluated numerically, but here we focus on integration as this is where the analytic solutions are harder.</p>
+<p>In this lecture we will write our own code to numerically integrate any function. We will start with the rectangle integration method, before adding complexity and introducing the trapezium rule, and then Simpson’s rule.</p>
 <section id="weekly-tasks">
 <h2>Weekly tasks<a class="headerlink" href="#weekly-tasks" title="Permalink to this headline">#</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Part_1_Introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Part_2_Numerical_Integration_rectangle_rule.html">The rectangle rule</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Part_3_Numerical_Integration_trapezium_rule.html">The Trapezium rule</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Part_4_Numerical_Integration_Simpsons_rule.html">Simpson’s rule</a></li>
+</ul>
+</div>
 </section>
 </section>
 
@@ -1071,17 +1138,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../lecture_8/Part07_week8_summary_exercises.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../lecture_8/Part07_week8_summary_exercises_solutions.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Part 8: Summary exercises</p>
+            <p class="prev-next-title">Part 8: Summary exercises - SOLVED</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../lecture_10/overview.html" title="next page">
+    <a class='right-next' id="next-link" href="Part_1_Introduction.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Lecture 10: Numerical Integration</p>
+        <p class="prev-next-title">Introduction</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

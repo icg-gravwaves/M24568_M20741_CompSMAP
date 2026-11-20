@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Lecture 10: Numerical Integration &#8212; Introduction to Computational Techniques for Maths and Physics</title>
+    <title>Simpson’s rule &#8212; Introduction to Computational Techniques for Maths and Physics</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -53,9 +53,11 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Lecture 9: Root finding" href="../lecture_9/overview.html" />
+    <link rel="prev" title="The Trapezium rule" href="Part_3_Numerical_Integration_trapezium_rule.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -766,8 +768,18 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_8/Part00_Week_8_into_solved.html">
+     Introduction - SOLVED
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../lecture_8/Part01_week8_data_frames.html">
      Part 1: data frames (extra powerful dictionaries)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_8/Part01_week8_data_frames_solutions.html">
+     Part 1: data frames (extra powerful dictionaries) - SOLVED
     </a>
    </li>
    <li class="toctree-l2">
@@ -776,8 +788,18 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_8/Part02_week8_viewing_data_solved.html">
+     Part 2: viewing data - SOLVED
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../lecture_8/Part03_week8_selecting_elements.html">
      Part 3: selecting elements from a data frame
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_8/Part03_week8_selecting_elements_solutions.html">
+     Part 3: selecting elements from a data frame - SOLVED
     </a>
    </li>
    <li class="toctree-l2">
@@ -786,8 +808,18 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_8/Part04_week8_more_operations_solutions.html">
+     Part 4: More operations on DataFrames - SOLVED
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../lecture_8/Part05_week8_grouping.html">
      Parts 5 and 6: grouping and visualising data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_8/Part05_week8_grouping_solutions.html">
+     Parts 5 and 6: grouping and visualising data - SOLVED
     </a>
    </li>
    <li class="toctree-l2">
@@ -796,21 +828,53 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_8/Part06_week8_importing_files_solutions.html">
+     Part 7: Importing and exporting files / spreadsheets - SOLVED
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../lecture_8/Part07_week8_summary_exercises.html">
      Part 8: Summary exercises
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lecture_8/Part07_week8_summary_exercises_solutions.html">
+     Part 8: Summary exercises - SOLVED
+    </a>
+   </li>
   </ul>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../lecture_9/overview.html">
-   Lecture 9: Root finding
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="overview.html">
+   Lecture 9: Numerical Integration
   </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Lecture 10: Numerical Integration
-  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="Part_1_Introduction.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Part_2_Numerical_Integration_rectangle_rule.html">
+     The rectangle rule
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Part_3_Numerical_Integration_trapezium_rule.html">
+     The Trapezium rule
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Simpson’s rule
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -863,6 +927,71 @@ title="Toggle navigation"
         
     </div>
     <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/icg-gravwaves/M24568_M20741_CompSMAP/main?urlpath=lab/tree/lecture_9/Part_4_Numerical_Integration_Simpsons_rule.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://colab.research.google.com/github/icg-gravwaves/M24568_M20741_CompSMAP/blob/main/lecture_9/Part_4_Numerical_Integration_Simpsons_rule.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Colab"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_colab.png">
+  </span>
+<span class="headerbtn__text-container">Colab</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="initThebeSBT()"
+  class="headerbtn headerbtn-launch-thebe"
+  data-toggle="tooltip"
+data-placement="left"
+title="Launch Thebe"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="headerbtn__text-container">Live Code</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
 <button onclick="toggleFullScreen()"
   class="headerbtn"
   data-toggle="tooltip"
@@ -902,7 +1031,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/icg-gravwaves/M24568_M20741_CompSMAP/issues/new?title=Issue%20on%20page%20%2Flecture_10/overview.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/icg-gravwaves/M24568_M20741_CompSMAP/issues/new?title=Issue%20on%20page%20%2Flecture_9/Part_4_Numerical_Integration_Simpsons_rule.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -930,7 +1059,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/lecture_10/overview.md"
+        <a href="../_sources/lecture_9/Part_4_Numerical_Integration_Simpsons_rule.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -941,7 +1070,7 @@ title="Download source file"
 <span class="headerbtn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.md</span>
+<span class="headerbtn__text-container">.ipynb</span>
 </a>
 
       </li>
@@ -990,8 +1119,55 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#weekly-tasks">
-   Weekly tasks
+  <a class="reference internal nav-link" href="#step-1">
+   Step 1
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#step-2">
+   Step 2
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#some-optimization">
+     Some optimization
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise">
+   Exercise
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Exercise
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   Exercise
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   Exercise
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   Exercise
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id5">
+   Exercise
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id6">
+   Exercise
   </a>
  </li>
 </ul>
@@ -1003,7 +1179,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Lecture 10: Numerical Integration</h1>
+                <h1>Simpson’s rule</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -1014,8 +1190,55 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#weekly-tasks">
-   Weekly tasks
+  <a class="reference internal nav-link" href="#step-1">
+   Step 1
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#step-2">
+   Step 2
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#some-optimization">
+     Some optimization
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise">
+   Exercise
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Exercise
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   Exercise
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   Exercise
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   Exercise
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id5">
+   Exercise
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id6">
+   Exercise
   </a>
  </li>
 </ul>
@@ -1028,15 +1251,206 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="lecture-10-numerical-integration">
-<h1>Lecture 10: Numerical Integration<a class="headerlink" href="#lecture-10-numerical-integration" title="Permalink to this headline">#</a></h1>
-<p>By this point you have seen in many places in your maths/physics degree how important integration and differentiation are in solving <strong>many</strong> problems.</p>
-<p>However, there is an important difference between integration and differentiation. Namely, differentiation is much easier than integration in the general case. The reason for this is that you have learned by now a set of rules (chain rule, product rule etc.) which can always be applied step by step to differentiate the vast majority of functions analytically. Sometimes this can take a long time, and it’s easy to make a mistake, but it can still be done (I note that there are mathematical computer “languages” like mathematica/maple that can greatly increase the speed of such <em>analytical</em> approaches, and reduce the chance of making errors).</p>
-<p>Integration in contrast is much harder. It generally relies on trying to find a function that differentiates to what you have and saying “that is the integral”. For some cases this is not so bad, but for other cases this can be very difficult.</p>
-<p>For this reason it is often easiest to solve an integration problem not by writing hundreds of lines of algebra, but by using a computer and doing it “numerically”. I note that differentials can also be evaluated numerically, but here we focus on integration as this is where the analytic solutions are harder.</p>
-<p>In this lecture we will write our own code to numerically integrate any function. We will start with the rectangle integration method, before adding complexity and introducing the trapezium rule, and then Simpson’s rule.</p>
-<section id="weekly-tasks">
-<h2>Weekly tasks<a class="headerlink" href="#weekly-tasks" title="Permalink to this headline">#</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="simpson-s-rule">
+<h1>Simpson’s rule<a class="headerlink" href="#simpson-s-rule" title="Permalink to this headline">#</a></h1>
+<p>We have now demonstrated both the rectangular and trapezium integration methods. While the trapezium method looks like a visibly better fit, there are cases (including the cases above) where the rectangle method is actually more accurate. However, this can be improved by using a “2nd-order” solution to the problem.</p>
+<p>Simpson’s rule is that. In this case rather than assuming that the curve is a series of straight lines, we assume that the curve is a series of quadratic lines. A nice introduction to this can be seen here:</p>
+<p><a class="reference external" href="https://web.stanford.edu/group/sisl/k12/optimization/MO-unit4-pdfs/4.2simpsonintegrals.pdf">https://web.stanford.edu/group/sisl/k12/optimization/MO-unit4-pdfs/4.2simpsonintegrals.pdf</a></p>
+<p>(see up to slide 7). Let’s try and visualize how this will look for our <span class="math notranslate nohighlight">\(e^{-x^2}dx\)</span>. Here I will compare to using only one rectangle/trapezium to emphasize the difference.</p>
+<p><img alt="Illustration of simpsons rule" src="https://raw.githubusercontent.com/icg-gravwaves/M24568_M20741_CompSMAP/main/lecture_9/images/Part4_Image1.png" /></p>
+<p>Here the red is the actual curve, the green is the rectangle, the orange the trapezium, and the black is the new quadrature fit. We can see that each is progressively fitting better.</p>
+<p>Now we just need to evaluate this integral. Now we <em>could</em> analytically integrate the quadratic curve at every point, but it turns out that the integral of a quadratic curve over the interval <span class="math notranslate nohighlight">\(a\)</span> to <span class="math notranslate nohighlight">\(b\)</span> (where the midpoint is <span class="math notranslate nohighlight">\(m\)</span>) is given by:</p>
+<div class="math notranslate nohighlight">
+\[\int_a^b f(x) dx \approx  \frac{(b-a)}{6}\left(f(a)+4f(m) + f(b) \right) \]</div>
+<p>We can code this up.</p>
+<section id="step-1">
+<h2>Step 1<a class="headerlink" href="#step-1" title="Permalink to this headline">#</a></h2>
+<p>Write a function <code class="docutils literal notranslate"><span class="pre">compute_quadrature_area(height_at_left,</span> <span class="pre">height_at_middle,</span> <span class="pre">height_at_right,</span> <span class="pre">width)</span></code> to compute the area of the shapes used in Simpson’s rule. As described above this function should return <code class="docutils literal notranslate"><span class="pre">width/6.</span> <span class="pre">*</span> <span class="pre">(height_at_left</span> <span class="pre">+</span> <span class="pre">4*height_at_middle</span> <span class="pre">+</span> <span class="pre">height_at_right)</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">compute_quadrature_area</span><span class="p">(</span><span class="n">height_at_left</span><span class="p">,</span> <span class="n">height_at_middle</span><span class="p">,</span> <span class="n">height_at_right</span><span class="p">,</span> <span class="n">width</span><span class="p">):</span>
+    <span class="c1"># Complete function below</span>
+
+
+
+<span class="c1"># One example to test this</span>
+<span class="n">example_area</span> <span class="o">=</span> <span class="n">compute_quadrature_area</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Should be 4.666666666666666&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Value computed was </span><span class="si">{</span><span class="n">example_area</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Should be 4.666666666666666
+Value computed was 4.666666666666666
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="step-2">
+<h2>Step 2<a class="headerlink" href="#step-2" title="Permalink to this headline">#</a></h2>
+<p>Now we can write a function <code class="docutils literal notranslate"><span class="pre">compute_simpsons_integral(function,</span> <span class="pre">lower_val,</span> <span class="pre">upper_val,</span> <span class="pre">num_shapes)</span></code>. The <code class="docutils literal notranslate"><span class="pre">function</span></code> should be the function to compute (ie. compute_ex2) in the example above, <code class="docutils literal notranslate"><span class="pre">lower_val</span></code> is the lower value of integration, <code class="docutils literal notranslate"><span class="pre">upper_val</span></code> is the upper value and <code class="docutils literal notranslate"><span class="pre">num_shapes</span></code> is the number of shapes to use. Here’s roughly how this could work:</p>
+<ol class="simple">
+<li><p>Call <code class="docutils literal notranslate"><span class="pre">rectangle_edges</span></code> to get the edges of your shapes (maybe rename the function if you want to avoid the confusion of calling something with rectangle in the name)</p></li>
+<li><p>Call <code class="docutils literal notranslate"><span class="pre">compute_step_size</span></code> to get the step size.</p></li>
+<li><p>Call <code class="docutils literal notranslate"><span class="pre">f_midpoints</span></code> to get the midpoints of your shapes</p></li>
+<li><p>Call <code class="docutils literal notranslate"><span class="pre">function</span></code> to get the y_values (the heights) of your shapes at all the edges.</p></li>
+<li><p>Call <code class="docutils literal notranslate"><span class="pre">function</span></code> <em>again</em> to get the y_values of the shapes at all the midpoints.</p></li>
+<li><p>For all shapes use <code class="docutils literal notranslate"><span class="pre">compute_quadrature_area</span></code> to compute the area.</p></li>
+<li><p>Sum over all areas.</p></li>
+<li><p>Return the integral.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># copy the functions you want to use from the previous workbook</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">compute_simpsons_integral</span><span class="p">(</span><span class="n">function</span><span class="p">,</span> <span class="n">lower_val</span><span class="p">,</span> <span class="n">upper_val</span><span class="p">,</span> <span class="n">num_shapes</span><span class="p">):</span>
+    <span class="c1"># COMPLETE CODE HERE</span>
+
+
+<span class="c1"># Checking that it works</span>
+<span class="n">integral</span> <span class="o">=</span> <span class="n">compute_simpsons_integral</span><span class="p">(</span><span class="n">compute_ex2</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Integral should be 0.4207871236381236&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Integral was computed to be </span><span class="si">{</span><span class="n">integral</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Integral should be 0.4207871236381236
+Integral was computed to be 0.4207871236381236
+</pre></div>
+</div>
+</div>
+</div>
+<section id="some-optimization">
+<h3>Some optimization<a class="headerlink" href="#some-optimization" title="Permalink to this headline">#</a></h3>
+<p>If we examine this closely (with 2 shapes), we can see that the right edge of the first shape is the left edge of the second shape, therefore we don’t need to compute that twice. We can just compute the value of the function at all the points we need (which will be twice as many points as with the trapezium rule, as we need to compute midpoints). Then we just multiply each point by a <em>weighting</em>. This weighting will be 4 for all the midpoints, 1 for the first and last point, and 2 otherwise. So for example if we were doing this with 3 shapes we would do something like:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+	\begin{array}{|c|c|c|}\hline
+	x &amp; f(x) &amp; \mbox{weight} \\
+	\hline
+	0.5 &amp; 0.778801 &amp; 1\\
+	0.666667 &amp; 0.641180 &amp; 4\\
+	0.833333 &amp; 0.499352 &amp; 2\\
+	1 &amp; 0.367880 &amp; 4\\
+	1.166667 &amp; 0.256376 &amp; 2\\
+    1.333333 &amp; 0.169013 &amp; 4\\
+    1.5 &amp; 0.105399 &amp; 1\\
+	\hline
+	\end{array}
+\end{split}\]</div>
+<p>Then we just multiply all the f(x) values by the weights and sum everything up.</p>
+<p>Integral = (0.778801 + 0.641180*4 + 0.499352*2 + 0.367880*4 + 0.256376*2 + 0.169013*4 + 0.105399) * width / 6.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">simpson_rule</span><span class="p">(</span><span class="n">function</span><span class="p">,</span> <span class="n">lower_val</span><span class="p">,</span> <span class="n">upper_val</span><span class="p">,</span> <span class="n">num_shapes</span><span class="p">):</span>
+    <span class="n">h</span> <span class="o">=</span> <span class="p">(</span><span class="n">upper_val</span> <span class="o">-</span> <span class="n">lower_val</span><span class="p">)</span><span class="o">/</span><span class="n">num_shapes</span>
+    <span class="n">x_vals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">lower_val</span><span class="p">,</span> <span class="n">upper_val</span><span class="p">,</span> <span class="n">num_shapes</span><span class="o">*</span><span class="mi">2</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">f_vals</span> <span class="o">=</span> <span class="n">function</span><span class="p">(</span><span class="n">x_vals</span><span class="p">)</span>
+    <span class="n">weights</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">f_vals</span><span class="p">))</span> <span class="c1"># Start with all weights equal to 1, then use slicing magic</span>
+    <span class="n">weights</span><span class="p">[</span><span class="mi">1</span><span class="p">::</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">4</span> <span class="c1"># Set every other value, starting with the second, to 4</span>
+    <span class="n">weights</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span> <span class="c1"># Set every other value, starting with the third, and not including the last, to 2</span>
+    <span class="c1">#print(weights) # Definitely use a debug statement here to check we got what we expected!!</span>
+    <span class="k">return</span> <span class="n">h</span><span class="o">/</span><span class="mi">6</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">f_vals</span><span class="o">*</span><span class="n">weights</span><span class="p">)</span>
+
+<span class="n">current_area</span> <span class="o">=</span> <span class="n">simpson_rule</span><span class="p">(</span><span class="n">compute_ex2</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;I have computed the integral to be </span><span class="si">{</span><span class="n">current_area</span><span class="si">}</span><span class="s2"> with numerical integration using Simpson&#39;s rule&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>I have computed the integral to be 0.42078712363812343 with numerical integration using Simpson&#39;s rule
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="exercise">
+<h2>Exercise<a class="headerlink" href="#exercise" title="Permalink to this headline">#</a></h2>
+<p>Make a plot of the accuracy of the integral of <span class="math notranslate nohighlight">\(e^{-x^2}dx\)</span> between <span class="math notranslate nohighlight">\(x=0.5\)</span> and <span class="math notranslate nohighlight">\(x=2\)</span> computed using Simpson’s rule.</p>
+<p>The x-axis of the plot should be the number of shapes used in the integral. Vary this between 1 shape and 100 shapes. The y-axis should show the value of the integral.</p>
+<p><strong>HINT</strong> As before, you don’t need to write any integration code here, it’s all provided above.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ADD CODE HERE</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id1">
+<h2>Exercise<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+<p>TL;DR: Now repeat the process but plot the accuracy using Simpson’s rule, Trapezium rule and rectangle rule on the same plot!</p>
+<p>Longer: Make a plot of the accuracy of the integral of <span class="math notranslate nohighlight">\(e^{-x^2}dx\)</span> between <span class="math notranslate nohighlight">\(x=0.5\)</span> and <span class="math notranslate nohighlight">\(x=2\)</span> computed using Simpson’s rule, Trapezium rule and the Rectangle rule. Show the 3 lines on the same plot.</p>
+<p>The x-axis of the plot should be the number of shapes used in the integral. Vary this between 1 shape and 100 shapes. The y-axis should show the value of the integral.</p>
+<p><strong>HINT</strong> As before, you don’t need to write any integration code here, it’s all provided above.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ADD CODE HERE</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id2">
+<h2>Exercise<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h2>
+<p>Again, repeat the process for the other two integrals:</p>
+<p>Make a plot of the accuracy of <span class="math notranslate nohighlight">\(\int_1^3\frac{\sin{x}}{x} dx\)</span> computed using the “rectangle rule”, the “trapezium rule” and “Simpson’s rule”</p>
+<p>The x-axis of the plot should be the number of shapes used in the integral vary this between 1 and 100 shapes. The y-axis should show the value of the integral.</p>
+<p><strong>HINT</strong> All you have to do is copy the previous solution and change the function used, and the range used. I computed the integral to be roughly 0.90257.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ADD CODE HERE</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Make a plot of the accuracy of <span class="math notranslate nohighlight">\(\int_1^3 \sqrt{\sin{x}} dx\)</span> computed using the “rectangle rule”, the “trapezium rule” and “Simpson’s rule”</p>
+<p>The x-axis of the plot should be the number of shapes used in the integral vary this between 1 and 100 shapes. The y-axis should show the value of the integral.</p>
+<p>I computed the integral to be 1.717835 here.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ADD CODE HERE</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id3">
+<h2>Exercise<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h2>
+<p>Compute the integral:</p>
+<div class="math notranslate nohighlight">
+\[\int_{0.2}^{0.5} \tan(x) dx\]</div>
+<p>using numerical integration</p>
+</section>
+<section id="id4">
+<h2>Exercise<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h2>
+<p>Compute the integral</p>
+<div class="math notranslate nohighlight">
+\[\int_0^{20} e ^ {\sin(x)} dx \]</div>
+</section>
+<section id="id5">
+<h2>Exercise<a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h2>
+<p>Compute the integral</p>
+<div class="math notranslate nohighlight">
+\[\int_1^{100} \frac{\ln (x + 1)}{x} dx \]</div>
+</section>
+<section id="id6">
+<h2>Exercise<a class="headerlink" href="#id6" title="Permalink to this headline">#</a></h2>
+<p>Compute the integral:</p>
+<div class="math notranslate nohighlight">
+\[\int_{1}^{2} \tan(x) dx\]</div>
+<p>using numerical integration.</p>
+<p><strong>WARNING</strong> There’s a catch in this one! Maybe try plotting <span class="math notranslate nohighlight">\(\tan(x)\)</span> in this interval first?? If you can see the catch, is it still possible to integrate this?</p>
 </section>
 </section>
 
@@ -1053,7 +1467,7 @@ title="Print to PDF"
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./lecture_10"
+            path: "./lecture_9"
         },
         predefinedOutput: true
     }
@@ -1067,11 +1481,11 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../lecture_9/overview.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="Part_3_Numerical_Integration_trapezium_rule.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Lecture 9: Root finding</p>
+            <p class="prev-next-title">The Trapezium rule</p>
         </div>
     </a>
 </div>
